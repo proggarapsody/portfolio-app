@@ -1,0 +1,281 @@
+.seiko-page {
+  --page-ratio: 0.6898;
+  background: var(--color-ocean);
+  color: var(--color-silver);
+}
+.seiko-composition p,
+.seiko-composition h2 {
+  margin: 0;
+}
+.seiko-headline {
+  position: absolute;
+  inset: -0.45% 1.1% auto;
+  z-index: 2;
+  --type-font: var(--font-label);
+  --type-size: 5.6cqw;
+  --type-weight: var(--weight-black);
+  --type-tracking: 0.16em;
+  --type-leading: 1.2;
+  white-space: nowrap;
+  font-style: italic;
+}
+.seiko-sea {
+  position: absolute;
+  top: 5.155%;
+  left: 0;
+  width: 100%;
+  height: 62.792%;
+  padding: 0;
+  border: 0;
+  background: var(--color-clear);
+  cursor: pointer;
+  overflow: hidden;
+}
+.seiko-montage {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.seiko-sea:focus-visible {
+  outline: var(--rule-focus) solid var(--color-silver);
+  outline-offset: calc(-1 * var(--space-1));
+}
+.seiko-foam {
+  position: absolute;
+  inset: 0;
+  background: url("/graphics/seiko-ocean-watch.webp") 0 0 / 100% 100%;
+  clip-path: polygon(
+    0 0,
+    18% 0,
+    39% 15%,
+    44% 25%,
+    26% 28%,
+    19% 39%,
+    17% 48%,
+    26% 57%,
+    31% 65%,
+    18% 61%,
+    9% 46%,
+    0 33%
+  );
+  mix-blend-mode: screen;
+  opacity: 0;
+  pointer-events: none;
+}
+.seiko-lcd-glint,
+.seiko-steel-glint {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    110deg,
+    var(--color-clear) 25%,
+    var(--color-silver) 49%,
+    var(--color-clear) 63%
+  );
+  background-size: 300% 100%;
+  mix-blend-mode: screen;
+}
+.seiko-lcd-glint {
+  left: 37.1%;
+  top: 43.5%;
+  width: 18%;
+  height: 12.6%;
+  clip-path: polygon(3% 0, 98% 0, 100% 100%, 0 100%);
+}
+.seiko-steel-glint {
+  left: 31.5%;
+  top: 18.8%;
+  width: 40.5%;
+  height: 70%;
+  clip-path: polygon(
+    37% 0,
+    75% 0,
+    92% 20%,
+    100% 51%,
+    87% 84%,
+    72% 100%,
+    30% 96%,
+    17% 74%,
+    24% 67%,
+    59% 77%,
+    70% 61%,
+    74% 32%
+  );
+}
+[data-motion="on"] .seiko-sea:is(:hover, :focus-visible, :focus) .seiko-foam {
+  animation: seiko-water 2.6s ease-in-out infinite;
+}
+[data-motion="on"]
+  .seiko-sea:is(:hover, :focus-visible, :focus)
+  .seiko-lcd-glint {
+  animation: seiko-glint 2.6s ease-in-out infinite;
+}
+[data-motion="on"]
+  .seiko-sea:is(:hover, :focus-visible, :focus)
+  .seiko-steel-glint {
+  animation: seiko-glint 2.6s 0.18s ease-in-out infinite;
+}
+@keyframes seiko-water {
+  0%,
+  100% {
+    opacity: 0.02;
+    transform: translate(0, 0);
+  }
+  50% {
+    opacity: 0.22;
+    transform: translate(0.35%, 0.18%);
+  }
+}
+@keyframes seiko-glint {
+  0%,
+  100% {
+    opacity: 0;
+    background-position: 100% 0;
+  }
+  40% {
+    opacity: 0.32;
+  }
+  75% {
+    opacity: 0.12;
+    background-position: 0 0;
+  }
+}
+.seiko-digital-note {
+  position: absolute;
+  left: 16.5%;
+  top: 52.7%;
+  width: 24%;
+  text-align: center;
+  pointer-events: none;
+}
+.seiko-new {
+  --type-size: 1.96cqw;
+  --type-tracking: 0.03em;
+  --type-leading: 1.35;
+}
+.seiko-price {
+  --type-size: 1.62cqw;
+  --type-font: var(--font-reading);
+  --type-tracking: -0.025em;
+  --type-leading: 1.6;
+}
+.seiko-note {
+  --type-size: 1.08cqw;
+  --type-tracking: 0.015em;
+  --type-leading: 1.4;
+}
+.seiko-poem {
+  position: absolute;
+  left: 1.2%;
+  top: 69.1%;
+  width: 15.8%;
+}
+.seiko-poem > .type-body {
+  --type-size: 1.74cqw;
+  --type-leading: 1.83;
+  font-style: italic;
+}
+.seiko-smallprint {
+  margin-top: 5cqw !important;
+  --type-size: 1.03cqw;
+  --type-leading: 1.6;
+  --type-tracking: 0.05em;
+}
+.seiko-analog {
+  position: absolute;
+  top: 68.792%;
+  height: 27.554%;
+  object-fit: contain;
+}
+.seiko-diver {
+  left: 16.848%;
+  width: 25%;
+}
+.seiko-classic {
+  left: 42.392%;
+  width: 23.641%;
+}
+.seiko-model {
+  position: absolute;
+  top: 97.05%;
+  --type-size: 1.61cqw;
+  --type-font: var(--font-reading);
+  --type-tracking: -0.015em;
+}
+.seiko-model-diver {
+  left: 22.8%;
+}
+.seiko-model-classic {
+  left: 46.2%;
+}
+.seiko-copy {
+  position: absolute;
+  left: 67.5%;
+  top: 69.25%;
+  width: 29.2%;
+}
+.seiko-sport {
+  --type-size: 1.91cqw;
+  --type-tracking: -0.03em;
+  --type-leading: 1.15;
+}
+.seiko-series {
+  --type-size: 1.19cqw;
+  --type-tracking: 0.07em;
+  --type-leading: 1.9;
+  text-align: center;
+}
+.seiko-description {
+  margin-top: 0.55cqw !important;
+  --type-size: 1.41cqw;
+  --type-leading: 1.85;
+  --type-tracking: 0.035em;
+}
+.seiko-world {
+  margin-top: 1.1cqw !important;
+  --type-size: 2.66cqw;
+  --type-leading: 1.2;
+  white-space: nowrap;
+}
+.seiko-wordmark {
+  position: absolute;
+  top: 34.8cqw;
+  left: 0;
+  width: 100%;
+  transform: scaleX(1.15);
+  transform-origin: left center;
+  --type-size: 8.65cqw;
+  --type-font: var(--font-label);
+  --type-weight: var(--weight-black);
+  --type-leading: 1;
+  --type-tracking: -0.075em;
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-motion="on"] .seiko-sea:is(:hover, :focus-visible, :focus) .seiko-foam,
+  [data-motion="on"]
+    .seiko-sea:is(:hover, :focus-visible, :focus)
+    .seiko-lcd-glint,
+  [data-motion="on"]
+    .seiko-sea:is(:hover, :focus-visible, :focus)
+    .seiko-steel-glint {
+    animation: none;
+  }
+}
+
+.seiko-script {
+  --type-font: var(--font-reading);
+  --type-leading: 1.05;
+  --type-tracking: -0.075em;
+  font-style: italic;
+  border-bottom: var(--rule-fine) solid var(--color-silver);
+  --type-size: 6.7cqw;
+  white-space: nowrap;
+}
+.seiko-composition {
+  overflow: hidden;
+  background: var(--color-ocean);
+  isolation: isolate;
+  background-image: url("/graphics/seiko-ocean-field.webp");
+  background-size: 100% 100%;
+}

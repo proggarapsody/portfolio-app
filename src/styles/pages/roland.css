@@ -1,0 +1,181 @@
+.roland-page {
+  --page-ratio: 0.74315;
+  --roland-white: var(--color-ivory);
+  --roland-orange: var(--color-signal);
+  --roland-field: var(--color-forest);
+  --roland-duration: 1800ms;
+  --roland-display-weight: var(--weight-normal);
+  --roland-caption-weight: var(--weight-strong);
+  --roland-leading: 1;
+  --roland-brand-tracking: -0.065em;
+  --roland-caption-tracking: -0.045em;
+  background: var(--roland-field);
+}
+.roland-composition {
+  background: var(--roland-field);
+  color: var(--roland-white);
+}
+.roland-photo-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 6.507%;
+}
+.roland-studio {
+  position: absolute;
+  left: 0;
+  top: 6.507%;
+  width: 100%;
+  height: 86.473%;
+}
+.roland-photo-footer {
+  position: absolute;
+  left: 0;
+  top: 92.98%;
+  width: 100%;
+  height: 7.02%;
+}
+.roland-brand {
+  position: absolute;
+  right: 2.2%;
+  top: 0.8%;
+  display: flex;
+  align-items: center;
+  gap: 0.65cqw;
+  height: 5.7%;
+}
+.roland-symbol {
+  width: 11.2cqw;
+  height: 6.5cqw;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+.roland-wordmark {
+  --type-size: 8.05cqw;
+  --type-font: var(--font-label);
+  --type-weight: var(--roland-display-weight);
+  --type-leading: var(--roland-leading);
+  --type-tracking: var(--roland-brand-tracking);
+}
+.roland-catalogue {
+  position: absolute;
+  bottom: 0.8%;
+  right: 2.9%;
+  text-align: right;
+}
+.roland-volume {
+  --type-size: 2.5cqw;
+  --type-font: var(--font-label);
+  --type-weight: var(--weight-normal);
+  --type-leading: var(--roland-leading);
+  --type-tracking: var(--roland-caption-tracking);
+  margin-bottom: 0.7cqw;
+}
+.roland-category {
+  --type-size: 4.43cqw;
+  --type-font: var(--font-label);
+  --type-weight: var(--roland-caption-weight);
+  --type-leading: var(--roland-leading);
+  --type-tracking: var(--roland-caption-tracking);
+  color: var(--roland-orange);
+  white-space: nowrap;
+}
+.roland-studio-control {
+  position: absolute;
+  inset: 7% 0 7%;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background: var(--color-clear);
+}
+.roland-studio-control:focus-visible {
+  outline: 0.4cqw solid var(--roland-orange);
+  outline-offset: -0.8cqw;
+}
+.roland-reel-window {
+  position: absolute;
+  left: 11.982%;
+  top: 3.2%;
+  width: 20.507%;
+  height: 46.79%;
+  clip-path: ellipse(47% 49% at 50% 50%);
+  opacity: 0;
+}
+.roland-reel-perspective {
+  position: absolute;
+  inset: 0;
+  display: block;
+  transform: scaleX(0.3787);
+}
+.roland-reel-turn {
+  position: absolute;
+  width: 264.04%;
+  height: 100%;
+  left: -82.02%;
+  object-fit: fill;
+}
+.roland-panel-window {
+  position: absolute;
+  left: 49%;
+  top: 18%;
+  width: 35%;
+  height: 52%;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 17%, 100% 75%, 0 100%);
+}
+.roland-panel-light {
+  position: absolute;
+  left: -30%;
+  top: 29%;
+  width: 10%;
+  height: 1.5%;
+  opacity: 0;
+  background: var(--roland-orange);
+  box-shadow: 0 0 0.7cqw var(--roland-orange);
+}
+[data-motion="on"]
+  .roland-studio-control:is(:hover, :focus-visible, :focus, :active)
+  .roland-reel-window {
+  opacity: 1;
+}
+[data-motion="on"]
+  .roland-studio-control:is(:hover, :focus-visible, :focus, :active)
+  .roland-reel-turn {
+  animation: roland-reel-spin var(--roland-duration) linear infinite;
+}
+[data-motion="on"]
+  .roland-studio-control:is(:hover, :focus-visible, :focus, :active)
+  .roland-panel-light {
+  animation: roland-panel-travel var(--roland-duration) linear infinite;
+}
+@keyframes roland-reel-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes roland-panel-travel {
+  0% {
+    left: -15%;
+    top: 29%;
+    opacity: 0;
+  }
+  15%,
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    left: 110%;
+    top: 44%;
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .roland-reel-window {
+    opacity: 0 !important;
+  }
+  .roland-reel-turn,
+  .roland-panel-light {
+    animation: none !important;
+  }
+}

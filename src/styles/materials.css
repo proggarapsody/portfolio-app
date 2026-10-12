@@ -1,0 +1,196 @@
+/* Small text-free source paper samples; no textures cover photographic assets. */
+.reader-newsprint,
+.akira-composition {
+  background-image: url("/graphics/paper-newsprint.webp");
+}
+.reader-ivory,
+.canon-tele-composition {
+  background-image: url("/graphics/paper-ivory.webp");
+}
+.reader-warm,
+.sony-composition {
+  background-image: url("/graphics/paper-warm.webp");
+}
+.reader-butter,
+.canon-demi-composition {
+  background-image: url("/graphics/paper-butter.webp");
+}
+.reader-newsprint .full-page,
+.reader-ivory .full-page,
+.reader-warm .full-page,
+.reader-butter .full-page {
+  background: transparent;
+}
+
+.print-definitions {
+  position: absolute;
+  pointer-events: none;
+}
+.print-ink {
+  filter: url("#print-ink-edge");
+}
+
+/* Only live printed lettering receives ink. No parent/photo filters. */
+.composition,
+.printed-type {
+  --ink-display: url("#print-letterpress");
+  --ink-reading: url("#print-reading-ink");
+}
+.akira-composition,
+.type-study-poster .printed-type {
+  --ink-display: url("#print-ink-edge");
+}
+:is(.composition, .printed-type)
+  :is(.type-display, .type-title, .type-poster, .type-label, .type-number) {
+  filter: var(--ink-display);
+}
+:is(.composition, .printed-type) :is(.type-body, .type-micro) {
+  filter: var(--ink-reading);
+}
+:is(.composition, .printed-type)
+  :is(.type-display, .type-title, .type-poster, .type-label, .type-number)
+  > :is(
+    .type-display,
+    .type-title,
+    .type-poster,
+    .type-label,
+    .type-number,
+    .type-micro
+  ) {
+  filter: none;
+}
+
+.akira-banner {
+  --ink-display: url("#print-letterpress");
+}
+.akira-caption,
+.akira-report-title,
+.akira-footer-strip .type-label {
+  filter: var(--ink-reading);
+}
+
+/* Optical capture treats the entire composed print, including its media. */
+[data-surface="camera"] .composition {
+  filter: var(--camera-filter);
+}
+[data-surface="camera"] .composition::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+  background-image:
+    url("/effects/camera-grain.png"),
+    radial-gradient(
+      ellipse at 45% 42%,
+      var(--color-clear) 34%,
+      var(--camera-vignette) 100%
+    ),
+    linear-gradient(
+      112deg,
+      var(--camera-side-shadow),
+      var(--camera-exposure) 44%,
+      var(--color-clear) 75%
+    );
+  background-size:
+    var(--camera-grain-size) var(--camera-grain-size),
+    100% 100%,
+    100% 100%;
+}
+.reader-ocean {
+  --camera-vignette: var(--camera-cool-vignette);
+}
+.reader-forest {
+  --camera-vignette: var(--camera-green-vignette);
+}
+
+/* Film frames vary in grain, gate position and exposure; the page never turns. */
+[data-motion="on"][data-surface="camera"] .composition {
+  animation: camera-gate-weave 1.8s steps(1, end) infinite;
+}
+[data-motion="on"][data-surface="camera"] .composition::after {
+  animation:
+    camera-film-grain 640ms steps(1, end) infinite,
+    camera-exposure-breathe 7s ease-in-out infinite;
+}
+@keyframes camera-gate-weave {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  17% {
+    transform: translate(0.35px, -0.45px);
+  }
+  36% {
+    transform: translate(-0.5px, 0.25px);
+  }
+  58% {
+    transform: translate(0.25px, 0.55px);
+  }
+  81% {
+    transform: translate(-0.3px, -0.2px);
+  }
+}
+@keyframes camera-film-grain {
+  0%,
+  100% {
+    background-position:
+      0 0,
+      0 0,
+      0 0;
+  }
+  14% {
+    background-position:
+      47px -31px,
+      0 0,
+      0 0;
+  }
+  28% {
+    background-position:
+      -59px 73px,
+      0 0,
+      0 0;
+  }
+  42% {
+    background-position:
+      113px 17px,
+      0 0,
+      0 0;
+  }
+  57% {
+    background-position:
+      -83px -97px,
+      0 0,
+      0 0;
+  }
+  71% {
+    background-position:
+      29px 131px,
+      0 0,
+      0 0;
+  }
+  85% {
+    background-position:
+      -137px 53px,
+      0 0,
+      0 0;
+  }
+}
+@keyframes camera-exposure-breathe {
+  0%,
+  100% {
+    opacity: 0.92;
+  }
+  37% {
+    opacity: 1;
+  }
+  73% {
+    opacity: 0.96;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-motion="on"][data-surface="camera"] .composition,
+  [data-motion="on"][data-surface="camera"] .composition::after {
+    animation: none;
+  }
+}

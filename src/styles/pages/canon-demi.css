@@ -1,0 +1,183 @@
+.canon-demi-page {
+  --page-ratio: 0.70028;
+  background: var(--color-butter);
+}
+.canon-demi-composition {
+  position: relative;
+  container-type: inline-size;
+  aspect-ratio: var(--page-ratio);
+  overflow: hidden;
+  background: var(--color-butter);
+  color: var(--color-black);
+}
+.canon-demi-frame {
+  position: absolute;
+  left: 4.35%;
+  top: 2.76%;
+  width: 93.34%;
+  height: 73.36%;
+  border: 0.27cqw solid var(--color-ink);
+  border-radius: 13.5cqw;
+  z-index: 2;
+  pointer-events: none;
+}
+.canon-demi-eyes {
+  position: absolute;
+  left: 4.62%;
+  top: 2.85%;
+  width: 92.94%;
+  height: 36.92%;
+  object-fit: cover;
+  border-radius: 13.5cqw 13.5cqw 0 0;
+}
+.canon-demi-camera {
+  position: absolute;
+  left: 4.62%;
+  top: 39.96%;
+  width: 74.73%;
+  height: 36.06%;
+  object-fit: contain;
+}
+.canon-demi-headline {
+  position: absolute;
+  left: 82.1%;
+  top: 42.1%;
+  height: 28.5%;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  --type-font: var(--font-reading);
+  --type-size: 3.75cqw;
+  --type-weight: var(--weight-strong);
+  --type-leading: 1.05;
+  --type-tracking: -0.055em;
+}
+.canon-demi-footer {
+  position: absolute;
+  left: 5.1%;
+  right: 2.25%;
+  top: 79.1%;
+  height: 18.6%;
+}
+.canon-demi-maker {
+  position: absolute;
+  left: 0;
+  top: 0.6%;
+  height: 100%;
+  width: 14.6%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.canon-demi-maker p {
+  writing-mode: vertical-rl;
+  --type-size: 1.23cqw;
+  --type-leading: 1.1;
+  --type-tracking: 0.06em;
+}
+.canon-demi-maker .type-label {
+  --type-size: 1.45cqw;
+  --type-weight: var(--weight-strong);
+}
+.canon-demi-brand {
+  position: absolute;
+  left: 15.8%;
+  top: 0;
+  width: 29%;
+}
+.canon-demi-canon {
+  --type-font: var(--font-reading);
+  --type-size: 8.25cqw;
+  --type-weight: var(--weight-heavy);
+  --type-leading: 0.82;
+  --type-tracking: -0.075em;
+  border-bottom: 0.28cqw solid var(--color-black);
+  padding-bottom: 0.9cqw;
+}
+.canon-demi-price {
+  --type-font: var(--font-label);
+  --type-size: 2.7cqw;
+  --type-weight: var(--weight-heavy);
+  --type-leading: 1.15;
+  --type-tracking: -0.025em;
+  white-space: nowrap;
+}
+.canon-demi-accessories {
+  --type-size: 1.18cqw;
+  --type-weight: var(--weight-strong);
+  --type-tracking: -0.015em;
+  white-space: nowrap;
+  margin-top: 0.8cqw;
+}
+.canon-demi-columns {
+  position: absolute;
+  left: 45%;
+  right: 0;
+  top: 0.4%;
+  height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  gap: 0.55cqw;
+}
+.canon-demi-columns p {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  height: 100%;
+  --type-font: var(--font-reading);
+  --type-size: 1.46cqw;
+  --type-leading: 1.18;
+  --type-tracking: -0.025em;
+}
+.canon-demi-lens {
+  position: absolute;
+  left: 44.4%;
+  top: 55.6%;
+  width: 12.6%;
+  aspect-ratio: 1;
+  border: 0;
+  padding: 0;
+  background: var(--color-clear);
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 3;
+}
+.canon-demi-lens:focus-visible {
+  outline: var(--rule-focus) solid var(--color-accent);
+  outline-offset: var(--space-1);
+}
+.canon-demi-iris {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 0 solid var(--color-black);
+}
+[data-motion="on"]
+  .canon-demi-lens:is(:hover, :focus-visible, :focus)
+  .canon-demi-iris {
+  animation: canon-demi-iris 700ms var(--ease-paper);
+}
+@keyframes canon-demi-iris {
+  0%,
+  100% {
+    border-width: 0;
+  }
+  45% {
+    border-width: 5.5cqw;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .canon-demi-iris {
+    animation: none !important;
+  }
+}
+
+.canon-demi-name {
+  --type-font: var(--font-label);
+  --type-size: 10.1cqw;
+  --type-weight: var(--weight-heavy);
+  --type-leading: 1.1;
+  transform-origin: left center;
+  --type-stretch: var(--width-narrow);
+  transform: none;
+  --type-tracking: -0.05em;
+}

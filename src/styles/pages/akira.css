@@ -1,0 +1,377 @@
+.akira-page {
+  background: var(--color-newsprint);
+  color: var(--color-black);
+}
+
+.akira-composition .type-display,
+.akira-composition .type-label,
+.akira-composition .type-title,
+.akira-composition .type-number {
+  --type-font: var(--font-label);
+  --type-weight: var(--weight-heavy);
+  --type-tracking: -0.055em;
+  --type-leading: 0.92;
+}
+
+.akira-banner-detail {
+  width: 42%;
+  display: grid;
+  gap: var(--space-1);
+}
+
+.akira-banner-detail .type-label {
+  --type-size: 2.45cqw;
+}
+
+.akira-banner-detail .type-title {
+  --type-size: 5.55cqw;
+}
+
+.akira-crater-window {
+  position: relative;
+  aspect-ratio: 461 / 335;
+  overflow: hidden;
+  background: var(--color-newsprint);
+}
+
+.akira-crater {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+}
+
+.akira-caption {
+  --type-size: 1.06cqw;
+  --type-tracking: 0;
+  --type-leading: 1.15;
+  display: block;
+  padding-top: 0.8%;
+}
+
+.akira-illustration:focus-visible {
+  outline: var(--rule-focus) solid var(--color-accent);
+  outline-offset: var(--space-1);
+}
+
+.akira-shock-ring {
+  position: absolute;
+  left: 34%;
+  top: 30%;
+  width: 32%;
+  height: 44%;
+  border: var(--rule-focus) solid var(--color-newsprint);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+[data-motion="on"]
+  .akira-illustration:is(:hover, :focus-visible, :focus)
+  .akira-crater {
+  animation: akira-seismic 850ms linear 2;
+}
+
+[data-motion="on"]
+  .akira-illustration:is(:hover, :focus-visible, :focus)
+  .akira-shock-ring {
+  animation: akira-shock 1700ms var(--ease-paper) 1;
+}
+
+@keyframes akira-seismic {
+  0%,
+  100% {
+    transform: none;
+  }
+  15%,
+  55% {
+    transform: translate(0.3%, -0.5%) rotate(0.12deg);
+  }
+  30%,
+  70% {
+    transform: translate(-0.3%, 0.4%) rotate(-0.12deg);
+  }
+  45%,
+  85% {
+    transform: translate(0.2%, 0.2%);
+  }
+}
+
+@keyframes akira-shock {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  18% {
+    opacity: 0.55;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.8);
+  }
+}
+
+.akira-dispatch {
+  position: absolute;
+  top: 22.9%;
+  left: 68.6%;
+  width: 15.1%;
+  height: 50.8%;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: var(--space-1);
+  overflow: hidden;
+}
+
+.akira-dispatch-title {
+  --type-size: 4.5cqw;
+  --type-leading: 1;
+  margin: 0;
+  writing-mode: vertical-rl;
+}
+
+.akira-dispatch-copy {
+  --type-size: 1.52cqw;
+  --type-leading: 1.21;
+  margin: 0;
+  text-align: justify;
+}
+
+.akira-rail {
+  position: absolute;
+  top: 0.8%;
+  right: 0.8%;
+  width: 11.8%;
+  height: 72.5%;
+  border-left: var(--rule-fine) solid var(--color-ink);
+}
+
+.akira-rail-label {
+  --type-size: 1.25cqw;
+  --type-tracking: 0.1em;
+  position: absolute;
+  bottom: 0;
+  left: 42%;
+  writing-mode: vertical-rl;
+}
+
+.akira-book-title {
+  position: absolute;
+  left: 1.2%;
+  top: 1%;
+  width: 65%;
+  height: 79%;
+}
+
+.akira-release {
+  position: absolute;
+  top: 5%;
+  right: 1.2%;
+  width: 31%;
+  height: 75%;
+  border-left: var(--rule-fine) solid var(--color-ink);
+  padding-left: 1.4%;
+}
+
+.akira-footer-strip {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 16%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 1.5%;
+  background: var(--color-black);
+  color: var(--color-newsprint);
+}
+
+.akira-footer-strip .type-label {
+  --type-size: 1.9cqw;
+  --type-tracking: 0;
+}
+
+/* Refined against the original's measured page coordinates. */
+.akira-composition {
+  --page-ratio: 0.699;
+  background: var(--color-newsprint);
+  position: relative;
+  border: 0;
+}
+.akira-composition::before {
+  content: "";
+  position: absolute;
+  inset: 1.33% 1.63% 0.85% 2.17%;
+  border: var(--rule-fine) solid var(--color-ink);
+  pointer-events: none;
+}
+.akira-banner {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  background: var(--color-black);
+  color: var(--color-newsprint);
+  padding: 1.1%;
+  left: 3.8%;
+  top: 2.56%;
+  width: 79.2%;
+  height: 12.06%;
+}
+.akira-subhead {
+  --type-size: 3.35cqw;
+  --type-tracking: -0.04em;
+  position: absolute;
+  margin: 0;
+  text-align: center;
+  border-block: var(--rule-fine) solid var(--color-ink);
+  padding-block: 0.5%;
+  left: 3.8%;
+  top: 15.5%;
+  width: 79.2%;
+}
+.akira-illustration {
+  position: absolute;
+  margin: 0;
+  left: 3.53%;
+  top: 20.89%;
+  width: 62.64%;
+}
+.akira-reports {
+  position: absolute;
+  top: 55%;
+  height: 20.6%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2%;
+  overflow: hidden;
+  left: 3.53%;
+  width: 62.64%;
+}
+.akira-footer {
+  position: absolute;
+  top: 77.2%;
+  height: 22%;
+  border: calc(var(--rule-fine) * 3) double var(--color-ink);
+  left: 2.58%;
+  width: 95.38%;
+}
+.akira-author {
+  --type-tracking: 0.12em;
+  position: absolute;
+  left: 1%;
+  bottom: 0;
+  --type-size: 3cqw;
+}
+.akira-volume {
+  --type-size: 15.7cqw;
+  --type-leading: 0.85;
+  position: absolute;
+  top: 14%;
+  border-radius: 50%;
+  background: var(--color-black);
+  color: var(--color-newsprint);
+  width: 25%;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  right: 1.8%;
+}
+.akira-extra {
+  position: absolute;
+  left: 13%;
+  margin: 0;
+  writing-mode: vertical-rl;
+  top: 44%;
+  text-orientation: upright;
+  --type-size: 9cqw;
+  --type-tracking: -0.1em;
+}
+.akira-reports article {
+  overflow: hidden;
+  border-top: var(--rule-fine) solid var(--color-ink);
+  padding-top: 3%;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 3%;
+}
+.akira-report-title {
+  --type-leading: 1.05;
+  --type-tracking: 0;
+  writing-mode: vertical-rl;
+  --type-size: 1.6cqw;
+  margin: 0;
+}
+.akira-report-copy {
+  margin: 0;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  height: 100%;
+  width: 100%;
+  text-align: start;
+  --type-size: 1.4cqw;
+  --type-leading: 1.25;
+}
+.akira-headline {
+  width: 58%;
+  margin: 0;
+  --type-stretch: var(--width-narrow);
+  --type-font: var(--font-label);
+  --type-weight: var(--weight-heavy);
+  --type-size: 11.2cqw;
+  --type-tracking: 0.005em;
+}
+.akira-masthead {
+  position: absolute;
+  margin: 0;
+  border: calc(var(--rule-fine) * 3) double var(--color-ink);
+  left: -9%;
+  top: 1.4%;
+  width: 91%;
+  height: 33%;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  writing-mode: vertical-rl;
+  white-space: nowrap;
+  --type-size: 5.2cqw;
+  padding: 5% 16%;
+}
+
+.akira-logo {
+  --type-leading: 0.86;
+  display: inline-block;
+  transform-origin: left top;
+  transform: none;
+  --type-stretch: var(--width-compressed);
+  --type-weight: var(--weight-poster);
+  --type-tracking: -0.025em;
+  --type-size: 22cqw;
+}
+.akira-release-date {
+  --type-size: 5.1cqw;
+  border-bottom: var(--rule-fine) solid var(--color-ink);
+  padding-bottom: 4%;
+  display: flex;
+  align-items: baseline;
+  gap: 2%;
+}
+.akira-release-date .type-poster {
+  --type-size: 9.4cqw;
+  --type-leading: 1;
+  --type-tracking: -0.035em;
+}
+.akira-release-date .type-label {
+  --type-size: 3.1cqw;
+  --type-leading: 1;
+  --type-tracking: -0.035em;
+}
+.akira-release-copy {
+  display: block;
+  padding-top: 4%;
+  --type-size: 5.1cqw;
+  --type-leading: 1.1;
+  --type-tracking: -0.07em;
+}

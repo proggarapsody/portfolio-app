@@ -1,0 +1,280 @@
+.sony-page {
+  --page-ratio: 0.67338;
+  background: var(--color-warm);
+  color: var(--color-ink);
+}
+.sony-composition {
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--color-warm);
+}
+.sony-composition p,
+.sony-composition h2 {
+  margin: 0;
+}
+.sony-masthead {
+  position: absolute;
+  left: 4.35%;
+  top: 2.7%;
+}
+.sony-tagline {
+  --type-size: 1.2cqw;
+  --type-font: var(--font-reading);
+  --type-tracking: var(--tracking-micro);
+  --type-leading: var(--leading-label);
+}
+.sony-wordmark {
+  --type-size: 11.05cqw;
+  --type-weight: var(--weight-strong);
+  --type-leading: 0.94;
+  --type-tracking: 0.02em;
+  transform: scaleY(0.75);
+  transform-origin: left top;
+}
+.sony-registered {
+  --type-size: 2.1cqw;
+  --type-tracking: normal;
+}
+.sony-headline {
+  position: absolute;
+  top: 13.15%;
+  left: 15.3%;
+  width: 72.2%;
+  z-index: 2;
+}
+.sony-heading-line {
+  display: block;
+  --type-size: 4.65cqw;
+  --type-leading: 1.5;
+  --type-tracking: -0.05em;
+  white-space: nowrap;
+}
+.sony-hunting {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.sony-hunting::after {
+  content: "";
+  flex: 1;
+  border-top: var(--rule-focus) solid var(--color-ink);
+}
+.sony-play {
+  --type-size: 4.25cqw;
+  font-style: italic;
+}
+.sony-subject {
+  position: absolute;
+  left: 17.3913%;
+  top: 27.0814%;
+  width: 60.5978%;
+  height: 72.9186%;
+  padding: 0;
+  border: 0;
+  background: var(--color-clear);
+  cursor: pointer;
+  z-index: 1;
+}
+.sony-subject img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.sony-subject:focus-visible {
+  outline: var(--rule-focus) solid var(--color-accent);
+  outline-offset: var(--space-1);
+}
+.sony-speaker-pulse {
+  position: absolute;
+  left: 60.6%;
+  top: 25.7%;
+  width: 20.6%;
+  aspect-ratio: 1;
+  border: var(--rule-focus) solid var(--color-ink);
+  border-radius: 50%;
+  transform: rotate(-38deg);
+  opacity: 0;
+  pointer-events: none;
+}
+.sony-tape-motion {
+  position: absolute;
+  left: 35%;
+  top: 17.1%;
+  width: 11.8%;
+  height: 16%;
+  background: repeating-linear-gradient(
+    130deg,
+    var(--color-clear) 0 14%,
+    var(--color-silver) 15% 17%,
+    var(--color-clear) 18% 31%
+  );
+  background-size: 200% 200%;
+  clip-path: polygon(0 54%, 76% 0, 100% 30%, 22% 100%);
+  opacity: 0;
+  pointer-events: none;
+}
+[data-motion="on"]
+  .sony-subject:is(:hover, :focus-visible, :focus)
+  .sony-speaker-pulse {
+  animation: sony-speaker var(--duration-page) ease-out infinite;
+}
+[data-motion="on"]
+  .sony-subject:is(:hover, :focus-visible, :focus)
+  .sony-tape-motion {
+  animation: sony-tape calc(var(--duration-page) * 2) linear infinite;
+}
+@keyframes sony-speaker {
+  0% {
+    opacity: 0.6;
+    box-shadow: 0 0 0 0 var(--color-ink);
+  }
+  100% {
+    opacity: 0;
+    box-shadow: 0 0 0 var(--space-4) var(--color-clear);
+  }
+}
+@keyframes sony-tape {
+  0% {
+    opacity: 0.12;
+    background-position: 0 0;
+  }
+  50% {
+    opacity: 0.38;
+  }
+  100% {
+    opacity: 0.12;
+    background-position: var(--space-8) var(--space-8);
+  }
+}
+.sony-release {
+  position: absolute;
+  left: 75.35%;
+  top: 48.7%;
+  --type-size: 3.4cqw;
+  --type-leading: var(--leading-title);
+  --type-tracking: -0.045em;
+  z-index: 2;
+}
+.sony-copy {
+  position: absolute;
+  top: 78.1%;
+  width: 26.4%;
+  z-index: 2;
+}
+.sony-copy-left {
+  left: 3.55%;
+}
+.sony-copy-middle {
+  left: 34.45%;
+}
+.sony-copy .type-body {
+  --type-size: 1.5cqw;
+  --type-leading: 1.86;
+  --type-tracking: 0.025em;
+}
+.sony-features {
+  --type-size: 1.16cqw;
+  --type-font: var(--font-reading);
+  --type-leading: 1.8;
+  --type-tracking: normal;
+}
+.sony-product {
+  position: absolute;
+  left: 64.4%;
+  top: 78.25%;
+  width: 28.9%;
+  height: 13.75%;
+  box-sizing: border-box;
+  border: var(--rule-fine) solid var(--color-muted);
+  padding: 0 var(--space-1);
+  z-index: 2;
+}
+.sony-product-box {
+  padding: 0;
+}
+.sony-product-brand {
+  --type-size: 4.45cqw;
+  --type-weight: var(--weight-strong);
+  --type-leading: 0.85;
+  --type-tracking: 0.01em;
+}
+.sony-product-registered {
+  --type-size: 0.85cqw;
+  --type-tracking: normal;
+}
+.sony-product-kind {
+  --type-size: 1.2cqw;
+  --type-weight: var(--weight-strong);
+  --type-leading: 1.2;
+  --type-tracking: -0.02em;
+  font-style: italic;
+}
+.sony-product-name {
+  --type-size: 2.46cqw;
+  --type-weight: var(--weight-strong);
+  --type-leading: 1.18;
+  --type-tracking: -0.05em;
+  font-style: italic;
+}
+.sony-memo {
+  --type-font: var(--font-label);
+  --type-size: 6.1cqw;
+  --type-weight: var(--weight-strong);
+  --type-leading: 1.07;
+  --type-tracking: -0.09em;
+  text-align: center;
+  font-style: italic;
+}
+.sony-price {
+  --type-font: var(--font-reading);
+  --type-size: 2.65cqw;
+  --type-weight: var(--weight-strong);
+  --type-leading: 1.2;
+  --type-tracking: -0.02em;
+  text-align: right;
+}
+.sony-accessories {
+  --type-font: var(--font-reading);
+  --type-size: 0.85cqw;
+  --type-leading: 1.45;
+  --type-tracking: normal;
+  white-space: nowrap;
+}
+.sony-footer {
+  position: absolute;
+  left: 3.55%;
+  top: 92.2%;
+  width: 89%;
+  display: flex;
+  align-items: end;
+  gap: var(--space-2);
+  z-index: 2;
+}
+.sony-service-mark {
+  padding: var(--space-1);
+  background: var(--color-ink);
+  color: var(--color-warm);
+  --type-size: 1.1cqw;
+  --type-font: var(--font-reading);
+  --type-leading: 1;
+  --type-tracking: normal;
+}
+.sony-service-copy .type-micro {
+  --type-font: var(--font-reading);
+  --type-size: 0.95cqw;
+  --type-leading: 1.5;
+  --type-tracking: 0.02em;
+}
+.sony-service-copy .type-micro:first-child {
+  --type-weight: var(--weight-strong);
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-motion="on"]
+    .sony-subject:is(:hover, :focus-visible, :focus)
+    .sony-speaker-pulse,
+  [data-motion="on"]
+    .sony-subject:is(:hover, :focus-visible, :focus)
+    .sony-tape-motion {
+    animation: none;
+  }
+}

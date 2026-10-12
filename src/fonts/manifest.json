@@ -1,0 +1,46 @@
+{
+  "downloaded": "2026-10-12",
+  "provider": "Google Fonts Latin variable subsets",
+  "fonts": [
+    {
+      "family": "Archivo",
+      "style": "italic",
+      "file": "archivo-italic.woff2",
+      "source": "https://fonts.gstatic.com/s/archivo/v25/k3kSo8UDI-1M0wlSfdzYLGHEA6CF8Q.woff2",
+      "bytes": 101888,
+      "sha256": "d2a3a083e983d78b2e2fd848a990200b34fcb1392ed11f695096b7535ef74d88"
+    },
+    {
+      "family": "Archivo",
+      "style": "normal",
+      "file": "archivo-normal.woff2",
+      "source": "https://fonts.gstatic.com/s/archivo/v25/k3kQo8UDI-1M0wlSfdnoLmvDIaI.woff2",
+      "bytes": 90096,
+      "sha256": "4c98b9d490d1698ec95f2ff17a6c7d0e72691864c0c5d7bc2a2c161b45afe5ad"
+    },
+    {
+      "family": "Source Serif 4",
+      "style": "italic",
+      "file": "source-serif-4-italic.woff2",
+      "source": "https://fonts.gstatic.com/s/sourceserif4/v15/vEFK2_tTDB4M7-auWDN0ahZJW1gewtW_WpzEpMs.woff2",
+      "bytes": 129940,
+      "sha256": "011e0ca2bd14c5dff94aa4c61121b8d057b95dbdbb2af621b175fed1059cfd5e"
+    },
+    {
+      "family": "Source Serif 4",
+      "style": "normal",
+      "file": "source-serif-4-normal.woff2",
+      "source": "https://fonts.gstatic.com/s/sourceserif4/v15/vEFI2_tTDB4M7-auWDN0ahZJW1gb8te1Xb7G.woff2",
+      "bytes": 122168,
+      "sha256": "2a24bad466f09b88b8e9cbc488bf774117c912e66374c57bf4716855849143f8"
+    },
+    {
+      "family": "Anton",
+      "style": "normal",
+      "file": "anton-normal.woff2",
+      "source": "https://fonts.gstatic.com/s/anton/v27/1Ptgg87LROyAm3Kz-C8CSKlv.woff2",
+      "bytes": 12004,
+      "sha256": "23aab0b2692a0c89eb7997d3c7cf5bda41276d6cd4ab6cc0edc3edfcece32b09"
+    }
+  ]
+}

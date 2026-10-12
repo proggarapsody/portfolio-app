@@ -1,0 +1,192 @@
+.canon-tele-page {
+  --page-ratio: 0.7023;
+  --canon-tele-red: var(--color-accent);
+  background: var(--color-ivory);
+}
+.canon-tele-composition {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-ivory);
+  color: var(--color-ink);
+}
+.canon-tele-composition p,
+.canon-tele-composition h1 {
+  margin: 0;
+}
+.canon-tele-brand {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.canon-tele-kicker {
+  position: absolute;
+  top: 2.6%;
+  left: 7.9%;
+  --type-font: var(--font-label);
+  --type-weight: var(--weight-heavy);
+  --type-size: 2.45cqw;
+  --type-leading: 1;
+  --type-tracking: -0.035em;
+}
+.canon-tele-canon {
+  position: absolute;
+  top: 5.4%;
+  left: 4%;
+  --type-font: var(--font-reading);
+  --type-weight: var(--weight-heavy);
+  --type-size: 4.8cqw;
+  --type-leading: 0.85;
+  --type-tracking: -0.075em;
+}
+.canon-tele-autoboy {
+  position: absolute;
+  top: 8%;
+  left: 4%;
+  --type-font: var(--font-label);
+  --type-weight: var(--weight-heavy);
+  --type-size: 4.8cqw;
+  --type-leading: 0.95;
+  --type-tracking: -0.075em;
+}
+.canon-tele-wordmark-sub {
+  position: absolute;
+  top: 11.4%;
+  left: 4%;
+  width: 18%;
+  background: var(--color-ink);
+  color: var(--color-ivory);
+  text-align: center;
+  --type-font: var(--font-label);
+  --type-weight: var(--weight-bold);
+  --type-size: 1.18cqw;
+  --type-leading: 1.15;
+  --type-tracking: 0.01em;
+}
+.canon-tele-model {
+  position: absolute;
+  top: 5.2%;
+  left: 22.5%;
+  font-style: italic;
+  transform: scaleX(0.84);
+  transform-origin: left top;
+  --type-font: var(--font-label);
+  --type-weight: var(--weight-heavy);
+  --type-size: 12.1cqw;
+  --type-leading: 0.9;
+  --type-tracking: -0.08em;
+}
+.canon-tele-portrait {
+  position: absolute;
+  left: 6.52%;
+  top: 12.98%;
+  width: 78.48%;
+  height: 87.02%;
+  object-fit: contain;
+  pointer-events: none;
+}
+.canon-tele-sidecopy {
+  position: absolute;
+  top: 2.8%;
+  right: 14.3%;
+  height: 52%;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  --type-font: var(--font-label);
+  --type-weight: var(--weight-heavy);
+  --type-size: 3.35cqw;
+  --type-leading: 1;
+  --type-tracking: -0.025em;
+}
+.canon-tele-product {
+  position: absolute;
+  inset: 79.5% auto 3.7% 3.8%;
+  width: 37%;
+}
+.canon-tele-tagline {
+  color: var(--canon-tele-red);
+  white-space: nowrap;
+  --type-font: var(--font-label);
+  --type-weight: var(--weight-heavy);
+  --type-size: 2.6cqw;
+  --type-leading: 1.15;
+  --type-tracking: -0.045em;
+}
+.canon-tele-price {
+  display: block;
+  margin-top: 0.5cqw !important;
+  white-space: nowrap;
+  color: var(--canon-tele-red);
+  --type-font: var(--font-label);
+  --type-weight: var(--weight-heavy);
+  --type-size: 1.52cqw;
+  --type-leading: 1;
+  --type-tracking: -0.03em;
+}
+.canon-tele-shutter {
+  position: absolute;
+  left: 31.9%;
+  top: 46.6%;
+  width: 9.6%;
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-clear);
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+.canon-tele-shutter:focus-visible {
+  outline: 0.45cqw solid var(--canon-tele-red);
+  outline-offset: 0.7cqw;
+}
+.canon-tele-lens-sweep {
+  position: absolute;
+  inset: -25%;
+  opacity: 0;
+  background: linear-gradient(
+    115deg,
+    var(--color-clear) 36%,
+    var(--color-white) 48%,
+    var(--color-clear) 59%
+  );
+  transform: translateX(-120%);
+}
+[data-motion="on"]
+  .canon-tele-shutter:is(:hover, :focus-visible, :focus)
+  .canon-tele-lens-sweep {
+  animation: canon-tele-exposure 700ms ease-out;
+}
+@keyframes canon-tele-exposure {
+  0% {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+}
+
+.canon-tele-headline {
+  position: absolute;
+  right: 3.3%;
+  top: 2.6%;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  --type-font: var(--font-label);
+  --type-weight: var(--weight-heavy);
+  --type-leading: 1;
+  --type-tracking: -0.12em;
+  --type-size: 7.4cqw;
+}
+
+.canon-tele-product-camera {
+  display: block;
+  width: 84%;
+  margin-top: 1.1cqw;
+  height: auto;
+}

@@ -1,0 +1,178 @@
+/* All live type, spacing, palette and material roles originate here. */
+:root {
+  color-scheme: light;
+  --color-paper: #f1eee6;
+  --color-sheet: #f8f5ed;
+  --color-ink: #26251f;
+  --color-muted: #68675e;
+  --color-rule: #c8c3b7;
+  --color-accent: #93432d;
+  --color-selection: #e4c9a4;
+  --color-binding-shadow: #17171132;
+  --color-shadow: #30271828;
+  --color-clear: #ffffff00;
+  --color-white: #fff;
+  --color-black: #080b0b;
+  --color-newsprint: #e8d8d7;
+  --color-ivory: #f3efed;
+  --color-ocean: #123e78;
+  --color-forest: #0c1b04;
+  --color-warm: #ebcbb2;
+  --color-butter: #ede3c5;
+  --color-silver: #c5e4ed;
+  --color-signal: #d96d35;
+  --color-controls: #171714d9;
+  --poster-backdrop-blur: 80px;
+  --poster-backdrop-scale: 1.16;
+  --camera-vignette: #26170f66;
+  --camera-exposure: #fff1d126;
+  --camera-side-shadow: #2a1b141a;
+  --camera-cool-vignette: #000b256b;
+  --camera-green-vignette: #010d0273;
+  --camera-grain-size: 256px;
+  --camera-filter: url("#print-camera-surface");
+  --font-reading: var(--font-source-serif), Georgia, "Times New Roman", serif;
+  --font-poster: var(--font-anton), "Arial Narrow", "Arial", sans-serif;
+  --weight-poster: 400;
+  --font-label: var(--font-archivo), "Arial", "Helvetica", sans-serif;
+  --width-compressed: 62%;
+  --width-narrow: 78%;
+  --width-normal: 100%;
+  --width-wide: 112%;
+  --text-display: clamp(1.7rem, 3vw, 2.7rem);
+  --text-title: 1.5rem;
+  --text-body: 0.9375rem;
+  --text-label: 0.6875rem;
+  --text-micro: 0.625rem;
+  --text-number: 0.8125rem;
+  --text-specimen-title: clamp(3rem, 7vw, 6rem);
+  --text-specimen-poster: clamp(3.5rem, 12vw, 9rem);
+  --text-specimen-heading: clamp(2.5rem, 6vw, 5.5rem);
+  --text-specimen-italic: clamp(1.5rem, 3vw, 2.5rem);
+  --text-specimen-body: 1.125rem;
+  --text-specimen-technical: clamp(1.3rem, 3vw, 2.4rem);
+  --text-specimen-figures: clamp(1rem, 2.5vw, 1.8rem);
+  --weight-normal: 400;
+  --weight-strong: 600;
+  --weight-bold: 700;
+  --weight-black: 800;
+  --weight-heavy: 900;
+  --leading-display: 1.1;
+  --leading-title: 1.25;
+  --leading-reading: 1.65;
+  --leading-label: 1.4;
+  --tracking-display: -0.045em;
+  --tracking-label: 0.12em;
+  --tracking-micro: 0.08em;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --rule-fine: 1px;
+  --rule-focus: 2px;
+  --duration-page: 700ms;
+  --ease-paper: cubic-bezier(0.16, 1, 0.3, 1);
+}
+.type-display {
+  font: var(--type-weight, var(--weight-normal))
+    var(--type-size, var(--text-display))/var(
+      --type-leading,
+      var(--leading-display)
+    )
+    var(--type-font, var(--font-reading));
+  letter-spacing: var(--type-tracking, var(--tracking-display));
+}
+.type-title {
+  font: var(--type-weight, var(--weight-normal))
+    var(--type-size, var(--text-title))/var(
+      --type-leading,
+      var(--leading-title)
+    )
+    var(--type-font, var(--font-reading));
+  letter-spacing: var(--type-tracking, var(--tracking-display));
+}
+.type-body {
+  font: var(--type-weight, var(--weight-normal))
+    var(--type-size, var(--text-body))/var(
+      --type-leading,
+      var(--leading-reading)
+    )
+    var(--type-font, var(--font-reading));
+  letter-spacing: var(--type-tracking, normal);
+}
+.type-label {
+  font: var(--type-weight, var(--weight-strong))
+    var(--type-size, var(--text-label))/var(
+      --type-leading,
+      var(--leading-label)
+    )
+    var(--type-font, var(--font-label));
+  letter-spacing: var(--type-tracking, var(--tracking-label));
+}
+.type-micro {
+  font: var(--type-weight, var(--weight-normal))
+    var(--type-size, var(--text-micro))/var(
+      --type-leading,
+      var(--leading-label)
+    )
+    var(--type-font, var(--font-label));
+  letter-spacing: var(--type-tracking, var(--tracking-micro));
+}
+.type-number {
+  font: var(--type-weight, var(--weight-normal))
+    var(--type-size, var(--text-number))/var(
+      --type-leading,
+      var(--leading-label)
+    )
+    var(--type-font, var(--font-label));
+  letter-spacing: var(--type-tracking, var(--tracking-label));
+}
+.tone-newsprint {
+  --plate-paper: var(--color-newsprint);
+  --effect-ink: var(--color-ink);
+}
+.tone-ivory {
+  --plate-paper: var(--color-ivory);
+  --effect-ink: var(--color-black);
+}
+.tone-ocean {
+  --plate-paper: var(--color-ocean);
+  --effect-ink: var(--color-silver);
+}
+.tone-forest {
+  --plate-paper: var(--color-forest);
+  --effect-ink: var(--color-signal);
+}
+.tone-warm {
+  --plate-paper: var(--color-warm);
+  --effect-ink: var(--color-ink);
+}
+.tone-butter {
+  --plate-paper: var(--color-butter);
+  --effect-ink: var(--color-black);
+}
+
+.type-display,
+.type-title,
+.type-body,
+.type-label,
+.type-micro,
+.type-number,
+.type-poster {
+  font-stretch: var(--type-stretch, var(--width-normal));
+  font-optical-sizing: auto;
+}
+.type-poster {
+  font-family: var(--font-poster);
+  font-size: var(--type-size, var(--text-display));
+  font-weight: var(--type-weight, var(--weight-poster));
+  line-height: var(--type-leading, var(--leading-display));
+  letter-spacing: var(--type-tracking, var(--tracking-display));
+  font-stretch: var(--width-normal);
+}

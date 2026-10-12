@@ -14,7 +14,7 @@ The deeper research includes [120 existing skill entrypoints](docs/research/CATA
 
 ## Current state
 
-The Next.js application is scaffolded with a neutral development page. Journal routes, approved content, content schemas/cross-reference validation, and publishing remain future work. The scaffold has `noindex, nofollow` metadata. There is no deployment or configured automation.
+The Next.js application now includes [Paper studies](docs/PAPERBOOK.md), six full-screen HTML compositions rebuilt from the owner-supplied references. It has shared design tokens, English reading notes, subject-specific hover/focus/touch effects, and reduced-motion support. Journal routes, approved owner content, content schemas/cross-reference validation, and publishing remain future work. The scaffold has `noindex, nofollow` metadata. There is no deployment or configured automation.
 
 ## Development
 
@@ -25,7 +25,7 @@ npm ci
 npm run dev
 ```
 
-Open http://localhost:3000. The App Router lives in `src/app`; `@/*` resolves to `src/*`. Server Components are the default. Styling uses plain CSS, with no committed art-direction or font selection yet.
+Open http://localhost:3000. The App Router lives in `src/app`; `@/*` resolves to `src/*`. Server Components are the default. Styling uses plain CSS with shared typography, spacing, palette and print-effect tokens for the reference book. The locally served [type system](docs/TYPOGRAPHY.md) uses Source Serif 4, Archivo and Anton; inspect its live specimen at `/typography`.
 
 | Command                | Purpose                                              |
 | ---------------------- | ---------------------------------------------------- |
@@ -39,14 +39,14 @@ Open http://localhost:3000. The App Router lives in `src/app`; `@/*` resolves to
 | `npm run check`        | Lint, types, formatting, and production build        |
 | `npm run test:e2e`     | Production smoke and automated accessibility checks  |
 
-For browser tests, run `npx playwright install chromium` once, then `npm run build` and `npm run test:e2e`. The test runner starts its own production server on port 3100 and checks desktop/mobile Chromium. These checks establish scaffold behavior, not complete journal journeys or WCAG conformance.
+For browser tests, run `npx playwright install chromium` once, then `npm run build` and `npm run test:e2e`. The test runner starts its own production server on port 3100 and checks desktop/mobile Chromium. These checks establish reference-book controls and navigation behavior, not complete journal journeys or WCAG conformance.
 
 ## Installed foundation
 
 - Next.js, React, React DOM, TypeScript, typed routes, and the `@/*` import alias.
 - `@next/mdx`, the MDX compiler/runtime, and `remark-gfm` for trusted local Markdown/MDX. `src/mdx-components.tsx` is configured for the App Router. Keep authored content outside `src/app` until publication rules are implemented.
 - `yaml` and Zod for future structured metadata parsing and validation; schemas, stable-ID resolution, and draft filtering are not implemented yet. `server-only` is available to protect future filesystem/content modules.
-- Sharp for image optimization. Original reference scans remain under `docs/references`, outside public assets.
+- Sharp for image optimization. The inspiration library remains under `docs/references`; only clipped photographic and illustration graphics are served under `public/graphics` for this local reconstruction study.
 - ESLint with Next.js rules, Prettier, Playwright, and axe for development checks.
 
 Next.js documentation matching the installed version is available in `node_modules/next/dist/docs`. Native Next.js facilities cover images, fonts, metadata, and routing; no CMS, database, state store, UI kit, or motion library is needed for this foundation.
