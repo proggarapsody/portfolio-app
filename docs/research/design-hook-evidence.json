@@ -1,0 +1,299 @@
+{
+  "repository": "pbakaus/impeccable",
+  "head_sha": "d631a8827f99414d2b6daba4ef08b7f8701751d7",
+  "license": "Apache-2.0",
+  "license_url": "https://github.com/pbakaus/impeccable/blob/d631a8827f99414d2b6daba4ef08b7f8701751d7/LICENSE",
+  "stars_snapshot": 79540,
+  "snapshot_utc": "2026-10-11T07:53:30.994725+00:00",
+  "scope": "Source retrieval only; no installation, hook enablement, runtime execution, behavioral eval or automatic cultural judgment.",
+  "candidate": {
+    "name": "impeccable",
+    "skill_path": ".agents/skills/impeccable/SKILL.md",
+    "source_url": "https://github.com/pbakaus/impeccable/blob/d631a8827f99414d2b6daba4ef08b7f8701751d7/.agents/skills/impeccable/SKILL.md",
+    "skill_version": "4.5.2",
+    "engine_version_file": "0.1.14",
+    "counting_note": "One real skill entrypoint with multiple command/reference playbooks and generated provider copies; count once, not once per command/provider.",
+    "actual_contents": [
+      "Context loader reads product/design/surface context. Explicit brief and pinned aesthetics override saturated-pattern warnings.",
+      "Modes distinguish persuade, operate, read and experience. Portfolio/gallery is explicitly experience.",
+      "Command playbooks cover typography, color, layout, animation, art direction, critique, accessibility/performance and live iteration.",
+      "Craft-floor guidance is loaded before UI edits; bounded QA instructions limit rounds.",
+      "Hook management and drift repair are explicit commands; source forbids opportunistic drift repair during ordinary design work."
+    ],
+    "relevance_fact": "General frontend craft, not a Japanese-specific aesthetics pack; user-pinned eras/materials/fonts/palettes explicitly win over anti-pattern warnings.",
+    "possible_use_inference": "Could supply existing general craft and mechanical checks beside separately authored Japanese-specific principles; this is applicability inference, not selection or validation."
+  },
+  "hook": {
+    "is_existing": true,
+    "implementation": "Rust native engine; post-edit regex source detector and static-HTML DOM/CSS detector, plus session cache/dedup and completion scan.",
+    "automatic_behavior": [
+      "Matches Claude Edit/Write and Codex Edit/Write/apply_patch; source normalization extracts apply_patch paths.",
+      "Per-edit pass scans touched supported UI files. Default immediate tier includes mechanical defects and selected anti-patterns; copy/palette/type/layout taste heuristics are deferred to Stop.",
+      "Stop performs full-rule pass on touched files, deduplicates earlier findings, observes recursion guard, and can suppress verified preexisting text findings with before-edit baselines.",
+      "Hook output provides findings/correction prompts, optional clean/pending acknowledgements, context freshness notes and build-completion reminders.",
+      "Hook does not automatically repair code, write ignore exceptions, certify visual quality, or judge Japanese cultural authenticity."
+    ],
+    "what_is_not_proven": "The detector uses heuristics, regex and static HTML analysis; inspected hook path does not run a screenshot-based art-direction judge. Broad craft/reflexes remain agent-guided. No skill/hook quality eval was run here.",
+    "native_provider_manifests": {
+      "codex": {
+        "source_path": ".codex/hooks.json",
+        "url": "https://github.com/pbakaus/impeccable/blob/d631a8827f99414d2b6daba4ef08b7f8701751d7/.codex/hooks.json",
+        "events": [
+          "PostToolUse",
+          "Stop"
+        ],
+        "post_tool_matcher": "Edit|Write|apply_patch",
+        "timeouts_seconds": {
+          "PostToolUse": 5,
+          "Stop": 30
+        },
+        "installer_launcher_path": ".agents/skills/impeccable/scripts/impeccable",
+        "source_manifest_path_caution": "Checked-in source template still refers to .codex/skills/impeccable; installer rewrites the command for .agents provider. Do not blindly copy that stale launcher path.",
+        "requires_user_step": "Project trusted configuration and first-time hook approval through /hooks, according to bundled README/reference.",
+        "response_shape": "PostToolUse uses hookSpecificOutput.additionalContext. Nonempty Codex Stop output uses top-level decision:block and reason to continue the turn; it does not undo/block the already-completed edit."
+      },
+      "claude": {
+        "source_path": ".claude/settings.json",
+        "plugin_source_path": "plugin/hooks/hooks.json",
+        "events": [
+          "SessionStart",
+          "PostToolUse",
+          "Stop"
+        ],
+        "post_tool_matcher": "Edit|Write",
+        "install_target": ".claude/settings.local.json (project-local, gitignored); shared settings.json respected if already used",
+        "plugin_launcher_path": "${CLAUDE_PLUGIN_ROOT}/skills/impeccable/scripts/impeccable",
+        "response_shape": "Additional context after edits and at completion; no pre-edit rejection.",
+        "execution_note": "Bundled README states installed command hooks run independently of model-tool approval; first Edit/Stop may therefore fetch/cache native engine even when model launcher execution is denied."
+      },
+      "cursor": {
+        "events": [
+          "preToolUse"
+        ],
+        "behavior": "Separate hook-before-edit implementation examines proposed writes and can deny writes when detector finds issues. This blocking behavior must not be attributed to Claude/Codex PostToolUse."
+      }
+    },
+    "portability_summary": "Skill sources are generated for many providers; event schemas/paths and trust differ. Codex and Claude require provider-native manifests, not one interchangeable JSON. Native-platform projects skip this web detector hook.",
+    "configuration": {
+      "shared": ".impeccable/config.json",
+      "local": ".impeccable/config.local.json",
+      "commands": "hooks on/off/status/ignore-rule/ignore-file/ignore-value/reset",
+      "behavior": "on installs/repairs manifests and records local consent. enabled:false disables automatic hook; manual detect unaffected. quiet:true silences clean/pending acknowledgement. Configured ignores affect manual and hook scans unless explicitly bypassed.",
+      "exceptions": "Source allows narrow evidence-backed ignore-value exceptions; broad ignore-file/ignore-rule requires user request. Hook itself does not write exception config."
+    }
+  },
+  "execution_prerequisites": {
+    "runtime": "Self-contained native engine; Node is unnecessary for skill launcher/hook. npx installation route needs Node only for npx.",
+    "first_run": "Prefer configured/bundled/preinstalled native binary; otherwise launcher downloads pinned engine release into ~/.impeccable/bin/<version>/.",
+    "download_url_template": "https://github.com/pbakaus/impeccable/releases/download/engine-v<VERSION>/impeccable-<os>-<arch>[.exe]",
+    "requires": [
+      "Supported OS/architecture binary",
+      "Network and writable cache when binary absent",
+      "curl or wget",
+      "shasum or sha256sum for first-download verification; cmd sibling for Windows"
+    ],
+    "verification_behavior": "Fresh download requires matching .sha256 sidecar; missing sidecar/hash tool/mismatch refuses execution. Trusted configured/bundled binaries and reusable cache are handled as launcher trust candidates rather than freshly authenticated downloads.",
+    "risks": [
+      "Hooks invoke executables on provider events and can fetch/cache binaries during first invocation.",
+      "Mechanical/static heuristics can report style preferences or miss rendered behavior; output is not proof of aesthetics/accessibility conformance.",
+      "Codex Stop decision:block may prolong an agent turn; hook recursion guard and dedup are source-inspected, not runtime-validated.",
+      "Provider checked-in template/installed launcher paths differ; installation mechanism must resolve actual project skill location."
+    ]
+  },
+  "source_evidence": [
+    {
+      "path": ".agents/skills/impeccable/SKILL.md",
+      "url": "https://github.com/pbakaus/impeccable/blob/d631a8827f99414d2b6daba4ef08b7f8701751d7/.agents/skills/impeccable/SKILL.md#L15-L29",
+      "lines": [
+        15,
+        29
+      ],
+      "finding": "Setup, context launcher and precedence of explicitly pinned brief."
+    },
+    {
+      "path": ".agents/skills/impeccable/SKILL.md",
+      "url": "https://github.com/pbakaus/impeccable/blob/d631a8827f99414d2b6daba4ef08b7f8701751d7/.agents/skills/impeccable/SKILL.md#L30-L39",
+      "lines": [
+        30,
+        39
+      ],
+      "finding": "Modes, including portfolio Experience."
+    },
+    {
+      "path": ".agents/skills/impeccable/SKILL.md",
+      "url": "https://github.com/pbakaus/impeccable/blob/d631a8827f99414d2b6daba4ef08b7f8701751d7/.agents/skills/impeccable/SKILL.md#L80-L86",
+      "lines": [
+        80,
+        86
+      ],
+      "finding": "Hook and doctor commands; no opportunistic drift repair."
+    },
+    {
+      "path": "skill/reference/hooks.md",
+      "url": "https://github.com/pbakaus/impeccable/blob/d631a8827f99414d2b6daba4ef08b7f8701751d7/skill/reference/hooks.md#L3-L21",
+      "lines": [
+        3,
+        21
+      ],
+      "finding": "Mechanical tiers and provider-specific behavior, trust and configuration."
+    },
+    {
+      "path": "skill/reference/hooks.md",
+      "url": "https://github.com/pbakaus/impeccable/blob/d631a8827f99414d2b6daba4ef08b7f8701751d7/skill/reference/hooks.md#L103-L113",
+      "lines": [
+        103,
+        113
+      ],
+      "finding": "Provider trust and failure behavior."
+    },
+    {
+      "path": ".codex/hooks.json",
+      "url": "https://github.com/pbakaus/impeccable/blob/d631a8827f99414d2b6daba4ef08b7f8701751d7/.codex/hooks.json#L1-L31",
+      "lines": [
+        1,
+        31
+      ],
+      "finding": "Codex event/matcher/timeouts source template."
+    },
+    {
+      "path": "plugin/hooks/hooks.json",
+      "url": "https://github.com/pbakaus/impeccable/blob/d631a8827f99414d2b6daba4ef08b7f8701751d7/plugin/hooks/hooks.json#L1-L41",
+      "lines": [
+        1,
+        41
+      ],
+      "finding": "Claude plugin native event manifest."
+    },
+    {
+      "path": "crates/skills/src/hook_manifest.rs",
+      "url": "https://github.com/pbakaus/impeccable/blob/d631a8827f99414d2b6daba4ef08b7f8701751d7/crates/skills/src/hook_manifest.rs#L229-L254",
+      "lines": [
+        229,
+        254
+      ],
+      "finding": "Installer rewrites provider command strings and adds Windows command for .agents/Codex."
+    },
+    {
+      "path": "crates/hook/src/lib.rs",
+      "url": "https://github.com/pbakaus/impeccable/blob/d631a8827f99414d2b6daba4ef08b7f8701751d7/crates/hook/src/lib.rs#L1-L11",
+      "lines": [
+        1,
+        11
+      ],
+      "finding": "Regex/static-HTML detector engine wiring and platform gate."
+    },
+    {
+      "path": "crates/hook/src/hook_lib.rs",
+      "url": "https://github.com/pbakaus/impeccable/blob/d631a8827f99414d2b6daba4ef08b7f8701751d7/crates/hook/src/hook_lib.rs#L1681-L1706",
+      "lines": [
+        1681,
+        1706
+      ],
+      "finding": "Actual regex and HTML detector calls."
+    },
+    {
+      "path": "crates/hook/src/hook_lib.rs",
+      "url": "https://github.com/pbakaus/impeccable/blob/d631a8827f99414d2b6daba4ef08b7f8701751d7/crates/hook/src/hook_lib.rs#L1797-L1823",
+      "lines": [
+        1797,
+        1823
+      ],
+      "finding": "Codex completion decision:block versus PostToolUse additional context."
+    },
+    {
+      "path": "crates/hook/src/hook_lib.rs",
+      "url": "https://github.com/pbakaus/impeccable/blob/d631a8827f99414d2b6daba4ef08b7f8701751d7/crates/hook/src/hook_lib.rs#L1834-L1875",
+      "lines": [
+        1834,
+        1875
+      ],
+      "finding": "apply_patch path extraction."
+    },
+    {
+      "path": "crates/hook/src/hook.rs",
+      "url": "https://github.com/pbakaus/impeccable/blob/d631a8827f99414d2b6daba4ef08b7f8701751d7/crates/hook/src/hook.rs#L639-L708",
+      "lines": [
+        639,
+        708
+      ],
+      "finding": "Completion recursion guard, platform skip and build-reminder routing."
+    },
+    {
+      "path": ".agents/skills/impeccable/scripts/impeccable",
+      "url": "https://github.com/pbakaus/impeccable/blob/d631a8827f99414d2b6daba4ef08b7f8701751d7/.agents/skills/impeccable/scripts/impeccable#L75-L100",
+      "lines": [
+        75,
+        100
+      ],
+      "finding": "Version cache/download prerequisites."
+    },
+    {
+      "path": ".agents/skills/impeccable/scripts/impeccable",
+      "url": "https://github.com/pbakaus/impeccable/blob/d631a8827f99414d2b6daba4ef08b7f8701751d7/.agents/skills/impeccable/scripts/impeccable#L117-L196",
+      "lines": [
+        117,
+        196
+      ],
+      "finding": "Pinned release download, sidecar/hash verification, cache and execution."
+    },
+    {
+      "path": "README.md",
+      "url": "https://github.com/pbakaus/impeccable/blob/d631a8827f99414d2b6daba4ef08b7f8701751d7/README.md#L398-L434",
+      "lines": [
+        398,
+        434
+      ],
+      "finding": "Installation/harness docs, download and Codex approval expectations."
+    }
+  ],
+  "not_executed": true,
+  "additional_candidates": [
+    {
+      "name": "make-interfaces-feel-better",
+      "repository": "jakubkrehel/make-interfaces-feel-better",
+      "head_sha": "35545ea1512ad59fa463e6b1f95ca9c052981fe6",
+      "skill_path": "skills/make-interfaces-feel-better/SKILL.md",
+      "source_url": "https://github.com/jakubkrehel/make-interfaces-feel-better/blob/35545ea1512ad59fa463e6b1f95ca9c052981fe6/skills/make-interfaces-feel-better/SKILL.md",
+      "license": "MIT",
+      "license_url": "https://github.com/jakubkrehel/make-interfaces-feel-better/blob/35545ea1512ad59fa463e6b1f95ca9c052981fe6/LICENSE",
+      "stars_snapshot": 3637,
+      "snapshot_utc": "2026-10-11T07:54:16.582561+00:00",
+      "distinct_skill_count": 1,
+      "summary": "Concrete UI detail/polish guidance covering geometry, optical alignment, elevation versus structure, interruptible motion, type, icons, hit areas and evidence-bounded review.",
+      "actual_guidance": [
+        "Keep existing styling system rather than introducing another one; inspect hover/focus/active/loading/empty states and review animation slowly.",
+        "Concentric nested radii; optical rather than purely geometric icon alignment; borders for structural/state cues and layered shadows for depth.",
+        "Interruptible transitions for state changes; staggers only for infrequent hierarchy-revealing entrances; subdued exits; no transition:all; will-change only when justified.",
+        "Specific prescriptions include icon scale0.25→1 / blur4px→0, press scale0.96, heading balance/body pretty, subtle pure-black/pure-white image outlines and icon stroke/text weight matching.",
+        "Prefer44×44 touch hit areas and at least40×40 dense desktop areas; avoid overlapping targets; motion requires static feedback too.",
+        "Quick/full review modes cap findings and require actual inspected evidence, rejected candidates and explicit unverified checks."
+      ],
+      "prerequisites": [
+        "Instruction/reference skill with no executable hook found in repository tree.",
+        "HTML/CSS/browser work and access to relevant component source.",
+        "If motion/framer-motion is already present, use existing imports; otherwise icon transitions have a CSS fallback without added dependency."
+      ],
+      "risks": [
+        "Prescriptive numeric/icon/image/type rules are authored design recipes, not universal cultural or accessibility proof.",
+        "The skill is general interaction polish, not Japanese aesthetic grounding.",
+        "Native text-wrap behavior and Japanese composition requirements need project/browser-specific checking rather than blanket application.",
+        "No behavioral evaluation, hook execution, installation or source change performed."
+      ],
+      "hooks_found": false,
+      "sources": [
+        {
+          "url": "https://github.com/jakubkrehel/make-interfaces-feel-better/blob/35545ea1512ad59fa463e6b1f95ca9c052981fe6/skills/make-interfaces-feel-better/SKILL.md#L7-L11",
+          "finding": "Established styling system and slow review of actual states."
+        },
+        {
+          "url": "https://github.com/jakubkrehel/make-interfaces-feel-better/blob/35545ea1512ad59fa463e6b1f95ca9c052981fe6/skills/make-interfaces-feel-better/SKILL.md#L23-L99",
+          "finding": "Nineteen concrete craft and interaction principles."
+        },
+        {
+          "url": "https://github.com/jakubkrehel/make-interfaces-feel-better/blob/35545ea1512ad59fa463e6b1f95ca9c052981fe6/skills/make-interfaces-feel-better/SKILL.md#L120-L187",
+          "finding": "Evidence-bounded review modes/output and unverified-check reporting."
+        }
+      ]
+    }
+  ]
+}

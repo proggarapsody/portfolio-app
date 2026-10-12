@@ -1,0 +1,2132 @@
+{
+  "created_at_utc": "2026-10-11T07:44:18.891864+00:00",
+  "method": "Read JPEG with Pillow and convert to RGB. For analysis only, downsample keeping aspect ratio to maximum 192x192 using LANCZOS. Quantize 12 colors by deterministic median-cut with no dithering; sort by pixel count. Whole-image top 8 bins; secondary top 6 excludes nearly white pixels (minimum RGB >232) and nearly black pixels (maximum RGB <35); chromatic top 6 keeps HSV saturation >0.15 and value between 0.12 and 0.93. Fractions are within each analyzed pixel set, not full-image shares except whole palette. No source image files modified. Localized samples are per-channel median RGB values from manually named approximate normalized rectangles in the original JPEG; they expose small accents missed by area-ranked bins and may include neighboring pixels. Hue-filtered regional accents use original RGB pixels converted to HSV and documented saturation/value/hue thresholds, then median retained RGB. Their retained counts disclose how much of the region actually matches the named color.",
+  "limitations": [
+    "JPEG artifacts, scan color cast, aging, photograph exposure and quantization shift colors. These are approximate observed RGB values, not recovered print inks or approved brand tokens.",
+    "Quantization bin counts express image area, not perceptual or semantic importance. White/black exclusions expose secondary object and accent colors but can omit dark colored regions.",
+    "No historical authenticity or image provenance follows from matching pixels.",
+    "Filtered accents are observed source colors, not functional UI tokens. A hue window can include similarly colored neighboring content; no contrast compliance is implied."
+  ],
+  "images": [
+    {
+      "image": 1,
+      "attachment_path": "/Users/aleksey/.codex/attachments/21f070b3-2d12-4d99-bf4b-9835eea65c98/image-1.jpeg",
+      "original_dimensions_px": [
+        736,
+        1093
+      ],
+      "sha256": "f52dfb6f6722412677e3b6afd87a5e33345e7f0f7c098c9333feb8f6e8314d7a",
+      "byte_identical_reference_copies": [
+        "docs/references/01-sony-recorder.jpeg"
+      ],
+      "analysis_dimensions_px": [
+        129,
+        192
+      ],
+      "whole_image_palette": [
+        {
+          "hex": "#EAC3A5",
+          "rgb": [
+            234,
+            195,
+            165
+          ],
+          "fraction_of_analyzed_pixels": 0.1145
+        },
+        {
+          "hex": "#EFDDCC",
+          "rgb": [
+            239,
+            221,
+            204
+          ],
+          "fraction_of_analyzed_pixels": 0.1003
+        },
+        {
+          "hex": "#4B4847",
+          "rgb": [
+            75,
+            72,
+            71
+          ],
+          "fraction_of_analyzed_pixels": 0.098
+        },
+        {
+          "hex": "#F2DDCA",
+          "rgb": [
+            242,
+            221,
+            202
+          ],
+          "fraction_of_analyzed_pixels": 0.0902
+        },
+        {
+          "hex": "#F0D7C2",
+          "rgb": [
+            240,
+            215,
+            194
+          ],
+          "fraction_of_analyzed_pixels": 0.0896
+        },
+        {
+          "hex": "#F2DFCD",
+          "rgb": [
+            242,
+            223,
+            205
+          ],
+          "fraction_of_analyzed_pixels": 0.0841
+        },
+        {
+          "hex": "#877E79",
+          "rgb": [
+            135,
+            126,
+            121
+          ],
+          "fraction_of_analyzed_pixels": 0.0835
+        },
+        {
+          "hex": "#CAB09D",
+          "rgb": [
+            202,
+            176,
+            157
+          ],
+          "fraction_of_analyzed_pixels": 0.0793
+        }
+      ],
+      "secondary_palette_without_extreme_neutrals": [
+        {
+          "hex": "#EAC4A7",
+          "rgb": [
+            234,
+            196,
+            167
+          ],
+          "fraction_of_analyzed_pixels": 0.1125
+        },
+        {
+          "hex": "#EFDDCC",
+          "rgb": [
+            239,
+            221,
+            204
+          ],
+          "fraction_of_analyzed_pixels": 0.0983
+        },
+        {
+          "hex": "#4C4948",
+          "rgb": [
+            76,
+            73,
+            72
+          ],
+          "fraction_of_analyzed_pixels": 0.0978
+        },
+        {
+          "hex": "#F2DDCA",
+          "rgb": [
+            242,
+            221,
+            202
+          ],
+          "fraction_of_analyzed_pixels": 0.0904
+        },
+        {
+          "hex": "#F0D7C2",
+          "rgb": [
+            240,
+            215,
+            194
+          ],
+          "fraction_of_analyzed_pixels": 0.0893
+        },
+        {
+          "hex": "#88807B",
+          "rgb": [
+            136,
+            128,
+            123
+          ],
+          "fraction_of_analyzed_pixels": 0.0871
+        }
+      ],
+      "secondary_retained_fraction": 0.9982,
+      "chromatic_palette": [
+        {
+          "hex": "#DDB292",
+          "rgb": [
+            221,
+            178,
+            146
+          ],
+          "fraction_of_analyzed_pixels": 0.1342
+        },
+        {
+          "hex": "#E8BB9A",
+          "rgb": [
+            232,
+            187,
+            154
+          ],
+          "fraction_of_analyzed_pixels": 0.1233
+        },
+        {
+          "hex": "#E9C0A0",
+          "rgb": [
+            233,
+            192,
+            160
+          ],
+          "fraction_of_analyzed_pixels": 0.094
+        },
+        {
+          "hex": "#EBC9AE",
+          "rgb": [
+            235,
+            201,
+            174
+          ],
+          "fraction_of_analyzed_pixels": 0.0906
+        },
+        {
+          "hex": "#ECD9C7",
+          "rgb": [
+            236,
+            217,
+            199
+          ],
+          "fraction_of_analyzed_pixels": 0.0849
+        },
+        {
+          "hex": "#A68E7D",
+          "rgb": [
+            166,
+            142,
+            125
+          ],
+          "fraction_of_analyzed_pixels": 0.0847
+        }
+      ],
+      "chromatic_retained_fraction": 0.2341,
+      "localized_samples": [
+        {
+          "region_label": "paper upper right",
+          "normalized_rectangle_xyxy": [
+            0.73,
+            0.05,
+            0.92,
+            0.12
+          ],
+          "method": "per-channel median of original JPEG RGB pixels in visible approximate region",
+          "hex": "#EED2BD",
+          "rgb": [
+            238,
+            210,
+            189
+          ]
+        },
+        {
+          "region_label": "logo ink stroke",
+          "normalized_rectangle_xyxy": [
+            0.06,
+            0.052,
+            0.08,
+            0.065
+          ],
+          "method": "per-channel median of original JPEG RGB pixels in visible approximate region",
+          "hex": "#343233",
+          "rgb": [
+            52,
+            50,
+            51
+          ]
+        }
+      ]
+    },
+    {
+      "image": 2,
+      "attachment_path": "/Users/aleksey/.codex/attachments/21f070b3-2d12-4d99-bf4b-9835eea65c98/image-2.jpeg",
+      "original_dimensions_px": [
+        736,
+        1067
+      ],
+      "sha256": "9d477d9a87e8b09b6049d4ebbb2af2506dd9b71a686f65233872f1966148ffc7",
+      "byte_identical_reference_copies": [
+        "docs/references/02-seiko-wave.jpeg"
+      ],
+      "analysis_dimensions_px": [
+        132,
+        192
+      ],
+      "whole_image_palette": [
+        {
+          "hex": "#183471",
+          "rgb": [
+            24,
+            52,
+            113
+          ],
+          "fraction_of_analyzed_pixels": 0.1479
+        },
+        {
+          "hex": "#144F8C",
+          "rgb": [
+            20,
+            79,
+            140
+          ],
+          "fraction_of_analyzed_pixels": 0.1302
+        },
+        {
+          "hex": "#1D2E66",
+          "rgb": [
+            29,
+            46,
+            102
+          ],
+          "fraction_of_analyzed_pixels": 0.128
+        },
+        {
+          "hex": "#18275B",
+          "rgb": [
+            24,
+            39,
+            91
+          ],
+          "fraction_of_analyzed_pixels": 0.1067
+        },
+        {
+          "hex": "#294B80",
+          "rgb": [
+            41,
+            75,
+            128
+          ],
+          "fraction_of_analyzed_pixels": 0.0799
+        },
+        {
+          "hex": "#7F8895",
+          "rgb": [
+            127,
+            136,
+            149
+          ],
+          "fraction_of_analyzed_pixels": 0.0712
+        },
+        {
+          "hex": "#C0C4BF",
+          "rgb": [
+            192,
+            196,
+            191
+          ],
+          "fraction_of_analyzed_pixels": 0.0647
+        },
+        {
+          "hex": "#9BA5AD",
+          "rgb": [
+            155,
+            165,
+            173
+          ],
+          "fraction_of_analyzed_pixels": 0.0625
+        }
+      ],
+      "secondary_palette_without_extreme_neutrals": [
+        {
+          "hex": "#183471",
+          "rgb": [
+            24,
+            52,
+            113
+          ],
+          "fraction_of_analyzed_pixels": 0.1484
+        },
+        {
+          "hex": "#144F8C",
+          "rgb": [
+            20,
+            79,
+            140
+          ],
+          "fraction_of_analyzed_pixels": 0.1306
+        },
+        {
+          "hex": "#1D2E66",
+          "rgb": [
+            29,
+            46,
+            102
+          ],
+          "fraction_of_analyzed_pixels": 0.12
+        },
+        {
+          "hex": "#18285D",
+          "rgb": [
+            24,
+            40,
+            93
+          ],
+          "fraction_of_analyzed_pixels": 0.1126
+        },
+        {
+          "hex": "#294B80",
+          "rgb": [
+            41,
+            75,
+            128
+          ],
+          "fraction_of_analyzed_pixels": 0.0801
+        },
+        {
+          "hex": "#7F8895",
+          "rgb": [
+            127,
+            136,
+            149
+          ],
+          "fraction_of_analyzed_pixels": 0.0714
+        }
+      ],
+      "secondary_retained_fraction": 0.997,
+      "chromatic_palette": [
+        {
+          "hex": "#183471",
+          "rgb": [
+            24,
+            52,
+            113
+          ],
+          "fraction_of_analyzed_pixels": 0.1261
+        },
+        {
+          "hex": "#174584",
+          "rgb": [
+            23,
+            69,
+            132
+          ],
+          "fraction_of_analyzed_pixels": 0.1224
+        },
+        {
+          "hex": "#192E6B",
+          "rgb": [
+            25,
+            46,
+            107
+          ],
+          "fraction_of_analyzed_pixels": 0.1058
+        },
+        {
+          "hex": "#18275A",
+          "rgb": [
+            24,
+            39,
+            90
+          ],
+          "fraction_of_analyzed_pixels": 0.1043
+        },
+        {
+          "hex": "#115A92",
+          "rgb": [
+            17,
+            90,
+            146
+          ],
+          "fraction_of_analyzed_pixels": 0.0878
+        },
+        {
+          "hex": "#1D2D64",
+          "rgb": [
+            29,
+            45,
+            100
+          ],
+          "fraction_of_analyzed_pixels": 0.0873
+        }
+      ],
+      "chromatic_retained_fraction": 0.8449,
+      "localized_samples": [
+        {
+          "region_label": "wave foam",
+          "normalized_rectangle_xyxy": [
+            0.13,
+            0.12,
+            0.19,
+            0.17
+          ],
+          "method": "per-channel median of original JPEG RGB pixels in visible approximate region",
+          "hex": "#A7B7BC",
+          "rgb": [
+            167,
+            183,
+            188
+          ]
+        },
+        {
+          "region_label": "watch light display",
+          "normalized_rectangle_xyxy": [
+            0.4,
+            0.34,
+            0.53,
+            0.4
+          ],
+          "method": "per-channel median of original JPEG RGB pixels in visible approximate region",
+          "hex": "#92959F",
+          "rgb": [
+            146,
+            149,
+            159
+          ]
+        },
+        {
+          "region_label": "lower watch red bezel",
+          "normalized_rectangle_xyxy": [
+            0.328,
+            0.745,
+            0.347,
+            0.763
+          ],
+          "method": "per-channel median of original JPEG RGB pixels in visible approximate region",
+          "hex": "#88545A",
+          "rgb": [
+            136,
+            84,
+            90
+          ],
+          "method_note": "Unfiltered regional median includes background; use corresponding filtered sample when identifying the accent."
+        }
+      ],
+      "filtered_accent_samples": [
+        {
+          "region_label": "lower watch red bezel",
+          "normalized_rectangle_xyxy": [
+            0.31,
+            0.73,
+            0.4,
+            0.83
+          ],
+          "hue_family": "red",
+          "method": "Convert original region RGB pixels to HSV; retain saturation >0.28, value >0.3 and hue-family window. Red hue <0.055 or >0.96; orange 0.035<hue<0.105; yellow 0.11<hue<0.19; blue 0.51<hue<0.72. Report per-channel median of retained RGB pixels. Hue normalized 0..1.",
+          "retained_pixels": 1011,
+          "region_pixels": 7062,
+          "retained_fraction": 0.1432,
+          "hex": "#803B3F",
+          "rgb": [
+            128,
+            59,
+            63
+          ]
+        }
+      ]
+    },
+    {
+      "image": 3,
+      "attachment_path": "/Users/aleksey/.codex/attachments/21f070b3-2d12-4d99-bf4b-9835eea65c98/image-3.jpeg",
+      "original_dimensions_px": [
+        736,
+        1104
+      ],
+      "sha256": "f6e16dc5a359996209285c1c7c32804dae7217787cb0b367d01edc1fdbe73e4b",
+      "byte_identical_reference_copies": [
+        "docs/references/03-walkman.jpeg"
+      ],
+      "analysis_dimensions_px": [
+        128,
+        192
+      ],
+      "whole_image_palette": [
+        {
+          "hex": "#21211F",
+          "rgb": [
+            33,
+            33,
+            31
+          ],
+          "fraction_of_analyzed_pixels": 0.1286
+        },
+        {
+          "hex": "#BCB9AC",
+          "rgb": [
+            188,
+            185,
+            172
+          ],
+          "fraction_of_analyzed_pixels": 0.1028
+        },
+        {
+          "hex": "#1D1C1B",
+          "rgb": [
+            29,
+            28,
+            27
+          ],
+          "fraction_of_analyzed_pixels": 0.0982
+        },
+        {
+          "hex": "#C3C0B4",
+          "rgb": [
+            195,
+            192,
+            180
+          ],
+          "fraction_of_analyzed_pixels": 0.0952
+        },
+        {
+          "hex": "#8A877D",
+          "rgb": [
+            138,
+            135,
+            125
+          ],
+          "fraction_of_analyzed_pixels": 0.0896
+        },
+        {
+          "hex": "#AAA79A",
+          "rgb": [
+            170,
+            167,
+            154
+          ],
+          "fraction_of_analyzed_pixels": 0.0823
+        },
+        {
+          "hex": "#B4AFA3",
+          "rgb": [
+            180,
+            175,
+            163
+          ],
+          "fraction_of_analyzed_pixels": 0.0791
+        },
+        {
+          "hex": "#262523",
+          "rgb": [
+            38,
+            37,
+            35
+          ],
+          "fraction_of_analyzed_pixels": 0.0779
+        }
+      ],
+      "secondary_palette_without_extreme_neutrals": [
+        {
+          "hex": "#252422",
+          "rgb": [
+            37,
+            36,
+            34
+          ],
+          "fraction_of_analyzed_pixels": 0.1307
+        },
+        {
+          "hex": "#B2AFA1",
+          "rgb": [
+            178,
+            175,
+            161
+          ],
+          "fraction_of_analyzed_pixels": 0.1111
+        },
+        {
+          "hex": "#BAB7AA",
+          "rgb": [
+            186,
+            183,
+            170
+          ],
+          "fraction_of_analyzed_pixels": 0.107
+        },
+        {
+          "hex": "#7E7B72",
+          "rgb": [
+            126,
+            123,
+            114
+          ],
+          "fraction_of_analyzed_pixels": 0.0925
+        },
+        {
+          "hex": "#9C988D",
+          "rgb": [
+            156,
+            152,
+            141
+          ],
+          "fraction_of_analyzed_pixels": 0.08
+        },
+        {
+          "hex": "#BEBCAF",
+          "rgb": [
+            190,
+            188,
+            175
+          ],
+          "fraction_of_analyzed_pixels": 0.0791
+        }
+      ],
+      "secondary_retained_fraction": 0.6712,
+      "chromatic_palette": [
+        {
+          "hex": "#484E3E",
+          "rgb": [
+            72,
+            78,
+            62
+          ],
+          "fraction_of_analyzed_pixels": 0.1062
+        },
+        {
+          "hex": "#251E1A",
+          "rgb": [
+            37,
+            30,
+            26
+          ],
+          "fraction_of_analyzed_pixels": 0.1035
+        },
+        {
+          "hex": "#2C2721",
+          "rgb": [
+            44,
+            39,
+            33
+          ],
+          "fraction_of_analyzed_pixels": 0.0955
+        },
+        {
+          "hex": "#63574B",
+          "rgb": [
+            99,
+            87,
+            75
+          ],
+          "fraction_of_analyzed_pixels": 0.0928
+        },
+        {
+          "hex": "#663A3A",
+          "rgb": [
+            102,
+            58,
+            58
+          ],
+          "fraction_of_analyzed_pixels": 0.0874
+        },
+        {
+          "hex": "#626555",
+          "rgb": [
+            98,
+            101,
+            85
+          ],
+          "fraction_of_analyzed_pixels": 0.0847
+        }
+      ],
+      "chromatic_retained_fraction": 0.0456,
+      "localized_samples": [
+        {
+          "region_label": "cassette red surround",
+          "normalized_rectangle_xyxy": [
+            0.252,
+            0.446,
+            0.268,
+            0.47
+          ],
+          "method": "per-channel median of original JPEG RGB pixels in visible approximate region",
+          "hex": "#B4ACA6",
+          "rgb": [
+            180,
+            172,
+            166
+          ],
+          "method_note": "Unfiltered regional median includes background; use corresponding filtered sample when identifying the accent."
+        },
+        {
+          "region_label": "headline cream",
+          "normalized_rectangle_xyxy": [
+            0.045,
+            0.037,
+            0.065,
+            0.08
+          ],
+          "method": "per-channel median of original JPEG RGB pixels in visible approximate region",
+          "hex": "#BDBFB4",
+          "rgb": [
+            189,
+            191,
+            180
+          ]
+        }
+      ],
+      "filtered_accent_samples": [
+        {
+          "region_label": "cassette red surround",
+          "normalized_rectangle_xyxy": [
+            0.23,
+            0.38,
+            0.43,
+            0.66
+          ],
+          "hue_family": "red",
+          "method": "Convert original region RGB pixels to HSV; retain saturation >0.28, value >0.3 and hue-family window. Red hue <0.055 or >0.96; orange 0.035<hue<0.105; yellow 0.11<hue<0.19; blue 0.51<hue<0.72. Report per-channel median of retained RGB pixels. Hue normalized 0..1.",
+          "retained_pixels": 3042,
+          "region_pixels": 45423,
+          "retained_fraction": 0.067,
+          "hex": "#613833",
+          "rgb": [
+            97,
+            56,
+            51
+          ]
+        }
+      ]
+    },
+    {
+      "image": 4,
+      "attachment_path": "/Users/aleksey/.codex/attachments/21f070b3-2d12-4d99-bf4b-9835eea65c98/image-4.jpeg",
+      "original_dimensions_px": [
+        550,
+        550
+      ],
+      "sha256": "2fcde40e110d25bac9cea2d29d15133ddefaaf473018d057a8b2f56fb60f58a3",
+      "byte_identical_reference_copies": [
+        "docs/references/04-modular-controls.jpeg"
+      ],
+      "analysis_dimensions_px": [
+        192,
+        192
+      ],
+      "whole_image_palette": [
+        {
+          "hex": "#FFFFFF",
+          "rgb": [
+            255,
+            255,
+            255
+          ],
+          "fraction_of_analyzed_pixels": 0.3855
+        },
+        {
+          "hex": "#CED1D1",
+          "rgb": [
+            206,
+            209,
+            209
+          ],
+          "fraction_of_analyzed_pixels": 0.0709
+        },
+        {
+          "hex": "#928A86",
+          "rgb": [
+            146,
+            138,
+            134
+          ],
+          "fraction_of_analyzed_pixels": 0.066
+        },
+        {
+          "hex": "#A1A3A2",
+          "rgb": [
+            161,
+            163,
+            162
+          ],
+          "fraction_of_analyzed_pixels": 0.0659
+        },
+        {
+          "hex": "#F9FBFC",
+          "rgb": [
+            249,
+            251,
+            252
+          ],
+          "fraction_of_analyzed_pixels": 0.0651
+        },
+        {
+          "hex": "#5F5450",
+          "rgb": [
+            95,
+            84,
+            80
+          ],
+          "fraction_of_analyzed_pixels": 0.0649
+        },
+        {
+          "hex": "#737370",
+          "rgb": [
+            115,
+            115,
+            112
+          ],
+          "fraction_of_analyzed_pixels": 0.0598
+        },
+        {
+          "hex": "#B9B6B4",
+          "rgb": [
+            185,
+            182,
+            180
+          ],
+          "fraction_of_analyzed_pixels": 0.0575
+        }
+      ],
+      "secondary_palette_without_extreme_neutrals": [
+        {
+          "hex": "#6D5E5A",
+          "rgb": [
+            109,
+            94,
+            90
+          ],
+          "fraction_of_analyzed_pixels": 0.1285
+        },
+        {
+          "hex": "#3D3E3D",
+          "rgb": [
+            61,
+            62,
+            61
+          ],
+          "fraction_of_analyzed_pixels": 0.1144
+        },
+        {
+          "hex": "#797A77",
+          "rgb": [
+            121,
+            122,
+            119
+          ],
+          "fraction_of_analyzed_pixels": 0.1019
+        },
+        {
+          "hex": "#A0A2A1",
+          "rgb": [
+            160,
+            162,
+            161
+          ],
+          "fraction_of_analyzed_pixels": 0.101
+        },
+        {
+          "hex": "#8B8986",
+          "rgb": [
+            139,
+            137,
+            134
+          ],
+          "fraction_of_analyzed_pixels": 0.0856
+        },
+        {
+          "hex": "#B0AEAC",
+          "rgb": [
+            176,
+            174,
+            172
+          ],
+          "fraction_of_analyzed_pixels": 0.0741
+        }
+      ],
+      "secondary_retained_fraction": 0.4395,
+      "chromatic_palette": [
+        {
+          "hex": "#85756A",
+          "rgb": [
+            133,
+            117,
+            106
+          ],
+          "fraction_of_analyzed_pixels": 0.1175
+        },
+        {
+          "hex": "#756A5F",
+          "rgb": [
+            117,
+            106,
+            95
+          ],
+          "fraction_of_analyzed_pixels": 0.1167
+        },
+        {
+          "hex": "#343634",
+          "rgb": [
+            52,
+            54,
+            52
+          ],
+          "fraction_of_analyzed_pixels": 0.1051
+        },
+        {
+          "hex": "#9D8B7F",
+          "rgb": [
+            157,
+            139,
+            127
+          ],
+          "fraction_of_analyzed_pixels": 0.1051
+        },
+        {
+          "hex": "#63584E",
+          "rgb": [
+            99,
+            88,
+            78
+          ],
+          "fraction_of_analyzed_pixels": 0.1026
+        },
+        {
+          "hex": "#221E1C",
+          "rgb": [
+            34,
+            30,
+            28
+          ],
+          "fraction_of_analyzed_pixels": 0.1002
+        }
+      ],
+      "chromatic_retained_fraction": 0.0328,
+      "localized_samples": [
+        {
+          "region_label": "red DIP switches",
+          "normalized_rectangle_xyxy": [
+            0.27,
+            0.57,
+            0.37,
+            0.6
+          ],
+          "method": "per-channel median of original JPEG RGB pixels in visible approximate region",
+          "hex": "#EB6C6A",
+          "rgb": [
+            235,
+            108,
+            106
+          ]
+        },
+        {
+          "region_label": "yellow knob mark",
+          "normalized_rectangle_xyxy": [
+            0.719,
+            0.342,
+            0.737,
+            0.373
+          ],
+          "method": "per-channel median of original JPEG RGB pixels in visible approximate region",
+          "hex": "#7E8075",
+          "rgb": [
+            126,
+            128,
+            117
+          ],
+          "method_note": "Unfiltered regional median includes background; use corresponding filtered sample when identifying the accent."
+        },
+        {
+          "region_label": "blue knob mark",
+          "normalized_rectangle_xyxy": [
+            0.292,
+            0.353,
+            0.315,
+            0.368
+          ],
+          "method": "per-channel median of original JPEG RGB pixels in visible approximate region",
+          "hex": "#171F2A",
+          "rgb": [
+            23,
+            31,
+            42
+          ],
+          "method_note": "Unfiltered regional median includes background; use corresponding filtered sample when identifying the accent."
+        }
+      ],
+      "filtered_accent_samples": [
+        {
+          "region_label": "yellow knob mark",
+          "normalized_rectangle_xyxy": [
+            0.68,
+            0.3,
+            0.78,
+            0.41
+          ],
+          "hue_family": "yellow",
+          "method": "Convert original region RGB pixels to HSV; retain saturation >0.28, value >0.3 and hue-family window. Red hue <0.055 or >0.96; orange 0.035<hue<0.105; yellow 0.11<hue<0.19; blue 0.51<hue<0.72. Report per-channel median of retained RGB pixels. Hue normalized 0..1.",
+          "retained_pixels": 144,
+          "region_pixels": 3355,
+          "retained_fraction": 0.0429,
+          "hex": "#C4BC7E",
+          "rgb": [
+            196,
+            188,
+            126
+          ]
+        },
+        {
+          "region_label": "blue knob mark",
+          "normalized_rectangle_xyxy": [
+            0.27,
+            0.32,
+            0.36,
+            0.38
+          ],
+          "hue_family": "blue",
+          "method": "Convert original region RGB pixels to HSV; retain saturation >0.28, value >0.3 and hue-family window. Red hue <0.055 or >0.96; orange 0.035<hue<0.105; yellow 0.11<hue<0.19; blue 0.51<hue<0.72. Report per-channel median of retained RGB pixels. Hue normalized 0..1.",
+          "retained_pixels": 92,
+          "region_pixels": 1650,
+          "retained_fraction": 0.0558,
+          "hex": "#7AB0CF",
+          "rgb": [
+            122,
+            176,
+            207
+          ]
+        }
+      ]
+    },
+    {
+      "image": 5,
+      "attachment_path": "/Users/aleksey/.codex/attachments/21f070b3-2d12-4d99-bf4b-9835eea65c98/image-5.jpeg",
+      "original_dimensions_px": [
+        736,
+        981
+      ],
+      "sha256": "b75cc1b3014e45ee8471c19b5d2ce2468c0e933f89f4b610b6276d27dbc50817",
+      "byte_identical_reference_copies": [
+        "docs/references/05-studio-editorial.jpeg"
+      ],
+      "analysis_dimensions_px": [
+        144,
+        192
+      ],
+      "whole_image_palette": [
+        {
+          "hex": "#FFFFFF",
+          "rgb": [
+            255,
+            255,
+            255
+          ],
+          "fraction_of_analyzed_pixels": 0.1754
+        },
+        {
+          "hex": "#635046",
+          "rgb": [
+            99,
+            80,
+            70
+          ],
+          "fraction_of_analyzed_pixels": 0.0979
+        },
+        {
+          "hex": "#37332F",
+          "rgb": [
+            55,
+            51,
+            47
+          ],
+          "fraction_of_analyzed_pixels": 0.0973
+        },
+        {
+          "hex": "#3D3935",
+          "rgb": [
+            61,
+            57,
+            53
+          ],
+          "fraction_of_analyzed_pixels": 0.0923
+        },
+        {
+          "hex": "#27221F",
+          "rgb": [
+            39,
+            34,
+            31
+          ],
+          "fraction_of_analyzed_pixels": 0.089
+        },
+        {
+          "hex": "#2E2A26",
+          "rgb": [
+            46,
+            42,
+            38
+          ],
+          "fraction_of_analyzed_pixels": 0.0878
+        },
+        {
+          "hex": "#4C3D37",
+          "rgb": [
+            76,
+            61,
+            55
+          ],
+          "fraction_of_analyzed_pixels": 0.0821
+        },
+        {
+          "hex": "#312E2A",
+          "rgb": [
+            49,
+            46,
+            42
+          ],
+          "fraction_of_analyzed_pixels": 0.0761
+        }
+      ],
+      "secondary_palette_without_extreme_neutrals": [
+        {
+          "hex": "#42403B",
+          "rgb": [
+            66,
+            64,
+            59
+          ],
+          "fraction_of_analyzed_pixels": 0.1305
+        },
+        {
+          "hex": "#383530",
+          "rgb": [
+            56,
+            53,
+            48
+          ],
+          "fraction_of_analyzed_pixels": 0.1077
+        },
+        {
+          "hex": "#634B42",
+          "rgb": [
+            99,
+            75,
+            66
+          ],
+          "fraction_of_analyzed_pixels": 0.105
+        },
+        {
+          "hex": "#282320",
+          "rgb": [
+            40,
+            35,
+            32
+          ],
+          "fraction_of_analyzed_pixels": 0.0937
+        },
+        {
+          "hex": "#34302C",
+          "rgb": [
+            52,
+            48,
+            44
+          ],
+          "fraction_of_analyzed_pixels": 0.0909
+        },
+        {
+          "hex": "#2D2925",
+          "rgb": [
+            45,
+            41,
+            37
+          ],
+          "fraction_of_analyzed_pixels": 0.0884
+        }
+      ],
+      "secondary_retained_fraction": 0.7748,
+      "chromatic_palette": [
+        {
+          "hex": "#3C3630",
+          "rgb": [
+            60,
+            54,
+            48
+          ],
+          "fraction_of_analyzed_pixels": 0.1063
+        },
+        {
+          "hex": "#2B2723",
+          "rgb": [
+            43,
+            39,
+            35
+          ],
+          "fraction_of_analyzed_pixels": 0.0993
+        },
+        {
+          "hex": "#614139",
+          "rgb": [
+            97,
+            65,
+            57
+          ],
+          "fraction_of_analyzed_pixels": 0.0992
+        },
+        {
+          "hex": "#322D28",
+          "rgb": [
+            50,
+            45,
+            40
+          ],
+          "fraction_of_analyzed_pixels": 0.0975
+        },
+        {
+          "hex": "#2E2A26",
+          "rgb": [
+            46,
+            42,
+            38
+          ],
+          "fraction_of_analyzed_pixels": 0.0973
+        },
+        {
+          "hex": "#372E29",
+          "rgb": [
+            55,
+            46,
+            41
+          ],
+          "fraction_of_analyzed_pixels": 0.0811
+        }
+      ],
+      "chromatic_retained_fraction": 0.412,
+      "localized_samples": [
+        {
+          "region_label": "apple orange",
+          "normalized_rectangle_xyxy": [
+            0.216,
+            0.316,
+            0.249,
+            0.34
+          ],
+          "method": "per-channel median of original JPEG RGB pixels in visible approximate region",
+          "hex": "#F97140",
+          "rgb": [
+            249,
+            113,
+            64
+          ]
+        },
+        {
+          "region_label": "lamp golden light",
+          "normalized_rectangle_xyxy": [
+            0.47,
+            0.128,
+            0.54,
+            0.136
+          ],
+          "method": "per-channel median of original JPEG RGB pixels in visible approximate region",
+          "hex": "#FDF7E6",
+          "rgb": [
+            253,
+            247,
+            230
+          ]
+        },
+        {
+          "region_label": "wood desk",
+          "normalized_rectangle_xyxy": [
+            0.62,
+            0.525,
+            0.84,
+            0.54
+          ],
+          "method": "per-channel median of original JPEG RGB pixels in visible approximate region",
+          "hex": "#7E483C",
+          "rgb": [
+            126,
+            72,
+            60
+          ]
+        }
+      ]
+    },
+    {
+      "image": 6,
+      "attachment_path": "/Users/aleksey/.codex/attachments/21f070b3-2d12-4d99-bf4b-9835eea65c98/image-6.jpeg",
+      "original_dimensions_px": [
+        434,
+        584
+      ],
+      "sha256": "c8a92d93df0f695e71f123506bc271579e62c4fedda1c0b37f5db86a83712dda",
+      "byte_identical_reference_copies": [
+        "docs/references/06-roland.jpeg"
+      ],
+      "analysis_dimensions_px": [
+        143,
+        192
+      ],
+      "whole_image_palette": [
+        {
+          "hex": "#223D1E",
+          "rgb": [
+            34,
+            61,
+            30
+          ],
+          "fraction_of_analyzed_pixels": 0.1143
+        },
+        {
+          "hex": "#041702",
+          "rgb": [
+            4,
+            23,
+            2
+          ],
+          "fraction_of_analyzed_pixels": 0.1129
+        },
+        {
+          "hex": "#052003",
+          "rgb": [
+            5,
+            32,
+            3
+          ],
+          "fraction_of_analyzed_pixels": 0.1115
+        },
+        {
+          "hex": "#3F5035",
+          "rgb": [
+            63,
+            80,
+            53
+          ],
+          "fraction_of_analyzed_pixels": 0.1057
+        },
+        {
+          "hex": "#496949",
+          "rgb": [
+            73,
+            105,
+            73
+          ],
+          "fraction_of_analyzed_pixels": 0.0753
+        },
+        {
+          "hex": "#0C2707",
+          "rgb": [
+            12,
+            39,
+            7
+          ],
+          "fraction_of_analyzed_pixels": 0.0743
+        },
+        {
+          "hex": "#192A10",
+          "rgb": [
+            25,
+            42,
+            16
+          ],
+          "fraction_of_analyzed_pixels": 0.0742
+        },
+        {
+          "hex": "#0B1D05",
+          "rgb": [
+            11,
+            29,
+            5
+          ],
+          "fraction_of_analyzed_pixels": 0.0719
+        }
+      ],
+      "secondary_palette_without_extreme_neutrals": [
+        {
+          "hex": "#0B2406",
+          "rgb": [
+            11,
+            36,
+            6
+          ],
+          "fraction_of_analyzed_pixels": 0.1366
+        },
+        {
+          "hex": "#0F2C0A",
+          "rgb": [
+            15,
+            44,
+            10
+          ],
+          "fraction_of_analyzed_pixels": 0.0955
+        },
+        {
+          "hex": "#4A5E43",
+          "rgb": [
+            74,
+            94,
+            67
+          ],
+          "fraction_of_analyzed_pixels": 0.0934
+        },
+        {
+          "hex": "#70876A",
+          "rgb": [
+            112,
+            135,
+            106
+          ],
+          "fraction_of_analyzed_pixels": 0.0906
+        },
+        {
+          "hex": "#385536",
+          "rgb": [
+            56,
+            85,
+            54
+          ],
+          "fraction_of_analyzed_pixels": 0.0858
+        },
+        {
+          "hex": "#61674C",
+          "rgb": [
+            97,
+            103,
+            76
+          ],
+          "fraction_of_analyzed_pixels": 0.0778
+        }
+      ],
+      "secondary_retained_fraction": 0.7106,
+      "chromatic_palette": [
+        {
+          "hex": "#082104",
+          "rgb": [
+            8,
+            33,
+            4
+          ],
+          "fraction_of_analyzed_pixels": 0.1381
+        },
+        {
+          "hex": "#0B2707",
+          "rgb": [
+            11,
+            39,
+            7
+          ],
+          "fraction_of_analyzed_pixels": 0.1191
+        },
+        {
+          "hex": "#132A0C",
+          "rgb": [
+            19,
+            42,
+            12
+          ],
+          "fraction_of_analyzed_pixels": 0.0986
+        },
+        {
+          "hex": "#2C4828",
+          "rgb": [
+            44,
+            72,
+            40
+          ],
+          "fraction_of_analyzed_pixels": 0.0906
+        },
+        {
+          "hex": "#3D5237",
+          "rgb": [
+            61,
+            82,
+            55
+          ],
+          "fraction_of_analyzed_pixels": 0.0892
+        },
+        {
+          "hex": "#1B3114",
+          "rgb": [
+            27,
+            49,
+            20
+          ],
+          "fraction_of_analyzed_pixels": 0.0825
+        }
+      ],
+      "chromatic_retained_fraction": 0.751,
+      "localized_samples": [
+        {
+          "region_label": "orange footer type",
+          "normalized_rectangle_xyxy": [
+            0.365,
+            0.965,
+            0.48,
+            0.989
+          ],
+          "method": "per-channel median of original JPEG RGB pixels in visible approximate region",
+          "hex": "#6C4420",
+          "rgb": [
+            108,
+            68,
+            32
+          ],
+          "method_note": "Unfiltered regional median includes background; use corresponding filtered sample when identifying the accent."
+        },
+        {
+          "region_label": "green panel",
+          "normalized_rectangle_xyxy": [
+            0.72,
+            0.44,
+            0.82,
+            0.5
+          ],
+          "method": "per-channel median of original JPEG RGB pixels in visible approximate region",
+          "hex": "#1E331C",
+          "rgb": [
+            30,
+            51,
+            28
+          ]
+        }
+      ],
+      "filtered_accent_samples": [
+        {
+          "region_label": "orange footer type",
+          "normalized_rectangle_xyxy": [
+            0.36,
+            0.96,
+            0.96,
+            0.995
+          ],
+          "hue_family": "orange",
+          "method": "Convert original region RGB pixels to HSV; retain saturation >0.28, value >0.3 and hue-family window. Red hue <0.055 or >0.96; orange 0.035<hue<0.105; yellow 0.11<hue<0.19; blue 0.51<hue<0.72. Report per-channel median of retained RGB pixels. Hue normalized 0..1.",
+          "retained_pixels": 1920,
+          "region_pixels": 5220,
+          "retained_fraction": 0.3678,
+          "hex": "#B4804D",
+          "rgb": [
+            180,
+            128,
+            77
+          ]
+        }
+      ]
+    },
+    {
+      "image": 7,
+      "attachment_path": "/Users/aleksey/.codex/attachments/21f070b3-2d12-4d99-bf4b-9835eea65c98/image-7.jpeg",
+      "original_dimensions_px": [
+        736,
+        1072
+      ],
+      "sha256": "c6027f41dcbc492a735a3513683ea2c0030612cff3bbde5864dd02d8eaa0c76e",
+      "byte_identical_reference_copies": [
+        "docs/references/07-yamaha.jpeg"
+      ],
+      "analysis_dimensions_px": [
+        132,
+        192
+      ],
+      "whole_image_palette": [
+        {
+          "hex": "#514937",
+          "rgb": [
+            81,
+            73,
+            55
+          ],
+          "fraction_of_analyzed_pixels": 0.1497
+        },
+        {
+          "hex": "#A99463",
+          "rgb": [
+            169,
+            148,
+            99
+          ],
+          "fraction_of_analyzed_pixels": 0.1074
+        },
+        {
+          "hex": "#613F2F",
+          "rgb": [
+            97,
+            63,
+            47
+          ],
+          "fraction_of_analyzed_pixels": 0.1009
+        },
+        {
+          "hex": "#BEBEAA",
+          "rgb": [
+            190,
+            190,
+            170
+          ],
+          "fraction_of_analyzed_pixels": 0.0999
+        },
+        {
+          "hex": "#F8FAFB",
+          "rgb": [
+            248,
+            250,
+            251
+          ],
+          "fraction_of_analyzed_pixels": 0.0981
+        },
+        {
+          "hex": "#7D5E4B",
+          "rgb": [
+            125,
+            94,
+            75
+          ],
+          "fraction_of_analyzed_pixels": 0.0814
+        },
+        {
+          "hex": "#FEFEFC",
+          "rgb": [
+            254,
+            254,
+            252
+          ],
+          "fraction_of_analyzed_pixels": 0.0751
+        },
+        {
+          "hex": "#E1E5E0",
+          "rgb": [
+            225,
+            229,
+            224
+          ],
+          "fraction_of_analyzed_pixels": 0.0712
+        }
+      ],
+      "secondary_palette_without_extreme_neutrals": [
+        {
+          "hex": "#4F4937",
+          "rgb": [
+            79,
+            73,
+            55
+          ],
+          "fraction_of_analyzed_pixels": 0.1182
+        },
+        {
+          "hex": "#584E3C",
+          "rgb": [
+            88,
+            78,
+            60
+          ],
+          "fraction_of_analyzed_pixels": 0.1099
+        },
+        {
+          "hex": "#583F2E",
+          "rgb": [
+            88,
+            63,
+            46
+          ],
+          "fraction_of_analyzed_pixels": 0.1076
+        },
+        {
+          "hex": "#CBA449",
+          "rgb": [
+            203,
+            164,
+            73
+          ],
+          "fraction_of_analyzed_pixels": 0.1003
+        },
+        {
+          "hex": "#C6BE9B",
+          "rgb": [
+            198,
+            190,
+            155
+          ],
+          "fraction_of_analyzed_pixels": 0.095
+        },
+        {
+          "hex": "#786959",
+          "rgb": [
+            120,
+            105,
+            89
+          ],
+          "fraction_of_analyzed_pixels": 0.0858
+        }
+      ],
+      "secondary_retained_fraction": 0.7942,
+      "chromatic_palette": [
+        {
+          "hex": "#56503C",
+          "rgb": [
+            86,
+            80,
+            60
+          ],
+          "fraction_of_analyzed_pixels": 0.1403
+        },
+        {
+          "hex": "#564231",
+          "rgb": [
+            86,
+            66,
+            49
+          ],
+          "fraction_of_analyzed_pixels": 0.1334
+        },
+        {
+          "hex": "#4D4634",
+          "rgb": [
+            77,
+            70,
+            52
+          ],
+          "fraction_of_analyzed_pixels": 0.1308
+        },
+        {
+          "hex": "#C6BF9B",
+          "rgb": [
+            198,
+            191,
+            155
+          ],
+          "fraction_of_analyzed_pixels": 0.1016
+        },
+        {
+          "hex": "#CEA74D",
+          "rgb": [
+            206,
+            167,
+            77
+          ],
+          "fraction_of_analyzed_pixels": 0.0984
+        },
+        {
+          "hex": "#635645",
+          "rgb": [
+            99,
+            86,
+            69
+          ],
+          "fraction_of_analyzed_pixels": 0.0853
+        }
+      ],
+      "chromatic_retained_fraction": 0.5901,
+      "localized_samples": [
+        {
+          "region_label": "red vertical type",
+          "normalized_rectangle_xyxy": [
+            0.015,
+            0.3,
+            0.048,
+            0.35
+          ],
+          "method": "per-channel median of original JPEG RGB pixels in visible approximate region",
+          "hex": "#634737",
+          "rgb": [
+            99,
+            71,
+            55
+          ],
+          "method_note": "Unfiltered regional median includes background; use corresponding filtered sample when identifying the accent."
+        },
+        {
+          "region_label": "yellow seat",
+          "normalized_rectangle_xyxy": [
+            0.4,
+            0.34,
+            0.5,
+            0.4
+          ],
+          "method": "per-channel median of original JPEG RGB pixels in visible approximate region",
+          "hex": "#CFAF4D",
+          "rgb": [
+            207,
+            175,
+            77
+          ]
+        },
+        {
+          "region_label": "sweater cream",
+          "normalized_rectangle_xyxy": [
+            0.73,
+            0.48,
+            0.83,
+            0.58
+          ],
+          "method": "per-channel median of original JPEG RGB pixels in visible approximate region",
+          "hex": "#CAC1A1",
+          "rgb": [
+            202,
+            193,
+            161
+          ]
+        }
+      ],
+      "filtered_accent_samples": [
+        {
+          "region_label": "red vertical type",
+          "normalized_rectangle_xyxy": [
+            0.01,
+            0.01,
+            0.145,
+            0.72
+          ],
+          "hue_family": "red",
+          "method": "For brighter red typography, retain hue <0.035 or >0.965, saturation >0.55 and value >0.45; report per-channel median retained original RGB. This tighter mask rejects brown photographic background.",
+          "retained_pixels": 10454,
+          "region_pixels": 76100,
+          "retained_fraction": 0.1374,
+          "hex": "#AB3B38",
+          "rgb": [
+            171,
+            59,
+            56
+          ]
+        }
+      ]
+    },
+    {
+      "image": 8,
+      "attachment_path": "/Users/aleksey/.codex/attachments/21f070b3-2d12-4d99-bf4b-9835eea65c98/image-8.jpeg",
+      "original_dimensions_px": [
+        681,
+        878
+      ],
+      "sha256": "319c4a99d46a2b75c417895bc9d34136bc96c06b4a6ef881cfecc4912877eec9",
+      "byte_identical_reference_copies": [
+        "docs/references/08-newspaper.jpeg"
+      ],
+      "analysis_dimensions_px": [
+        149,
+        192
+      ],
+      "whole_image_palette": [
+        {
+          "hex": "#A88F6F",
+          "rgb": [
+            168,
+            143,
+            111
+          ],
+          "fraction_of_analyzed_pixels": 0.127
+        },
+        {
+          "hex": "#937B60",
+          "rgb": [
+            147,
+            123,
+            96
+          ],
+          "fraction_of_analyzed_pixels": 0.1244
+        },
+        {
+          "hex": "#CBB086",
+          "rgb": [
+            203,
+            176,
+            134
+          ],
+          "fraction_of_analyzed_pixels": 0.0984
+        },
+        {
+          "hex": "#C2A37C",
+          "rgb": [
+            194,
+            163,
+            124
+          ],
+          "fraction_of_analyzed_pixels": 0.0972
+        },
+        {
+          "hex": "#866E56",
+          "rgb": [
+            134,
+            110,
+            86
+          ],
+          "fraction_of_analyzed_pixels": 0.0962
+        },
+        {
+          "hex": "#E8CB9B",
+          "rgb": [
+            232,
+            203,
+            155
+          ],
+          "fraction_of_analyzed_pixels": 0.091
+        },
+        {
+          "hex": "#D7BC8F",
+          "rgb": [
+            215,
+            188,
+            143
+          ],
+          "fraction_of_analyzed_pixels": 0.0909
+        },
+        {
+          "hex": "#E0C495",
+          "rgb": [
+            224,
+            196,
+            149
+          ],
+          "fraction_of_analyzed_pixels": 0.0868
+        }
+      ],
+      "secondary_palette_without_extreme_neutrals": [
+        {
+          "hex": "#A88F6F",
+          "rgb": [
+            168,
+            143,
+            111
+          ],
+          "fraction_of_analyzed_pixels": 0.127
+        },
+        {
+          "hex": "#937B60",
+          "rgb": [
+            147,
+            123,
+            96
+          ],
+          "fraction_of_analyzed_pixels": 0.1244
+        },
+        {
+          "hex": "#CBB086",
+          "rgb": [
+            203,
+            176,
+            134
+          ],
+          "fraction_of_analyzed_pixels": 0.0984
+        },
+        {
+          "hex": "#C2A37C",
+          "rgb": [
+            194,
+            163,
+            124
+          ],
+          "fraction_of_analyzed_pixels": 0.0972
+        },
+        {
+          "hex": "#866E56",
+          "rgb": [
+            134,
+            110,
+            86
+          ],
+          "fraction_of_analyzed_pixels": 0.0962
+        },
+        {
+          "hex": "#E8CB9B",
+          "rgb": [
+            232,
+            203,
+            155
+          ],
+          "fraction_of_analyzed_pixels": 0.091
+        }
+      ],
+      "secondary_retained_fraction": 1.0,
+      "chromatic_palette": [
+        {
+          "hex": "#A78E6E",
+          "rgb": [
+            167,
+            142,
+            110
+          ],
+          "fraction_of_analyzed_pixels": 0.1297
+        },
+        {
+          "hex": "#937B60",
+          "rgb": [
+            147,
+            123,
+            96
+          ],
+          "fraction_of_analyzed_pixels": 0.125
+        },
+        {
+          "hex": "#866E56",
+          "rgb": [
+            134,
+            110,
+            86
+          ],
+          "fraction_of_analyzed_pixels": 0.0992
+        },
+        {
+          "hex": "#D5BA8D",
+          "rgb": [
+            213,
+            186,
+            141
+          ],
+          "fraction_of_analyzed_pixels": 0.0943
+        },
+        {
+          "hex": "#C9AE84",
+          "rgb": [
+            201,
+            174,
+            132
+          ],
+          "fraction_of_analyzed_pixels": 0.0921
+        },
+        {
+          "hex": "#C1A17A",
+          "rgb": [
+            193,
+            161,
+            122
+          ],
+          "fraction_of_analyzed_pixels": 0.0917
+        }
+      ],
+      "chromatic_retained_fraction": 0.9699,
+      "localized_samples": [
+        {
+          "region_label": "red title",
+          "normalized_rectangle_xyxy": [
+            0.5,
+            0.1,
+            0.59,
+            0.15
+          ],
+          "method": "per-channel median of original JPEG RGB pixels in visible approximate region",
+          "hex": "#E78C6D",
+          "rgb": [
+            231,
+            140,
+            109
+          ]
+        },
+        {
+          "region_label": "paper margin",
+          "normalized_rectangle_xyxy": [
+            0.968,
+            0.19,
+            0.986,
+            0.32
+          ],
+          "method": "per-channel median of original JPEG RGB pixels in visible approximate region",
+          "hex": "#E6C696",
+          "rgb": [
+            230,
+            198,
+            150
+          ]
+        },
+        {
+          "region_label": "brown portrait",
+          "normalized_rectangle_xyxy": [
+            0.61,
+            0.48,
+            0.69,
+            0.55
+          ],
+          "method": "per-channel median of original JPEG RGB pixels in visible approximate region",
+          "hex": "#A18565",
+          "rgb": [
+            161,
+            133,
+            101
+          ]
+        }
+      ]
+    }
+  ]
+}

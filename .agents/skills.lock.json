@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "researched_on": "2026-10-12",
+  "hash_definition": "SHA-256 of sorted relative file path bytes, NUL, file bytes, NUL, concatenated per skill",
+  "skills": [
+    {
+      "name": "editorial-portfolio-design",
+      "local_path": ".agents/skills/editorial-portfolio-design",
+      "repository": null,
+      "revision": null,
+      "source_path": null,
+      "license_evidence": "Project-authored; no external license declaration",
+      "local_changes": [
+        "Project-authored synthesis from confirmed brief, eight image analyses and inspected source methods; see docs/research/SYNTHESIS.md",
+        "2026-10-12: route image composition and material work to new local skills and visual atlas"
+      ],
+      "file_count": 1,
+      "tree_sha256": "58f44aa6a8aab9bd93c48b16c082c81955548c80b913250563cdd04131f5c337",
+      "research_sources": "docs/research/catalog.json"
+    },
+    {
+      "name": "make-interfaces-feel-better",
+      "local_path": ".agents/skills/make-interfaces-feel-better",
+      "repository": "jakubkrehel/make-interfaces-feel-better",
+      "revision": "35545ea1512ad59fa463e6b1f95ca9c052981fe6",
+      "source_path": "skills/make-interfaces-feel-better",
+      "license_evidence": "MIT",
+      "local_changes": [
+        "Added unmodified upstream root LICENSE"
+      ],
+      "file_count": 8,
+      "tree_sha256": "a38394c031e268bf8d7d05ff6f742baf1787395692bedf76f07cef911c472bcb"
+    },
+    {
+      "name": "vercel-react-best-practices",
+      "local_path": ".agents/skills/vercel-react-best-practices",
+      "repository": "vercel-labs/agent-skills",
+      "revision": "063bee94c3f4df8453406c830b0a7df0f2860278",
+      "source_path": "skills/react-best-practices",
+      "license_evidence": "MIT declared in SKILL.md and README; no full license file upstream",
+      "local_changes": [
+        "Fixed three compiled AGENTS.md links to files in rules/"
+      ],
+      "file_count": 76,
+      "tree_sha256": "74953c602a496c90b2b5ee236315667553404536212cf98ccaea51d1f8b50aae"
+    },
+    {
+      "name": "performance",
+      "local_path": ".agents/skills/performance",
+      "repository": "addyosmani/web-quality-skills",
+      "revision": "afa8da942115f2961fdbfa80807ea0b232ff6c00",
+      "source_path": "skills/performance",
+      "license_evidence": "MIT",
+      "local_changes": [
+        "Added unmodified upstream root LICENSE",
+        "Replaced two omitted core-web-vitals sibling links with pinned URLs"
+      ],
+      "file_count": 4,
+      "tree_sha256": "227510658f51ea331aca4bb16a25b78311dd14d2f357227cc14bd1a4871e42e3"
+    },
+    {
+      "name": "accessibility",
+      "local_path": ".agents/skills/accessibility",
+      "repository": "addyosmani/web-quality-skills",
+      "revision": "afa8da942115f2961fdbfa80807ea0b232ff6c00",
+      "source_path": "skills/accessibility",
+      "license_evidence": "MIT",
+      "local_changes": [
+        "Added unmodified upstream root LICENSE",
+        "Replaced omitted web-quality-audit sibling link with pinned URL"
+      ],
+      "file_count": 4,
+      "tree_sha256": "7394f3ef6868df18858dcef573ae1285418419a48abac681b875f768e46f8e56"
+    },
+    {
+      "name": "seo",
+      "local_path": ".agents/skills/seo",
+      "repository": "addyosmani/web-quality-skills",
+      "revision": "afa8da942115f2961fdbfa80807ea0b232ff6c00",
+      "source_path": "skills/seo",
+      "license_evidence": "MIT",
+      "local_changes": [
+        "Added unmodified upstream root LICENSE",
+        "Replaced two omitted sibling links with pinned URLs"
+      ],
+      "file_count": 3,
+      "tree_sha256": "ee0668f75153b4339d4ed34009779f81164a71f3cc850de2e0764224d208fb60"
+    },
+    {
+      "name": "issue-art-direction",
+      "local_path": ".agents/skills/issue-art-direction",
+      "repository": null,
+      "revision": null,
+      "source_path": null,
+      "license_evidence": "Project-authored; no external license declaration",
+      "local_changes": [
+        "Project-authored synthesis from confirmed brief, eight image analyses and inspected source methods; see docs/research/SYNTHESIS.md",
+        "2026-10-12: route image composition and material work to new local skills and visual atlas"
+      ],
+      "research_sources": "docs/research/catalog.json",
+      "file_count": 1,
+      "tree_sha256": "8a3d089d3a73ecaa22e2b4beb462082c9a032bac857658ba684907a998529a7b"
+    },
+    {
+      "name": "journal-interaction",
+      "local_path": ".agents/skills/journal-interaction",
+      "repository": null,
+      "revision": null,
+      "source_path": null,
+      "license_evidence": "Project-authored; no external license declaration",
+      "local_changes": [
+        "Project-authored synthesis from confirmed brief, eight image analyses and inspected source methods; see docs/research/SYNTHESIS.md"
+      ],
+      "research_sources": "docs/research/catalog.json",
+      "file_count": 1,
+      "tree_sha256": "247f8b1d9c026039e62468ccf3177224ce96cd3d2ab99423c83d427588628cf8"
+    },
+    {
+      "name": "portfolio-editorial-copy",
+      "local_path": ".agents/skills/portfolio-editorial-copy",
+      "repository": null,
+      "revision": null,
+      "source_path": null,
+      "license_evidence": "Project-authored; no external license declaration",
+      "local_changes": [
+        "Project-authored synthesis from confirmed brief, eight image analyses and inspected source methods; see docs/research/SYNTHESIS.md"
+      ],
+      "research_sources": "docs/research/catalog.json",
+      "file_count": 1,
+      "tree_sha256": "118a9876b1c658f1a504406cc2aa1412d37d9fc3a2188966a814b7c21f1b9127"
+    },
+    {
+      "name": "wabi-sabi-restraint",
+      "local_path": ".agents/skills/wabi-sabi-restraint",
+      "repository": "ConcertoNotes/codex-plugins",
+      "revision": "9ba3c9fadff1092395837bf1502e1b8a7f98b1e1",
+      "source_path": "plugins/community/universal-design-principles/plugins/aesthetics-and-emotion-principles/skills/wabi-sabi-restraint",
+      "license_evidence": "MIT; complete scoped license preserved",
+      "local_changes": [
+        "Added unmodified parent-plugin scoped LICENSE"
+      ],
+      "file_count": 3,
+      "tree_sha256": "09102359080e0e929dd9afbf7efaada09e891c5c838f4ce90d9d679e5f3c6e41"
+    },
+    {
+      "name": "japanese-publication-layout",
+      "local_path": ".agents/skills/japanese-publication-layout",
+      "repository": null,
+      "revision": null,
+      "source_path": null,
+      "license_evidence": "Project-authored; no external license declaration",
+      "local_changes": [
+        "Project-authored visual guidance and linked internal atlas from five priority supplied references"
+      ],
+      "research_sources": "docs/research/visual-atlas/index.html",
+      "file_count": 3,
+      "tree_sha256": "56f4d0052d96a3734fb5ce2c3bf492320585e201f0b864c1baed8edfdcfe69be"
+    },
+    {
+      "name": "retro-print-effects",
+      "local_path": ".agents/skills/retro-print-effects",
+      "repository": null,
+      "revision": null,
+      "source_path": null,
+      "license_evidence": "Project-authored; no external license declaration",
+      "local_changes": [
+        "Project-authored visual guidance and linked internal atlas from five priority supplied references"
+      ],
+      "research_sources": "docs/research/visual-atlas/index.html",
+      "file_count": 3,
+      "tree_sha256": "0bc367be9a47d9958035936798828dea9b098a9081f14af6262374735da22d2a"
+    }
+  ],
+  "research_catalog": "docs/research/catalog.json",
+  "authored_entrypoint_max_lines": 80
+}

@@ -1,0 +1,4694 @@
+[
+  {
+    "name": "japanese-design-review",
+    "repository": "y-endo/agents",
+    "repository_url": "https://github.com/y-endo/agents",
+    "head_sha": "e52ef84553469e15316184259697933a6cab31f3",
+    "skill_path": ".agents/skills/japanese-design-review/SKILL.md",
+    "source_url": "https://github.com/y-endo/agents/blob/e52ef84553469e15316184259697933a6cab31f3/.agents/skills/japanese-design-review/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/y-endo/agents/e52ef84553469e15316184259697933a6cab31f3/.agents/skills/japanese-design-review/SKILL.md",
+    "license": "UNDECLARED",
+    "license_url": null,
+    "license_confirmed": false,
+    "stars_snapshot": 0,
+    "snapshot_utc": "2026-10-11T07:46:54.796898+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Evidence-based review of Japanese browser UI: writing, typography, task fit, responsive states, and accessibility; cites source cards and reports unchecked items.",
+    "trigger_excerpt": "Review Japanese-language websites and browser-based product UI for user-task fit, information architecture, Japanese writing and typography, visual hierarchy, responsive behavior, interaction states, accessibility, and brand-specific originality. Use for pre-release design review, implementation or design-diff critique, mobile Japanese line-break review, dense business UI review, or evidence-limited review of an existing project. Report evidence-backed hard gates and severity-ranked findings. Do not use to discover a new visual direction, write a DESIGN.md, implement UI, certify WCAG conformance, or review native apps, print, video, or spatial design.",
+    "sections": [
+      {
+        "line": 11,
+        "heading": "## Protect the boundary"
+      },
+      {
+        "line": 22,
+        "heading": "## Load details only when needed"
+      },
+      {
+        "line": 29,
+        "heading": "## Follow the evidence order"
+      },
+      {
+        "line": 42,
+        "heading": "## Follow the review workflow"
+      },
+      {
+        "line": 44,
+        "heading": "### 1. Establish scope"
+      },
+      {
+        "line": 63,
+        "heading": "### 2. Separate evidence from assumptions"
+      },
+      {
+        "line": 77,
+        "heading": "### 3. Test representative Japanese content"
+      },
+      {
+        "line": 86,
+        "heading": "### 4. Review by user impact"
+      },
+      {
+        "line": 101,
+        "heading": "### 5. Judge gates and findings"
+      },
+      {
+        "line": 117,
+        "heading": "### 6. Report for action"
+      },
+      {
+        "line": 142,
+        "heading": "## Avoid generic review behavior"
+      },
+      {
+        "line": 150,
+        "heading": "## Bundled resources"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 2,
+        "text": "name: japanese-design-review"
+      },
+      {
+        "line": 6,
+        "text": "# Review Japanese Web Design"
+      },
+      {
+        "line": 9,
+        "text": "Treat the project, its users, and its real Japanese content as the primary evidence."
+      },
+      {
+        "line": 25,
+        "text": "- Read [source-cards.md](references/source-cards.md) before applying a general Japanese design rule or citing an external source."
+      },
+      {
+        "line": 26,
+        "text": "- Read [content-test-cases.md](references/content-test-cases.md) before testing Japanese copy, line breaks, responsive typography, or UI states."
+      }
+    ],
+    "aesthetic_connection_fact": "Source cards cite Japan Digital Agency DADS, W3C JLReq, SmartHR, WAIC and named Japanese design-book publisher pages.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Project design evidence and browser/screenshots for interaction/responsive claims."
+    ],
+    "risks": [
+      "No declared source license found. Review-only scope; does not discover direction or implement UI."
+    ],
+    "skill_text_sha256": "8b8c2f70aee8e5d2e51971b48253bb17e9d4fec93d95268b1ed83358c8c1a79d",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "ja-webtypo-skill",
+    "repository": "hanageruge/ja-webtypo-skill",
+    "repository_url": "https://github.com/hanageruge/ja-webtypo-skill",
+    "head_sha": "18e128c17e60eed17f02bebc58e5929408e1072f",
+    "skill_path": "SKILL.md",
+    "source_url": "https://github.com/hanageruge/ja-webtypo-skill/blob/18e128c17e60eed17f02bebc58e5929408e1072f/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/hanageruge/ja-webtypo-skill/18e128c17e60eed17f02bebc58e5929408e1072f/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/hanageruge/ja-webtypo-skill/blob/18e128c17e60eed17f02bebc58e5929408e1072f/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 1,
+    "snapshot_utc": "2026-10-11T07:46:54.799145+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Japanese line-breaking and alignment rules; phrase-aware breaking for headings and centered copy, left alignment for body copy, punctuation and quoted-phrase protection.",
+    "trigger_excerpt": "Japanese web typography for HTML/CSS, Tailwind, React, Next.js, Vue, Svelte, Astro. Fixes awkward Japanese line breaks AND wrong text alignment (justify on Japanese mobile, the most common bug). Couples phrase-aware breaking (auto-phrase / BudouX) to text-align — ON by default for short display copy (headings, card titles) and center-aligned text; OFF by default for left-aligned body / lead / card descriptions to avoid right-edge gaps. Protects quoted phrases (「〜」) from BudouX mid-quote splits. Improves readability of headings, body, buttons, cards, nav, forms. Applies proper text-align defaults (left for body), letter-spacing, line-height, font stack, CJK punctuation handling, and responsive verification. Triggers when Japanese text wraps oddly, headings look cramped, particles strand at line ends, body has inter-character gaps or empty right edges (justify symptoms), card body has gappy right edges (phrase-break on left-aligned body), or a site needs production-grade Japanese typography defaults.",
+    "sections": [
+      {
+        "line": 8,
+        "heading": "## Goal"
+      },
+      {
+        "line": 12,
+        "heading": "## Step 0 — Agree the scope before touching code"
+      },
+      {
+        "line": 49,
+        "heading": "## Baseline CSS"
+      },
+      {
+        "line": 153,
+        "heading": "## Decision Rules"
+      },
+      {
+        "line": 193,
+        "heading": "## Phrase-break × Alignment Matrix"
+      },
+      {
+        "line": 209,
+        "heading": "### Worked failure modes"
+      },
+      {
+        "line": 215,
+        "heading": "## Text Alignment"
+      },
+      {
+        "line": 219,
+        "heading": "### The justify problem in 60 seconds"
+      },
+      {
+        "line": 228,
+        "heading": "### Per-structure defaults"
+      },
+      {
+        "line": 242,
+        "heading": "### When `text-align: justify` IS acceptable"
+      },
+      {
+        "line": 264,
+        "heading": "### Scoping reminder"
+      },
+      {
+        "line": 268,
+        "heading": "### Step 0 elicitation pattern"
+      },
+      {
+        "line": 292,
+        "heading": "## Browser Compatibility"
+      },
+      {
+        "line": 324,
+        "heading": "## Responsive Verification"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 6,
+        "text": "# Japanese Web Typography"
+      },
+      {
+        "line": 10,
+        "text": "Make Japanese web pages readable before decorative. Apply stable CSS defaults first — font stack, letter-spacing, line-height, CJK line-break rules — then protect important phrases manually only when automatic wrapping still fails"
+      },
+      {
+        "line": 14,
+        "text": "Japanese typography work ranges from a 5-minute CSS baseline to a build-pipeline change. Applying everything unasked surprises the user and usually over-reaches. **Before editing any code, present the scope as a short multiple-cho"
+      },
+      {
+        "line": 20,
+        "text": "   - *Tier 1 + Tier 2 — add build-time BudouX.* Also fixes WebKit (every iPhone browser) and Gecko (Firefox). Adds a build-time dependency."
+      },
+      {
+        "line": 34,
+        "text": "   - Card descriptions, feature descriptions — even if \"only 2–3 lines\" they tend to grow with copy edits, and BudouX over-fragments them into right-edge gaps. Default OFF."
+      }
+    ],
+    "aesthetic_connection_fact": "Direct Japanese language typography engineering rather than an aesthetic label.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Browser-dependent auto-phrase support; optional build-time BudouX for WebKit/Gecko."
+    ],
+    "risks": [
+      "Phrase-breaking support and alignment differ across engines; inserting phrase breaks into left-aligned body can produce gaps."
+    ],
+    "skill_text_sha256": "db675ab9196a6aa45c4d18d0f2fad4e3a34b7e201e2655357f712cff62e80018",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "Glaze",
+    "repository": "edbizarro/glaze",
+    "repository_url": "https://github.com/edbizarro/glaze",
+    "head_sha": "16764ede8c588bb3860439d3b49f54bbb39a998c",
+    "skill_path": "skills/Glaze/SKILL.md",
+    "source_url": "https://github.com/edbizarro/glaze/blob/16764ede8c588bb3860439d3b49f54bbb39a998c/skills/Glaze/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/edbizarro/glaze/16764ede8c588bb3860439d3b49f54bbb39a998c/skills/Glaze/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/edbizarro/glaze/blob/16764ede8c588bb3860439d3b49f54bbb39a998c/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 5,
+    "snapshot_utc": "2026-10-11T07:46:54.800089+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Skins existing content as standalone HTML with eight CSS themes; sumi documents ma, enso, vertical writing, and hanko; includes browser verification and HTML injection cautions.",
+    "trigger_excerpt": "Turn any output you already have — a plan, a report, a summary, release notes, any text — into a beautiful, self-contained themed HTML page. Glaze *skins* content; it does not generate it. Ships an eight-theme library (synthwave · manga · brutalist · terminal · sumi · coffee · dieselpunk · neonops), each a self-contained CSS preset built from award-winning design techniques. Zero build step, no JS framework, fonts via Google Fonts, all CSS inlined so the file travels as a single standalone artifact. Extensible: a new theme is one CSS file. Output is verified by opening it in a browser. USE WHEN glaze, glaze this, render as HTML, themed HTML, style this output, make this pretty, beautify this plan/report/summary, skin this content, apply a theme, turn this into a styled page, --style, synthwave/manga/brutalist/terminal/sumi/coffee/dieselpunk/neonops HTML, show the theme catalog. NOT FOR generating the content itself (produce the content first, then glaze the result), static illustrations or diagrams, or video.",
+    "sections": [
+      {
+        "line": 30,
+        "heading": "## Invocation"
+      },
+      {
+        "line": 50,
+        "heading": "### No-style preference"
+      },
+      {
+        "line": 67,
+        "heading": "## Theme library"
+      },
+      {
+        "line": 84,
+        "heading": "## Content model (what every theme styles)"
+      },
+      {
+        "line": 101,
+        "heading": "## Workflow routing"
+      },
+      {
+        "line": 109,
+        "heading": "## Catalog"
+      },
+      {
+        "line": 129,
+        "heading": "## Output & conventions"
+      },
+      {
+        "line": 140,
+        "heading": "## Verification (before declaring done)"
+      },
+      {
+        "line": 152,
+        "heading": "## Gotchas"
+      },
+      {
+        "line": 186,
+        "heading": "## Examples"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 7,
+        "text": "  brutalist · terminal · sumi · coffee · dieselpunk · neonops), each a self-contained CSS preset built"
+      },
+      {
+        "line": 14,
+        "text": "  synthwave/manga/brutalist/terminal/sumi/coffee/dieselpunk/neonops HTML, show the theme catalog. NOT"
+      },
+      {
+        "line": 38,
+        "text": "- `--style <theme>` — one of: `synthwave` `manga` `brutalist` `terminal` `sumi`"
+      },
+      {
+        "line": 41,
+        "text": "  `wabi`/`wabisabi`/`sumie`→sumi, `cafe`→coffee,"
+      },
+      {
+        "line": 75,
+        "text": "| `sumi` | sumi-e / wabi-sabi | 間 ma + ensō + tate-gaki + hanko seal | calm, reflective, sophisticated |"
+      }
+    ],
+    "aesthetic_connection_fact": "Sumi theme explicitly documents ma, enso, tategaki and hanko; author interpretation rather than scholarly authority.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Standalone HTML/CSS and browser verification; Google Fonts requests unless fonts are localized."
+    ],
+    "risks": [
+      "Theme modifies presentation rather than validating source content. External/untrusted content must be escaped; CSS effects need reduced-motion/browser review."
+    ],
+    "skill_text_sha256": "6f6b32a37d3eff250078ed1fb5c0724b4382591be85e327fd8cee4062d450b1a",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "maestro-creative top-level index",
+    "repository": "maestro-ai-stack/maestro-creative",
+    "repository_url": "https://github.com/maestro-ai-stack/maestro-creative",
+    "head_sha": "079d9426797bd853993cd99941d141815d192402",
+    "skill_path": "SKILL.md",
+    "source_url": "https://github.com/maestro-ai-stack/maestro-creative/blob/079d9426797bd853993cd99941d141815d192402/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/maestro-ai-stack/maestro-creative/079d9426797bd853993cd99941d141815d192402/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/maestro-ai-stack/maestro-creative/blob/079d9426797bd853993cd99941d141815d192402/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 0,
+    "snapshot_utc": "2026-10-11T07:46:54.801193+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "missing-yaml-frontmatter",
+    "summary": "Top-level creative CLI/reference index with twelve formats and 54 style definitions; file has no YAML skill frontmatter.",
+    "trigger_excerpt": null,
+    "sections": [
+      {
+        "line": 5,
+        "heading": "## Quick Reference"
+      },
+      {
+        "line": 45,
+        "heading": "## 12 Formats"
+      },
+      {
+        "line": 62,
+        "heading": "## Art Styles (7 Eras)"
+      },
+      {
+        "line": 84,
+        "heading": "## Design Theory Knowledge Base"
+      },
+      {
+        "line": 99,
+        "heading": "## Integrations"
+      },
+      {
+        "line": 109,
+        "heading": "## Architecture"
+      },
+      {
+        "line": 153,
+        "heading": "## Design System"
+      },
+      {
+        "line": 161,
+        "heading": "## Dependencies"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 73,
+        "text": "| **eastern** | 7 | chinoiserie, dunhuang, gongbi, ink-wash, song-minimal, ukiyo-e, wabi-sabi |"
+      },
+      {
+        "line": 90,
+        "text": "| **composition** | Golden ratio, rule of thirds, dynamic symmetry, gestalt, visual weight, Ma (間) |"
+      },
+      {
+        "line": 97,
+        "text": "| **typography-advanced** | Microtypography, optical corrections, variable fonts, CJK deep rules (避头尾, 标点挤压) |"
+      },
+      {
+        "line": 141,
+        "text": "    eastern/             # 7 styles: chinoiserie → wabi-sabi"
+      },
+      {
+        "line": 159,
+        "text": "All tokens use CSS custom properties. CJK + Latin bilingual support. 8pt grid for print."
+      }
+    ],
+    "aesthetic_connection_fact": "Repository has actual ukiyo-e and wabi-sabi CSS/style references; format skills themselves are not culturally specific.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Source commands use Bun; format-specific dependencies include Eleventy/Vite, Puppeteer, p5.js, ffmpeg and pagedjs-cli."
+    ],
+    "risks": [
+      "Scripts build/export files; inspect dependencies before execution. Style reference files are not independent skills."
+    ],
+    "skill_text_sha256": "e45a9ed169d2e5f5cc6dc57943ea75dca161513dc68a61bec417d2730bc75ddb",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "creative-poster",
+    "repository": "maestro-ai-stack/maestro-creative",
+    "repository_url": "https://github.com/maestro-ai-stack/maestro-creative",
+    "head_sha": "079d9426797bd853993cd99941d141815d192402",
+    "skill_path": "skills/poster/SKILL.md",
+    "source_url": "https://github.com/maestro-ai-stack/maestro-creative/blob/079d9426797bd853993cd99941d141815d192402/skills/poster/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/maestro-ai-stack/maestro-creative/079d9426797bd853993cd99941d141815d192402/skills/poster/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/maestro-ai-stack/maestro-creative/blob/079d9426797bd853993cd99941d141815d192402/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 0,
+    "snapshot_utc": "2026-10-11T07:46:54.802012+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Print poster composition, fixed point sizes, hierarchy, density, proportional layouts, bleed, build and visual QA.",
+    "trigger_excerpt": "Single-page print poster/flyer generation (A3/A4/custom, PDF). Triggers: 海报, poster, A3, single page print, 传单, flyer, 单页. Do NOT use for: multi-page booklet → creative-handbook, screen slides → creative-slides. Part of maestro-creative toolkit. CLI: creative poster {command}.",
+    "sections": [
+      {
+        "line": 14,
+        "heading": "## Design Philosophy"
+      },
+      {
+        "line": 28,
+        "heading": "## Format Rules"
+      },
+      {
+        "line": 30,
+        "heading": "### Dimensions & Bleed"
+      },
+      {
+        "line": 43,
+        "heading": "### Typography Scale (Print)"
+      },
+      {
+        "line": 54,
+        "heading": "### Density Targets"
+      },
+      {
+        "line": 62,
+        "heading": "## Composition Principles"
+      },
+      {
+        "line": 64,
+        "heading": "### Proportional Systems"
+      },
+      {
+        "line": 69,
+        "heading": "### Visual Weight Hierarchy"
+      },
+      {
+        "line": 77,
+        "heading": "### Balance Strategies"
+      },
+      {
+        "line": 84,
+        "heading": "## Design-First Workflow"
+      },
+      {
+        "line": 86,
+        "heading": "### Phase 1: INSPIRE"
+      },
+      {
+        "line": 99,
+        "heading": "### Phase 2: DESIGN"
+      },
+      {
+        "line": 108,
+        "heading": "### Phase 3: BUILD"
+      },
+      {
+        "line": 118,
+        "heading": "### Phase 4: QA"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 20,
+        "text": "2. **Negative space is the message** — Print has no animation, no hover states. The empty space around content is what gives the content its power. Target: 30-40% whitespace for text-heavy, 15-25% for image-dominant posters. Ma (間"
+      },
+      {
+        "line": 52,
+        "text": "CJK: hero 36–80pt (hanzi are visually denser). ZH/EN ratio: 0.91."
+      },
+      {
+        "line": 140,
+        "text": "| Typography | `knowledge/principles/typography.md` | Type scale, CJK rules |"
+      },
+      {
+        "line": 150,
+        "text": "4. **CJK font loading delay** — Noto Serif SC is ~5MB. Wait 3-5s after `networkidle0` before PDF capture. Without this, fallback fonts render."
+      }
+    ],
+    "aesthetic_connection_fact": "Repository has actual ukiyo-e and wabi-sabi CSS/style references; format skills themselves are not culturally specific.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Source commands use Bun; format-specific dependencies include Eleventy/Vite, Puppeteer, p5.js, ffmpeg and pagedjs-cli."
+    ],
+    "risks": [
+      "Scripts build/export files; inspect dependencies before execution. Style reference files are not independent skills."
+    ],
+    "skill_text_sha256": "aa5d18c6733404d660386809ceeb5b0084fd15533996311e5b175db25ea71806",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "creative-slides",
+    "repository": "maestro-ai-stack/maestro-creative",
+    "repository_url": "https://github.com/maestro-ai-stack/maestro-creative",
+    "head_sha": "079d9426797bd853993cd99941d141815d192402",
+    "skill_path": "skills/slides/SKILL.md",
+    "source_url": "https://github.com/maestro-ai-stack/maestro-creative/blob/079d9426797bd853993cd99941d141815d192402/skills/slides/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/maestro-ai-stack/maestro-creative/079d9426797bd853993cd99941d141815d192402/skills/slides/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/maestro-ai-stack/maestro-creative/blob/079d9426797bd853993cd99941d141815d192402/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 0,
+    "snapshot_utc": "2026-10-11T07:46:54.802946+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "HTML slides with screen type scales, content budgets, narrative sequence, easing, duration, transitions, and export workflow.",
+    "trigger_excerpt": "Self-contained HTML presentation/deck generation (12 presets). Triggers: 演示, slides, deck, pitch, presentation, 幻灯片, PPT. Do NOT use for: print booklet → creative-handbook, single print page → creative-poster. Part of maestro-creative toolkit. CLI: creative slides {command}.",
+    "sections": [
+      {
+        "line": 14,
+        "heading": "## Design Philosophy"
+      },
+      {
+        "line": 28,
+        "heading": "## Format Rules"
+      },
+      {
+        "line": 30,
+        "heading": "### Aspect Ratio & Resolution"
+      },
+      {
+        "line": 41,
+        "heading": "### Typography Scale (Screen)"
+      },
+      {
+        "line": 53,
+        "heading": "### Content Limits"
+      },
+      {
+        "line": 63,
+        "heading": "### Slide Types"
+      },
+      {
+        "line": 75,
+        "heading": "## Motion Principles"
+      },
+      {
+        "line": 77,
+        "heading": "### Easing-to-Emotion Mapping"
+      },
+      {
+        "line": 85,
+        "heading": "### Duration System"
+      },
+      {
+        "line": 93,
+        "heading": "### Transition Patterns"
+      },
+      {
+        "line": 98,
+        "heading": "## 12 Presets — Design Rationale"
+      },
+      {
+        "line": 100,
+        "heading": "### Dark Presets — Keynotes, Tech Talks, Dramatic Presentations"
+      },
+      {
+        "line": 108,
+        "heading": "### Light Presets — Workshops, Academic, Collaborative"
+      },
+      {
+        "line": 116,
+        "heading": "### Specialty Presets — Specific Aesthetics"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 51,
+        "text": "CJK: hero 36–56px (hanzi are visually denser). ZH/EN size ratio: 0.85."
+      },
+      {
+        "line": 187,
+        "text": "| Typography | `knowledge/principles/typography.md` | Type scale, CJK rules, screen readability |"
+      }
+    ],
+    "aesthetic_connection_fact": "Repository has actual ukiyo-e and wabi-sabi CSS/style references; format skills themselves are not culturally specific.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Source commands use Bun; format-specific dependencies include Eleventy/Vite, Puppeteer, p5.js, ffmpeg and pagedjs-cli."
+    ],
+    "risks": [
+      "Scripts build/export files; inspect dependencies before execution. Style reference files are not independent skills."
+    ],
+    "skill_text_sha256": "5b5777d406c98ffc2e10e2b09410ef02dd7dd47b83bcd74b560971349231bff3",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "creative-motion",
+    "repository": "maestro-ai-stack/maestro-creative",
+    "repository_url": "https://github.com/maestro-ai-stack/maestro-creative",
+    "head_sha": "079d9426797bd853993cd99941d141815d192402",
+    "skill_path": "skills/motion/SKILL.md",
+    "source_url": "https://github.com/maestro-ai-stack/maestro-creative/blob/079d9426797bd853993cd99941d141815d192402/skills/motion/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/maestro-ai-stack/maestro-creative/079d9426797bd853993cd99941d141815d192402/skills/motion/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/maestro-ai-stack/maestro-creative/blob/079d9426797bd853993cd99941d141815d192402/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 0,
+    "snapshot_utc": "2026-10-11T07:46:54.803770+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Converts CSS/DOM animated HTML to GIF/video; maps easing to emotional effect; frame count, encoding and timing checks.",
+    "trigger_excerpt": "Video/GIF motion graphic generation from templates or existing creative outputs. Triggers: 片头, intro, 短视频, GIF, motion graphic, 动画, animation, video, MP4, 视频. Do NOT use for: static print → creative-poster/handbook, interactive web → creative-web-landing. Part of maestro-creative toolkit. CLI: creative motion {command}.",
+    "sections": [
+      {
+        "line": 14,
+        "heading": "## Design Philosophy"
+      },
+      {
+        "line": 28,
+        "heading": "## Easing-to-Emotion Mapping"
+      },
+      {
+        "line": 44,
+        "heading": "## Template Types"
+      },
+      {
+        "line": 53,
+        "heading": "### Template Anatomy"
+      },
+      {
+        "line": 62,
+        "heading": "## Format Rules"
+      },
+      {
+        "line": 64,
+        "heading": "### Output Specifications"
+      },
+      {
+        "line": 71,
+        "heading": "### Animation Constraints"
+      },
+      {
+        "line": 76,
+        "heading": "## Design-First Workflow"
+      },
+      {
+        "line": 78,
+        "heading": "### Phase 1: INSPIRE"
+      },
+      {
+        "line": 92,
+        "heading": "### Phase 2: DESIGN"
+      },
+      {
+        "line": 100,
+        "heading": "### Phase 3: BUILD"
+      },
+      {
+        "line": 112,
+        "heading": "### Phase 4: QA"
+      },
+      {
+        "line": 126,
+        "heading": "## Required Reading"
+      },
+      {
+        "line": 137,
+        "heading": "## Gotchas"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 22,
+        "text": "3. **Style drives movement** — Art Deco = precise geometric transitions, elements slide on grid lines, rotations snap to 45/90 degrees. Ink Wash = stillness is the default, movement is rare and flowing like water. Cyberpunk = glit"
+      }
+    ],
+    "aesthetic_connection_fact": "Repository has actual ukiyo-e and wabi-sabi CSS/style references; format skills themselves are not culturally specific.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Source commands use Bun; format-specific dependencies include Eleventy/Vite, Puppeteer, p5.js, ffmpeg and pagedjs-cli."
+    ],
+    "risks": [
+      "Scripts build/export files; inspect dependencies before execution. Style reference files are not independent skills."
+    ],
+    "skill_text_sha256": "4a968bc0b5896fbfc5601a7252a12981d78656f1cdf374d12cb6d66f4860de82",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "creative-web-landing",
+    "repository": "maestro-ai-stack/maestro-creative",
+    "repository_url": "https://github.com/maestro-ai-stack/maestro-creative",
+    "head_sha": "079d9426797bd853993cd99941d141815d192402",
+    "skill_path": "skills/web-landing/SKILL.md",
+    "source_url": "https://github.com/maestro-ai-stack/maestro-creative/blob/079d9426797bd853993cd99941d141815d192402/skills/web-landing/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/maestro-ai-stack/maestro-creative/079d9426797bd853993cd99941d141815d192402/skills/web-landing/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/maestro-ai-stack/maestro-creative/blob/079d9426797bd853993cd99941d141815d192402/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 0,
+    "snapshot_utc": "2026-10-11T07:46:54.804671+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Responsive Vite landing-page architecture, performance budgets, progressive enhancement, motion presets, and responsive screenshots.",
+    "trigger_excerpt": "Vite-powered landing page / single-page website generation. Triggers: 着陆页, landing page, 官网, web page, 网站, website, single page site, launch page. Do NOT use for: print output → creative-handbook/poster, presentations → creative-slides. Part of maestro-creative toolkit. CLI: creative web {command}.",
+    "sections": [
+      {
+        "line": 14,
+        "heading": "## Design Philosophy"
+      },
+      {
+        "line": 28,
+        "heading": "## Format Rules"
+      },
+      {
+        "line": 30,
+        "heading": "### Viewport & Responsive"
+      },
+      {
+        "line": 44,
+        "heading": "### Typography Scale (Screen)"
+      },
+      {
+        "line": 55,
+        "heading": "### Performance Budgets"
+      },
+      {
+        "line": 65,
+        "heading": "## Section Architecture"
+      },
+      {
+        "line": 85,
+        "heading": "## Animation Presets"
+      },
+      {
+        "line": 104,
+        "heading": "## Design-First Workflow"
+      },
+      {
+        "line": 106,
+        "heading": "### Phase 1: INSPIRE"
+      },
+      {
+        "line": 119,
+        "heading": "### Phase 2: DESIGN"
+      },
+      {
+        "line": 128,
+        "heading": "### Phase 3: BUILD"
+      },
+      {
+        "line": 138,
+        "heading": "### Phase 4: QA"
+      },
+      {
+        "line": 151,
+        "heading": "## Required Reading"
+      },
+      {
+        "line": 165,
+        "heading": "## Gotchas"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 53,
+        "text": "CJK: hero clamp(2rem, 5vw, 4rem). ZH/EN ratio: 0.91. Always set `lang=\"zh\"` for correct line-breaking."
+      },
+      {
+        "line": 161,
+        "text": "| Typography | `knowledge/principles/typography.md` | Type scale, CJK rules, variable fonts |"
+      },
+      {
+        "line": 170,
+        "text": "3. **CJK text needs `lang=\"zh\"`** — Without it, line-breaking uses Latin rules. Chinese text wraps mid-word. Always set the attribute for correct segmentation."
+      },
+      {
+        "line": 212,
+        "text": "bun $CLI web new ./site --style wabi-sabi --preset scroll-story --title \"Portfolio\""
+      }
+    ],
+    "aesthetic_connection_fact": "Repository has actual ukiyo-e and wabi-sabi CSS/style references; format skills themselves are not culturally specific.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Source commands use Bun; format-specific dependencies include Eleventy/Vite, Puppeteer, p5.js, ffmpeg and pagedjs-cli."
+    ],
+    "risks": [
+      "Scripts build/export files; inspect dependencies before execution. Style reference files are not independent skills."
+    ],
+    "skill_text_sha256": "18731b43b9c2c91dc223926de7c961ba4945e2caa2c105d856310a8163436d90",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "creative-generative-art",
+    "repository": "maestro-ai-stack/maestro-creative",
+    "repository_url": "https://github.com/maestro-ai-stack/maestro-creative",
+    "head_sha": "079d9426797bd853993cd99941d141815d192402",
+    "skill_path": "skills/generative-art/SKILL.md",
+    "source_url": "https://github.com/maestro-ai-stack/maestro-creative/blob/079d9426797bd853993cd99941d141815d192402/skills/generative-art/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/maestro-ai-stack/maestro-creative/079d9426797bd853993cd99941d141815d192402/skills/generative-art/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/maestro-ai-stack/maestro-creative/blob/079d9426797bd853993cd99941d141815d192402/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 0,
+    "snapshot_utc": "2026-10-11T07:46:54.805506+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "p5.js generative-art algorithm choice, seeded output, canvas/export sizes, style palettes, frame budgets and SVG export constraints.",
+    "trigger_excerpt": "p5.js generative art sketch creation (6 algorithms, 54 styles). Triggers: 生成式, generative, p5.js, flow field, 生成艺术, creative coding, algorithmic art, 粒子, particle. Do NOT use for: data visualization → creative-infographic, video encoding → creative-motion. Part of maestro-creative toolkit. CLI: creative generative {command}.",
+    "sections": [
+      {
+        "line": 14,
+        "heading": "## Design Philosophy"
+      },
+      {
+        "line": 34,
+        "heading": "## Format Rules"
+      },
+      {
+        "line": 36,
+        "heading": "### Canvas Dimensions"
+      },
+      {
+        "line": 46,
+        "heading": "### Export Sizes"
+      },
+      {
+        "line": 51,
+        "heading": "### Framerate Targets"
+      },
+      {
+        "line": 59,
+        "heading": "## 6 Algorithms — Selection Guide"
+      },
+      {
+        "line": 70,
+        "heading": "### Decision Flowchart"
+      },
+      {
+        "line": 80,
+        "heading": "## Style-to-Algorithm Mapping"
+      },
+      {
+        "line": 99,
+        "heading": "## Design-First Workflow"
+      },
+      {
+        "line": 101,
+        "heading": "### Phase 1: INSPIRE"
+      },
+      {
+        "line": 114,
+        "heading": "### Phase 2: DESIGN"
+      },
+      {
+        "line": 122,
+        "heading": "### Phase 3: BUILD"
+      },
+      {
+        "line": 135,
+        "heading": "### Phase 4: QA"
+      },
+      {
+        "line": 149,
+        "heading": "## Required Reading"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 94,
+        "text": "| Wabi-Sabi (侘寂) | flow-field | — | Muted earth tones, imperfection, asymmetry |"
+      }
+    ],
+    "aesthetic_connection_fact": "Repository has actual ukiyo-e and wabi-sabi CSS/style references; format skills themselves are not culturally specific.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Source commands use Bun; format-specific dependencies include Eleventy/Vite, Puppeteer, p5.js, ffmpeg and pagedjs-cli."
+    ],
+    "risks": [
+      "Scripts build/export files; inspect dependencies before execution. Style reference files are not independent skills."
+    ],
+    "skill_text_sha256": "7b341be0e8966ad0ca4710a0be1f9a927c4aa03ddbb6460819b44b63b415481f",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "creative-handbook",
+    "repository": "maestro-ai-stack/maestro-creative",
+    "repository_url": "https://github.com/maestro-ai-stack/maestro-creative",
+    "head_sha": "079d9426797bd853993cd99941d141815d192402",
+    "skill_path": "skills/handbook/SKILL.md",
+    "source_url": "https://github.com/maestro-ai-stack/maestro-creative/blob/079d9426797bd853993cd99941d141815d192402/skills/handbook/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/maestro-ai-stack/maestro-creative/079d9426797bd853993cd99941d141815d192402/skills/handbook/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/maestro-ai-stack/maestro-creative/blob/079d9426797bd853993cd99941d141815d192402/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 0,
+    "snapshot_utc": "2026-10-11T07:46:54.806088+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Bilingual handbook/book design extending an HTML book pipeline with print grid, editorial rhythm, source preservation and QA.",
+    "trigger_excerpt": "Multi-page print handbook/booklet generation (A4, saddle stitch, PDF). Triggers: 手册, handbook, print booklet, A4 book, 印刷手册, travel guide, 旅行手册. Do NOT use for: single-page print → creative-poster, screen presentations → creative-slides. Part of maestro-creative toolkit. CLI: creative handbook {command}.",
+    "sections": [
+      {
+        "line": 15,
+        "heading": "## Design Philosophy"
+      },
+      {
+        "line": 24,
+        "heading": "## Parent Skill Contents"
+      },
+      {
+        "line": 37,
+        "heading": "## What This Skill Adds"
+      },
+      {
+        "line": 44,
+        "heading": "## Design-First Workflow"
+      },
+      {
+        "line": 46,
+        "heading": "### Phase 1: INSPIRE"
+      },
+      {
+        "line": 56,
+        "heading": "### Phase 2: DESIGN"
+      },
+      {
+        "line": 63,
+        "heading": "### Phase 3: BUILD"
+      },
+      {
+        "line": 70,
+        "heading": "### Phase 4: QA"
+      },
+      {
+        "line": 79,
+        "heading": "## Required Reading"
+      },
+      {
+        "line": 91,
+        "heading": "## Gotchas"
+      },
+      {
+        "line": 101,
+        "heading": "## CLI Quick Reference"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 21,
+        "text": "3. **The parent skill is the source of truth** — This skill adds style system connection and CLI scaffolding. The deep intelligence (7 primitives, 6 themes, 5 use-cases, CJK rules, overflow prevention) lives in the parent. ALWAYS "
+      },
+      {
+        "line": 31,
+        "text": "| **CJK Typography** | 5 bilingual rules: size ratio, color contrast, alignment, adjacency, font pairing |"
+      },
+      {
+        "line": 83,
+        "text": "| **Always (first)** | `~/maestro/maestro-skills/skills/handbook/SKILL.md` | Primitives, themes, overflow, CJK |"
+      },
+      {
+        "line": 87,
+        "text": "| Typography | `knowledge/principles/typography.md` | Type scale, CJK body |"
+      },
+      {
+        "line": 95,
+        "text": "3. **CJK font loading: 5s** — Puppeteer wait after `networkidle0`. Noto Serif SC ~5MB."
+      }
+    ],
+    "aesthetic_connection_fact": "Repository has actual ukiyo-e and wabi-sabi CSS/style references; format skills themselves are not culturally specific.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Source commands use Bun; format-specific dependencies include Eleventy/Vite, Puppeteer, p5.js, ffmpeg and pagedjs-cli."
+    ],
+    "risks": [
+      "Scripts build/export files; inspect dependencies before execution. Style reference files are not independent skills."
+    ],
+    "skill_text_sha256": "71e2b1c935d403bb37c1ad7437017bafa1112f75631beb0d499076e8f35fa773",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "mono-color",
+    "repository": "yanliudesign/mono-color-skill",
+    "repository_url": "https://github.com/yanliudesign/mono-color-skill",
+    "head_sha": "c8ff70597ddedcd65f21a0b528f6a70c35690b0a",
+    "skill_path": "SKILL.md",
+    "source_url": "https://github.com/yanliudesign/mono-color-skill/blob/c8ff70597ddedcd65f21a0b528f6a70c35690b0a/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/yanliudesign/mono-color-skill/c8ff70597ddedcd65f21a0b528f6a70c35690b0a/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/yanliudesign/mono-color-skill/blob/c8ff70597ddedcd65f21a0b528f6a70c35690b0a/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 3398,
+    "snapshot_utc": "2026-10-11T07:46:54.808090+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Generates original one-ink/two-ink editorial raster images with constrained inks, halftone, active negative space and typography; uses a recipe manifest and originality gate.",
+    "trigger_excerpt": "Generate original one-ink or controlled two-ink editorial images from any theme, sentence, article idea, object, or reference photo. Always use this skill when the user asks for 单色海报、双色印刷、单色调视觉、蓝色/绿色孔版印刷、risograph、网点照片、复古或当代编辑排版、zine poster, monochrome editorial poster, duotone print, or asks to use the mono-color style. It uses an adaptive white, gray, or pale-beige substrate, no more than two printing inks, active negative space, terse human language, and strong serif/grotesk/mono typography without making retro styling the default or copying a source composition, wording, logo, or artwork. Produce both the final generation prompt and the generated raster image unless the user explicitly asks for prompt only.",
+    "sections": [
+      {
+        "line": 14,
+        "heading": "## Default Deliverable"
+      },
+      {
+        "line": 24,
+        "heading": "## Input Reading"
+      },
+      {
+        "line": 38,
+        "heading": "### Recipe Manifest"
+      },
+      {
+        "line": 91,
+        "heading": "## Visual DNA"
+      },
+      {
+        "line": 93,
+        "heading": "### 1. Color System"
+      },
+      {
+        "line": 103,
+        "heading": "#### One-Ink Palette"
+      },
+      {
+        "line": 114,
+        "heading": "#### Two-Ink Recipes"
+      },
+      {
+        "line": 128,
+        "heading": "#### Print Modes"
+      },
+      {
+        "line": 137,
+        "heading": "### 2. Space and Grid"
+      },
+      {
+        "line": 149,
+        "heading": "#### Visual Tension and Uneven Energy"
+      },
+      {
+        "line": 162,
+        "heading": "### Reference-Derived Composition Grammar"
+      },
+      {
+        "line": 173,
+        "heading": "### 3. Image Treatment"
+      },
+      {
+        "line": 185,
+        "heading": "#### Abstract Looseness"
+      },
+      {
+        "line": 197,
+        "heading": "#### Controlled Chance"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "Editorial/risograph and controlled print craft; no inspected Japanese-specific philosophy claim.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Image-generation capability for final raster; prompt-only mode available."
+    ],
+    "risks": [
+      "MIT covers source/instructions/scripts, not original example artwork; third-party reference artwork remains separately copyrighted."
+    ],
+    "skill_text_sha256": "8274bc1f30a92a9dc715c03c3fb9aeaa060fb5a12fd58dfe8d977ae98a26bd76",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "typography",
+    "repository": "petekp/agent-skills",
+    "repository_url": "https://github.com/petekp/agent-skills",
+    "head_sha": "0f90f074fd018ffbd7fab9d96d65fee23d44295d",
+    "skill_path": "skills/typography/SKILL.md",
+    "source_url": "https://github.com/petekp/agent-skills/blob/0f90f074fd018ffbd7fab9d96d65fee23d44295d/skills/typography/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/petekp/agent-skills/0f90f074fd018ffbd7fab9d96d65fee23d44295d/skills/typography/SKILL.md",
+    "license": "UNDECLARED",
+    "license_url": null,
+    "license_confirmed": false,
+    "stars_snapshot": 10,
+    "snapshot_utc": "2026-10-11T07:46:54.809191+00:00",
+    "archived": true,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Modular scales, font pairing, measure, line height, spacing, variable fonts, font loading and OpenType details for readable UI.",
+    "trigger_excerpt": "Apply professional typography principles to create readable, hierarchical, and aesthetically refined interfaces. Use when setting type scales, choosing fonts, adjusting spacing, designing text-heavy layouts, implementing dark mode typography, or when asked about readability, font pairing, line height, measure, typographic hierarchy, variable fonts, font loading, or OpenType features.",
+    "sections": [
+      {
+        "line": 12,
+        "heading": "## Reference Files"
+      },
+      {
+        "line": 26,
+        "heading": "## Output Formats"
+      },
+      {
+        "line": 28,
+        "heading": "### Type System Recommendations"
+      },
+      {
+        "line": 31,
+        "heading": "## Type System"
+      },
+      {
+        "line": 33,
+        "heading": "### Scale"
+      },
+      {
+        "line": 38,
+        "heading": "### Hierarchy"
+      },
+      {
+        "line": 47,
+        "heading": "### Fonts"
+      },
+      {
+        "line": 52,
+        "heading": "### Implementation"
+      },
+      {
+        "line": 56,
+        "heading": "### Typography Audits"
+      },
+      {
+        "line": 59,
+        "heading": "## Typography Audit"
+      },
+      {
+        "line": 61,
+        "heading": "### Issues"
+      },
+      {
+        "line": 66,
+        "heading": "### Quick Wins"
+      },
+      {
+        "line": 73,
+        "heading": "## Core Principles"
+      },
+      {
+        "line": 75,
+        "heading": "### The Four Fundamentals (Bringhurst)"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 24,
+        "text": "| [internationalization.md](references/internationalization.md) | RTL languages, Arabic/Hebrew, CJK, bidirectional text |"
+      }
+    ],
+    "aesthetic_connection_fact": "General typography/interaction/aesthetic craft; no inspected Japanese claim.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Text instructions/reference files; aesthetic guide requires research access."
+    ],
+    "risks": [
+      "Archived repository; no declared license found."
+    ],
+    "skill_text_sha256": "fa63d89a9bcb43462d11b6b783419cbca4db8faec1f3fc3075cb044a80ebe2b9",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "aesthetic-guide",
+    "repository": "petekp/agent-skills",
+    "repository_url": "https://github.com/petekp/agent-skills",
+    "head_sha": "0f90f074fd018ffbd7fab9d96d65fee23d44295d",
+    "skill_path": "skills/aesthetic-guide/SKILL.md",
+    "source_url": "https://github.com/petekp/agent-skills/blob/0f90f074fd018ffbd7fab9d96d65fee23d44295d/skills/aesthetic-guide/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/petekp/agent-skills/0f90f074fd018ffbd7fab9d96d65fee23d44295d/skills/aesthetic-guide/SKILL.md",
+    "license": "UNDECLARED",
+    "license_url": null,
+    "license_confirmed": false,
+    "stars_snapshot": 10,
+    "snapshot_utc": "2026-10-11T07:46:54.809600+00:00",
+    "archived": true,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Researches a named design aesthetic and writes concrete palettes, CSS values, component states, type and motion specifications.",
+    "trigger_excerpt": "Research a UI design aesthetic and produce exhaustive, implementation-ready design guidelines for coding agents. Use when the user names an aesthetic (brutalist, glassmorphism, retro-futuristic, Swiss modernist, Apple HIG, neumorphism, minimalism, cyberpunk, Material Design, art deco, vaporwave, etc.) and wants a complete style guide with exact CSS values, color palettes, component states, animations, and typography — detailed enough for a coding agent to faithfully implement the aesthetic with zero ambiguity.",
+    "sections": [
+      {
+        "line": 10,
+        "heading": "## Workflow"
+      },
+      {
+        "line": 19,
+        "heading": "## Research Protocol"
+      },
+      {
+        "line": 29,
+        "heading": "## Output Requirements"
+      },
+      {
+        "line": 39,
+        "heading": "## Customization"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "General typography/interaction/aesthetic craft; no inspected Japanese claim.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Text instructions/reference files; aesthetic guide requires research access."
+    ],
+    "risks": [
+      "Archived repository; no declared license found."
+    ],
+    "skill_text_sha256": "0840211940d4d52a03fd29060ba06f863511bbfbf72991f67635356ce56217af",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "interaction-design",
+    "repository": "petekp/agent-skills",
+    "repository_url": "https://github.com/petekp/agent-skills",
+    "head_sha": "0f90f074fd018ffbd7fab9d96d65fee23d44295d",
+    "skill_path": "skills/interaction-design/SKILL.md",
+    "source_url": "https://github.com/petekp/agent-skills/blob/0f90f074fd018ffbd7fab9d96d65fee23d44295d/skills/interaction-design/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/petekp/agent-skills/0f90f074fd018ffbd7fab9d96d65fee23d44295d/skills/interaction-design/SKILL.md",
+    "license": "UNDECLARED",
+    "license_url": null,
+    "license_confirmed": false,
+    "stars_snapshot": 10,
+    "snapshot_utc": "2026-10-11T07:46:54.810392+00:00",
+    "archived": true,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Goal-directed component states, user flows, feedback, error prevention, keyboard/touch interactions, transitions and accessibility.",
+    "trigger_excerpt": "Design intuitive, meaningful interactions grounded in user goals and cognitive principles. Use when designing component behaviors, user flows, feedback systems, error handling, loading states, transitions, accessibility, keyboard navigation, touch/gesture interactions, or when evaluating interaction quality. Also use for modal vs modeless decisions, direct manipulation patterns, input device considerations, emotional/dramatic aspects of UX, or when asked about making interfaces feel responsive, humane, and goal-directed.",
+    "sections": [
+      {
+        "line": 10,
+        "heading": "## The Fundamental Question"
+      },
+      {
+        "line": 16,
+        "heading": "## Output Contracts"
+      },
+      {
+        "line": 18,
+        "heading": "### Interaction Specification"
+      },
+      {
+        "line": 21,
+        "heading": "## Interaction Spec: [Component Name]"
+      },
+      {
+        "line": 23,
+        "heading": "### User Goal"
+      },
+      {
+        "line": 26,
+        "heading": "### Conceptual Model"
+      },
+      {
+        "line": 29,
+        "heading": "### States & Transitions"
+      },
+      {
+        "line": 39,
+        "heading": "### Keyboard & Input"
+      },
+      {
+        "line": 45,
+        "heading": "### Error Prevention & Recovery"
+      },
+      {
+        "line": 50,
+        "heading": "### Accessibility"
+      },
+      {
+        "line": 56,
+        "heading": "### Flow Analysis"
+      },
+      {
+        "line": 59,
+        "heading": "## Flow Analysis: [Journey Name]"
+      },
+      {
+        "line": 61,
+        "heading": "### User Goal & Stakes"
+      },
+      {
+        "line": 64,
+        "heading": "### Dramatic Arc"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "General typography/interaction/aesthetic craft; no inspected Japanese claim.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Text instructions/reference files; aesthetic guide requires research access."
+    ],
+    "risks": [
+      "Archived repository; no declared license found."
+    ],
+    "skill_text_sha256": "e712e8ea4a564e5549653a13fb6011cf7709c0622f102a13ad8c7b6e9ec0c994",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "japanese-minimal",
+    "repository": "madebymustafa/design-taste",
+    "repository_url": "https://github.com/madebymustafa/design-taste",
+    "head_sha": "c4a6bff0871eb4b15371b0e7d2751628b0ed4608",
+    "skill_path": "skills/japanese-minimal/SKILL.md",
+    "source_url": "https://github.com/madebymustafa/design-taste/blob/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/skills/japanese-minimal/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/madebymustafa/design-taste/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/skills/japanese-minimal/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/madebymustafa/design-taste/blob/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 2,
+    "snapshot_utc": "2026-10-11T07:46:54.810999+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Fixed wabi-sabi genre pack: warm rice paper, sumi ink, hanko red, mincho/gothic pairing, ma spacing, asymmetry, a single vertical element and restrained fades.",
+    "trigger_excerpt": "Genre pack: wabi-sabi minimalism — rice paper, sumi ink, one seal-red accent, a Japanese mincho serif, negative space as the design, one vertical text element allowed. Calm, deliberate, quiet-luxury's unpolished cousin. Use for studios, tea/food brands, wellness, personal sites, and any brief wanting meditative restraint. Stack on the design-taste core skill.",
+    "sections": [
+      {
+        "line": 20,
+        "heading": "## 1. PALETTE (Fixed)"
+      },
+      {
+        "line": 28,
+        "heading": "## 2. TYPOGRAPHY (Fixed)"
+      },
+      {
+        "line": 36,
+        "heading": "## 3. COMPOSITION (Fixed)"
+      },
+      {
+        "line": 44,
+        "heading": "## 4. CONTENT TREATMENT"
+      },
+      {
+        "line": 51,
+        "heading": "## 5. MOTION (Single Acts)"
+      },
+      {
+        "line": 56,
+        "heading": "## 6. CHECKLIST (Fail the Page If…)"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 2,
+        "text": "name: japanese-minimal"
+      },
+      {
+        "line": 4,
+        "text": "  Genre pack: wabi-sabi minimalism — rice paper, sumi ink, one seal-red accent, a Japanese mincho serif, negative space as the design, one vertical text element allowed. Calm, deliberate, quiet-luxury's unpolished cousin. Use for "
+      },
+      {
+        "line": 6,
+        "text": "  - \"japanese\""
+      },
+      {
+        "line": 7,
+        "text": "  - \"wabi sabi\""
+      },
+      {
+        "line": 10,
+        "text": "  - \"minimal japanese\""
+      }
+    ],
+    "aesthetic_connection_fact": "Japanese-specific when japanese-minimal is invoked; other packs are general craft.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Stack genre packs on design-taste core; HTML/CSS implementation skills.",
+      "taste-gsap requires GSAP when actually implemented."
+    ],
+    "risks": [
+      "Fixed palettes, type and motion conventions can override the project direction; review per-pack constraints."
+    ],
+    "skill_text_sha256": "7b96ba5a48afd7d4e69f79f589f95e4fa6874384db0762c6d90b5cad0e1a6465",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "retro-print",
+    "repository": "madebymustafa/design-taste",
+    "repository_url": "https://github.com/madebymustafa/design-taste",
+    "head_sha": "c4a6bff0871eb4b15371b0e7d2751628b0ed4608",
+    "skill_path": "skills/retro-print/SKILL.md",
+    "source_url": "https://github.com/madebymustafa/design-taste/blob/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/skills/retro-print/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/madebymustafa/design-taste/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/skills/retro-print/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/madebymustafa/design-taste/blob/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 2,
+    "snapshot_utc": "2026-10-11T07:46:54.811457+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Print-inspired interface pack with limited inks, warm paper, serif/grotesk/mono hierarchy, grain and halftone, numbered editorial rows and little motion.",
+    "trigger_excerpt": "Genre pack: Risograph / 70s–80s print revival. Warm paper, pigment inks (one red + one blue maximum), halftone dot textures, misregistered ink offsets, rubber-stamp details, poster typography. Use for zines, events, agencies, food/drink brands, music, and anything wanting a warm analog voice. Stack on the design-taste core skill.",
+    "sections": [
+      {
+        "line": 22,
+        "heading": "## 1. PALETTE (Fixed)"
+      },
+      {
+        "line": 29,
+        "heading": "## 2. TYPOGRAPHY (Fixed)"
+      },
+      {
+        "line": 36,
+        "heading": "## 3. TEXTURE & DETAIL (The Craft That Sells It)"
+      },
+      {
+        "line": 44,
+        "heading": "## 4. COMPOSITION (Fixed)"
+      },
+      {
+        "line": 52,
+        "heading": "## 5. MOTION (Almost None — Prints Don't Move)"
+      },
+      {
+        "line": 58,
+        "heading": "## 6. CHECKLIST (Fail the Page If…)"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "Japanese-specific when japanese-minimal is invoked; other packs are general craft.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Stack genre packs on design-taste core; HTML/CSS implementation skills.",
+      "taste-gsap requires GSAP when actually implemented."
+    ],
+    "risks": [
+      "Fixed palettes, type and motion conventions can override the project direction; review per-pack constraints."
+    ],
+    "skill_text_sha256": "9036bd4daf53dd27a7e2c05d9c1d158a6a8aa0e67a2ea5d49f6f8b7b34ff1731",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "editorial-minimal",
+    "repository": "madebymustafa/design-taste",
+    "repository_url": "https://github.com/madebymustafa/design-taste",
+    "head_sha": "c4a6bff0871eb4b15371b0e7d2751628b0ed4608",
+    "skill_path": "skills/editorial-minimal/SKILL.md",
+    "source_url": "https://github.com/madebymustafa/design-taste/blob/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/skills/editorial-minimal/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/madebymustafa/design-taste/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/skills/editorial-minimal/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/madebymustafa/design-taste/blob/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 2,
+    "snapshot_utc": "2026-10-11T07:46:54.811820+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Publication-inspired interface pack using monochrome paper/ink, typographic contrast, editorial columns, rules and restrained motion.",
+    "trigger_excerpt": "Genre pack: Swiss-editorial design identity. Warm paper background, ink-black type, one vermillion accent, oversized serif display with monospaced labels, hairline grids, indexed sections, strict asymmetric composition. Use when the brief asks for a calm, editorial, print-inspired, or quietly premium feel. Stack on top of the design-taste core skill.",
+    "sections": [
+      {
+        "line": 18,
+        "heading": "## 1. PALETTE (Fixed)"
+      },
+      {
+        "line": 26,
+        "heading": "## 2. TYPOGRAPHY (Fixed)"
+      },
+      {
+        "line": 33,
+        "heading": "## 3. COMPOSITION (Fixed)"
+      },
+      {
+        "line": 41,
+        "heading": "## 4. CONTENT TREATMENT"
+      },
+      {
+        "line": 48,
+        "heading": "## 5. MOTION (Almost None)"
+      },
+      {
+        "line": 53,
+        "heading": "## 6. CHECKLIST (Fail the page if…)"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "Japanese-specific when japanese-minimal is invoked; other packs are general craft.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Stack genre packs on design-taste core; HTML/CSS implementation skills.",
+      "taste-gsap requires GSAP when actually implemented."
+    ],
+    "risks": [
+      "Fixed palettes, type and motion conventions can override the project direction; review per-pack constraints."
+    ],
+    "skill_text_sha256": "fd6c52053a992de985d5053278994784088f20bf9e76e1224ad9c75cdd8e3676",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "taste-typography",
+    "repository": "madebymustafa/design-taste",
+    "repository_url": "https://github.com/madebymustafa/design-taste",
+    "head_sha": "c4a6bff0871eb4b15371b0e7d2751628b0ed4608",
+    "skill_path": "skills/taste-typography/SKILL.md",
+    "source_url": "https://github.com/madebymustafa/design-taste/blob/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/skills/taste-typography/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/madebymustafa/design-taste/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/skills/taste-typography/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/madebymustafa/design-taste/blob/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 2,
+    "snapshot_utc": "2026-10-11T07:46:54.812175+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Two-family pairing, fluid modular scales, reading measure, baseline rhythm, weight discipline, text placement and accessibility minima.",
+    "trigger_excerpt": "Typography craft for agent-built interfaces: pairing rules, fluid type scales, line lengths, baseline rhythm, weight discipline, legibility minimums, and the typography reasons most AI-generated pages read as cheap. Use whenever generating or reviewing any UI with text. Stack on the design-taste core skill.",
+    "sections": [
+      {
+        "line": 17,
+        "heading": "## 1. PAIRING (Two Families Max, With Purpose)"
+      },
+      {
+        "line": 32,
+        "heading": "## 2. THE SCALE (Two Scales, Applied Consistently)"
+      },
+      {
+        "line": 43,
+        "heading": "## 3. MEASURE, LEADING, RHYTHM (The Numbers)"
+      },
+      {
+        "line": 51,
+        "heading": "## 4. TEXT PLACEMENT (The Details That Read as \"Designed\")"
+      },
+      {
+        "line": 61,
+        "heading": "## 5. ACCESSIBILITY FLOOR (Non-Negotiable)"
+      },
+      {
+        "line": 68,
+        "heading": "## 6. CHECKLIST (Fail the Page If…)"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "Japanese-specific when japanese-minimal is invoked; other packs are general craft.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Stack genre packs on design-taste core; HTML/CSS implementation skills.",
+      "taste-gsap requires GSAP when actually implemented."
+    ],
+    "risks": [
+      "Fixed palettes, type and motion conventions can override the project direction; review per-pack constraints."
+    ],
+    "skill_text_sha256": "8c9ce32d56237ade84985868db6cc5753082987a9cd1e67d0e2bbb8bc2e3e648",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "taste-color",
+    "repository": "madebymustafa/design-taste",
+    "repository_url": "https://github.com/madebymustafa/design-taste",
+    "head_sha": "c4a6bff0871eb4b15371b0e7d2751628b0ed4608",
+    "skill_path": "skills/taste-color/SKILL.md",
+    "source_url": "https://github.com/madebymustafa/design-taste/blob/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/skills/taste-color/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/madebymustafa/design-taste/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/skills/taste-color/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/madebymustafa/design-taste/blob/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 2,
+    "snapshot_utc": "2026-10-11T07:46:54.812563+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Palette roles and OKLCH ramps, exact contrast checks, semantic tokens and color-blind-safe combinations.",
+    "trigger_excerpt": "Color craft for agent-built interfaces: palette construction in OKLCH, the 60-30-10 discipline, one-accent rule, WCAG 2.2 contrast math, semantic tokens, color-blind-safe pairs, and dark mode mapping. Use whenever picking colors, building palettes, or reviewing UI color. Stack on the design-taste core skill.",
+    "sections": [
+      {
+        "line": 18,
+        "heading": "## 1. PALETTE ARCHITECTURE (60-30-10)"
+      },
+      {
+        "line": 28,
+        "heading": "## 2. BUILDING RAMPS (OKLCH, Not RGB)"
+      },
+      {
+        "line": 35,
+        "heading": "## 3. CONTRAST (WCAG 2.2 — Exact Numbers)"
+      },
+      {
+        "line": 49,
+        "heading": "## 4. SEMANTIC MAPPING (Names Carry Jobs)"
+      },
+      {
+        "line": 56,
+        "heading": "## 5. COLOR-BLIND SAFETY (Default-Safe Pairs)"
+      },
+      {
+        "line": 62,
+        "heading": "## 6. CHECKLIST (Fail the Page If…)"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "Japanese-specific when japanese-minimal is invoked; other packs are general craft.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Stack genre packs on design-taste core; HTML/CSS implementation skills.",
+      "taste-gsap requires GSAP when actually implemented."
+    ],
+    "risks": [
+      "Fixed palettes, type and motion conventions can override the project direction; review per-pack constraints."
+    ],
+    "skill_text_sha256": "e56ad74bef333f3d328a752f840f4e70240f3519f3a56dc585b26d2395be9482",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "taste-motion",
+    "repository": "madebymustafa/design-taste",
+    "repository_url": "https://github.com/madebymustafa/design-taste",
+    "head_sha": "c4a6bff0871eb4b15371b0e7d2751628b0ed4608",
+    "skill_path": "skills/taste-motion/SKILL.md",
+    "source_url": "https://github.com/madebymustafa/design-taste/blob/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/skills/taste-motion/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/madebymustafa/design-taste/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/skills/taste-motion/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/madebymustafa/design-taste/blob/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 2,
+    "snapshot_utc": "2026-10-11T07:46:54.813182+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Motion tokens, transforms/opacity, stagger choreography, hover/press/focus, scroll/layout constraints and reduced-motion fallback.",
+    "trigger_excerpt": "Motion craft for agent-built interfaces: duration and easing tokens, entrance choreography, hover/active micro-interactions, scroll-driven reveals, layout transitions, and prefers-reduced-motion compliance. Prevents the two AI-motion crimes: nothing moves at all, or everything moves forever. Stack on the design-taste core skill.",
+    "sections": [
+      {
+        "line": 18,
+        "heading": "## 1. THE DURATION SCALE (Fixed Tokens)"
+      },
+      {
+        "line": 29,
+        "heading": "## 2. THE EASING TOKENS (Fixed)"
+      },
+      {
+        "line": 37,
+        "heading": "## 3. WHAT TO ANIMATE (And What Not To)"
+      },
+      {
+        "line": 43,
+        "heading": "## 4. CHOREOGRAPHY (Entrances)"
+      },
+      {
+        "line": 51,
+        "heading": "## 5. MICRO-INTERACTIONS (Hover, Press, Focus)"
+      },
+      {
+        "line": 59,
+        "heading": "## 6. SCROLL & LAYOUT"
+      },
+      {
+        "line": 66,
+        "heading": "## 7. REDUCED MOTION (Non-Negotiable)"
+      },
+      {
+        "line": 82,
+        "heading": "## 8. CHECKLIST (Fail the Page If…)"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "Japanese-specific when japanese-minimal is invoked; other packs are general craft.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Stack genre packs on design-taste core; HTML/CSS implementation skills.",
+      "taste-gsap requires GSAP when actually implemented."
+    ],
+    "risks": [
+      "Fixed palettes, type and motion conventions can override the project direction; review per-pack constraints."
+    ],
+    "skill_text_sha256": "c8b4f6ae093ebee73b2ac401dbbbb8f80dba18a407ee938c1616e812fddd5d18",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "cinematic-motion",
+    "repository": "madebymustafa/design-taste",
+    "repository_url": "https://github.com/madebymustafa/design-taste",
+    "head_sha": "c4a6bff0871eb4b15371b0e7d2751628b0ed4608",
+    "skill_path": "skills/cinematic-motion/SKILL.md",
+    "source_url": "https://github.com/madebymustafa/design-taste/blob/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/skills/cinematic-motion/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/madebymustafa/design-taste/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/skills/cinematic-motion/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/madebymustafa/design-taste/blob/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 2,
+    "snapshot_utc": "2026-10-11T07:46:54.813657+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Cinematic web pack joining art-directed composition and narrative entrances; specifies no-JS readability, reduced motion, and touch-safe cursor effects.",
+    "trigger_excerpt": "Genre pack: the site-of-the-day aesthetic — the page as a film projected on studio print. Warm paper canvas, near-black ink type, one vivid electric-blue accent, grotesk display, alternating scene canvases, a scrubbed index counter, text-dissolve pins, and a drag-driven card carousel. For portfolios, product launches, agencies, and any brief that wants premium scroll-driven storytelling. Requires taste-gsap for the implementation. Stack on the design-taste core skill.",
+    "sections": [
+      {
+        "line": 22,
+        "heading": "## 1. PALETTE (Fixed)"
+      },
+      {
+        "line": 30,
+        "heading": "## 2. TYPOGRAPHY (Fixed)"
+      },
+      {
+        "line": 39,
+        "heading": "## 3. COMPOSITION (Fixed)"
+      },
+      {
+        "line": 49,
+        "heading": "## 4. CONTENT TREATMENT"
+      },
+      {
+        "line": 56,
+        "heading": "## 5. MOTION (The Soul — See taste-gsap)"
+      },
+      {
+        "line": 64,
+        "heading": "## 6. CHECKLIST (Fail the Page If…)"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "Japanese-specific when japanese-minimal is invoked; other packs are general craft.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Stack genre packs on design-taste core; HTML/CSS implementation skills.",
+      "taste-gsap requires GSAP when actually implemented."
+    ],
+    "risks": [
+      "Fixed palettes, type and motion conventions can override the project direction; review per-pack constraints."
+    ],
+    "skill_text_sha256": "b5e4b30e362c14e319f3c14eb725ce6b35d1f733c3314a1b5d0b592d39664fed",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "taste-brand-identity",
+    "repository": "madebymustafa/design-taste",
+    "repository_url": "https://github.com/madebymustafa/design-taste",
+    "head_sha": "c4a6bff0871eb4b15371b0e7d2751628b0ed4608",
+    "skill_path": "skills/taste-brand-identity/SKILL.md",
+    "source_url": "https://github.com/madebymustafa/design-taste/blob/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/skills/taste-brand-identity/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/madebymustafa/design-taste/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/skills/taste-brand-identity/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/madebymustafa/design-taste/blob/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 2,
+    "snapshot_utc": "2026-10-11T07:46:54.813998+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Brand concept, wordmark craft, lockups, ink/accent color application, reversed variants and identity deliverables.",
+    "trigger_excerpt": "Brand identity generation for agents: logo mark concepting, wordmark typography, lockups, clear space and minimum sizes, color application, favicon and og-image construction, and the one-page brand sheet. Use when asked to create a logo, identity, or brand assets for a product or site. Stack on the design-taste core skill.",
+    "sections": [
+      {
+        "line": 19,
+        "heading": "## 1. THE CONCEPT (Before Any Drawing)"
+      },
+      {
+        "line": 26,
+        "heading": "## 2. WORDMARK TYPOGRAPHY (The Half Nobody Checks)"
+      },
+      {
+        "line": 33,
+        "heading": "## 3. THE LOCKUP (Mark + Wordmark, Formalized)"
+      },
+      {
+        "line": 40,
+        "heading": "## 4. COLOR APPLICATION"
+      },
+      {
+        "line": 47,
+        "heading": "## 5. THE DELIVERABLE SET (Ship All of These)"
+      },
+      {
+        "line": 54,
+        "heading": "## 6. DO / DON'T (The Fast Filter)"
+      },
+      {
+        "line": 64,
+        "heading": "## 7. CHECKLIST (Fail the Identity If…)"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "Japanese-specific when japanese-minimal is invoked; other packs are general craft.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Stack genre packs on design-taste core; HTML/CSS implementation skills.",
+      "taste-gsap requires GSAP when actually implemented."
+    ],
+    "risks": [
+      "Fixed palettes, type and motion conventions can override the project direction; review per-pack constraints."
+    ],
+    "skill_text_sha256": "f21fd39579be578597f4ed73b10837c7a6ddfbabeee003d131a85c9d52171b8a",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "taste-gsap",
+    "repository": "madebymustafa/design-taste",
+    "repository_url": "https://github.com/madebymustafa/design-taste",
+    "head_sha": "c4a6bff0871eb4b15371b0e7d2751628b0ed4608",
+    "skill_path": "skills/taste-gsap/SKILL.md",
+    "source_url": "https://github.com/madebymustafa/design-taste/blob/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/skills/taste-gsap/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/madebymustafa/design-taste/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/skills/taste-gsap/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/madebymustafa/design-taste/blob/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 2,
+    "snapshot_utc": "2026-10-11T07:46:54.814514+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "GSAP contexts, matchMedia, cleanup, pin/scrub refresh, transform/opacity choreography and reduced-motion/touch considerations.",
+    "trigger_excerpt": "GSAP implementation craft for agent-built sites: timeline architecture, gsap.context and matchMedia, ScrollTrigger pin and scrub hygiene, SplitText discipline, transform-only animation, refresh-after-fonts, and full prefers-reduced-motion gating. The 90% of award-tier motion is structure, not effects — this is that 90%. Use whenever generating GSAP animation code. Stack on the design-taste core skill and taste-motion.",
+    "sections": [
+      {
+        "line": 22,
+        "heading": "## 1. ARCHITECTURE (The Non-Negotiable Shell)"
+      },
+      {
+        "line": 32,
+        "heading": "## 2. PIN & SCRUB HYGIENE (Where Agents Fail Loudest)"
+      },
+      {
+        "line": 43,
+        "heading": "## 3. WHAT TO ANIMATE (Transform and Opacity Only)"
+      },
+      {
+        "line": 50,
+        "heading": "## 4. REVEAL PATTERNS (The Professional's Defaults)"
+      },
+      {
+        "line": 57,
+        "heading": "## 5. THE FULL STACK OF SINS (Each Is a Fail)"
+      },
+      {
+        "line": 65,
+        "heading": "## 6. CHECKLIST (Fail the Animation If…)"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "Japanese-specific when japanese-minimal is invoked; other packs are general craft.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Stack genre packs on design-taste core; HTML/CSS implementation skills.",
+      "taste-gsap requires GSAP when actually implemented."
+    ],
+    "risks": [
+      "Fixed palettes, type and motion conventions can override the project direction; review per-pack constraints."
+    ],
+    "skill_text_sha256": "648b1b14375061b643fa1f45a2f65ac12edd0bd6c9a489f24f60cd21f547ef5f",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "brutalist-industrial",
+    "repository": "madebymustafa/design-taste",
+    "repository_url": "https://github.com/madebymustafa/design-taste",
+    "head_sha": "c4a6bff0871eb4b15371b0e7d2751628b0ed4608",
+    "skill_path": "skills/brutalist-industrial/SKILL.md",
+    "source_url": "https://github.com/madebymustafa/design-taste/blob/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/skills/brutalist-industrial/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/madebymustafa/design-taste/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/skills/brutalist-industrial/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/madebymustafa/design-taste/blob/c4a6bff0871eb4b15371b0e7d2751628b0ed4608/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 2,
+    "snapshot_utc": "2026-10-11T07:46:54.814756+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Industrial genre pack with hard grids, heavy grotesk headings, mono labels, stark palette and mechanical interaction cues.",
+    "trigger_excerpt": "Genre pack: raw mechanical interface — Swiss typographic print fused with military/industrial terminal aesthetics. Rigid visible grids, extreme type-scale contrast, utilitarian color (paper, ink, one signal color), hard edges, zero decoration. Use for data-heavy platforms, developer tools, portfolios, studios, or any brief wanting to feel like a declassified blueprint. Stack on the design-taste core skill.",
+    "sections": [
+      {
+        "line": 19,
+        "heading": "## 1. PALETTE (Fixed)"
+      },
+      {
+        "line": 28,
+        "heading": "## 2. TYPOGRAPHY (Fixed)"
+      },
+      {
+        "line": 35,
+        "heading": "## 3. COMPOSITION (Fixed)"
+      },
+      {
+        "line": 43,
+        "heading": "## 4. CONTENT TREATMENT"
+      },
+      {
+        "line": 50,
+        "heading": "## 5. MOTION (Mechanical, Not Pretty)"
+      },
+      {
+        "line": 56,
+        "heading": "## 6. CHECKLIST (Fail the page if…)"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "Japanese-specific when japanese-minimal is invoked; other packs are general craft.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Stack genre packs on design-taste core; HTML/CSS implementation skills.",
+      "taste-gsap requires GSAP when actually implemented."
+    ],
+    "risks": [
+      "Fixed palettes, type and motion conventions can override the project direction; review per-pack constraints."
+    ],
+    "skill_text_sha256": "7e16d97e74a303d62d572ad02c155d65dccd478fcf3372416765585b12ed0702",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "design-prompts",
+    "repository": "wangpf1129/design-prompts",
+    "repository_url": "https://github.com/wangpf1129/design-prompts",
+    "head_sha": "b6d5bb35e7ed799abd5bc61ac83734b944ef862b",
+    "skill_path": "SKILL.md",
+    "source_url": "https://github.com/wangpf1129/design-prompts/blob/b6d5bb35e7ed799abd5bc61ac83734b944ef862b/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/wangpf1129/design-prompts/b6d5bb35e7ed799abd5bc61ac83734b944ef862b/SKILL.md",
+    "license": "UNDECLARED",
+    "license_url": null,
+    "license_confirmed": false,
+    "stars_snapshot": 1,
+    "snapshot_utc": "2026-10-11T07:46:54.815590+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Routes to 30 aesthetic reference prompts including newsprint, industrial, organic/wabi-sabi, retro and monochrome; style pages are references rather than separate skills.",
+    "trigger_excerpt": "Apply curated design style prompts to frontend projects. Use when the user wants to build or style a UI in a specific aesthetic (e.g., \"use glassmorphism style\", \"make it brutalist\", \"cyberpunk design\", \"design in Art Deco style\"). Supports 30 distinct design styles from designprompts.dev. Each style includes a comprehensive, ready-to-use design prompt covering layout, colors, typography, spacing, effects, and component patterns.",
+    "sections": [
+      {
+        "line": 54,
+        "heading": "## Available Styles (30)"
+      },
+      {
+        "line": 56,
+        "heading": "### 1. Monochrome `Light` → `references/monochrome.md`"
+      },
+      {
+        "line": 59,
+        "heading": "### 2. Bauhaus `Light` → `references/bauhaus.md`"
+      },
+      {
+        "line": 62,
+        "heading": "### 3. Modern Dark `Dark` → `references/modern-dark.md`"
+      },
+      {
+        "line": 65,
+        "heading": "### 4. Newsprint `Light` → `references/newsprint.md`"
+      },
+      {
+        "line": 68,
+        "heading": "### 5. SaaS `Light` → `references/saas.md`"
+      },
+      {
+        "line": 71,
+        "heading": "### 6. Luxury `Light` → `references/luxury.md`"
+      },
+      {
+        "line": 74,
+        "heading": "### 7. Terminal `Dark` → `references/terminal.md`"
+      },
+      {
+        "line": 77,
+        "heading": "### 8. Swiss Minimalist `Light` → `references/swiss-minimalist.md`"
+      },
+      {
+        "line": 80,
+        "heading": "### 9. Kinetic `Dark` → `references/kinetic.md`"
+      },
+      {
+        "line": 83,
+        "heading": "### 10. Flat Design `Light` → `references/flat-design.md`"
+      },
+      {
+        "line": 86,
+        "heading": "### 11. Art Deco `Dark` → `references/art-deco.md`"
+      },
+      {
+        "line": 89,
+        "heading": "### 12. Material Design `Light` → `references/material-design.md`"
+      },
+      {
+        "line": 92,
+        "heading": "### 13. Neo Brutalism `Light` → `references/neo-brutalism.md`"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 138,
+        "text": "Earth-inspired palette with moss greens, terracotta, and sand tones. Features organic blob shapes, grain texture overlays, asymmetric rounded corners, and soft shadows. Embraces wabi-sabi philosophy with warmth and natural imperfe"
+      }
+    ],
+    "aesthetic_connection_fact": "General visual craft or a named reference style; cultural authenticity not independently established.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Read companion references; HTML/CSS/browser capabilities depend on output."
+    ],
+    "risks": [
+      "Source instructions are untested in this research; no execution or behavioral validation."
+    ],
+    "skill_text_sha256": "24cd9b132650e48e665804c71ad43fc3075d4f3ccfb4a890de03a8bb8ee33ab9",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "Design Process",
+    "repository": "ayusavin/skills",
+    "repository_url": "https://github.com/ayusavin/skills",
+    "head_sha": "95c2e4fe4799658a6135bc1d4c0dfb44d49fde98",
+    "skill_path": "design-process/skills/design-process/SKILL.md",
+    "source_url": "https://github.com/ayusavin/skills/blob/95c2e4fe4799658a6135bc1d4c0dfb44d49fde98/design-process/skills/design-process/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/ayusavin/skills/95c2e4fe4799658a6135bc1d4c0dfb44d49fde98/design-process/skills/design-process/SKILL.md",
+    "license": "UNDECLARED",
+    "license_url": null,
+    "license_confirmed": false,
+    "stars_snapshot": 3,
+    "snapshot_utc": "2026-10-11T07:46:54.817697+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Design-direction workflow with three contrasting schools and real-content HTML demos; names Kenya Hara/Muji/wabi-sabi as direction sources.",
+    "trigger_excerpt": "A disciplined process for producing design artifacts (websites, prototypes, slides, covers, mobile screens) with the user acting as a design manager and Claude acting as a senior designer. Optimizes for clarity of intent, breadth of exploration, and iteration speed — not for first-shot perfection.",
+    "sections": [
+      {
+        "line": 41,
+        "heading": "## Phase 0 — Fact-check (highest priority, overrides everything)"
+      },
+      {
+        "line": 47,
+        "heading": "### When this triggers (any one condition)"
+      },
+      {
+        "line": 56,
+        "heading": "### Hard process (execute before clarifying questions)"
+      },
+      {
+        "line": 66,
+        "heading": "### Why this comes first"
+      },
+      {
+        "line": 80,
+        "heading": "## Phase 1 — Intake"
+      },
+      {
+        "line": 82,
+        "heading": "### Goal"
+      },
+      {
+        "line": 86,
+        "heading": "### Entry criterion"
+      },
+      {
+        "line": 96,
+        "heading": "### What to do"
+      },
+      {
+        "line": 105,
+        "heading": "### The question taxonomy"
+      },
+      {
+        "line": 160,
+        "heading": "### Offer escape hatches"
+      },
+      {
+        "line": 166,
+        "heading": "### Fallback: Design Direction Consultant"
+      },
+      {
+        "line": 202,
+        "heading": "### Exit criterion"
+      },
+      {
+        "line": 207,
+        "heading": "### Anti-patterns"
+      },
+      {
+        "line": 220,
+        "heading": "## Phase 2 — Context"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 189,
+        "text": "   | Eastern philosophy (Muji, Wabi-sabi) | Warm, poetic, contemplative | Differentiating / unique pick |"
+      }
+    ],
+    "aesthetic_connection_fact": "General visual craft or a named reference style; cultural authenticity not independently established.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Read companion references; HTML/CSS/browser capabilities depend on output."
+    ],
+    "risks": [
+      "Source instructions are untested in this research; no execution or behavioral validation."
+    ],
+    "skill_text_sha256": "afaefeb452db7f05e6a78863e88139d75156957e612c5892e56ffb4647dce702",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "gpt-image2-ppt",
+    "repository": "luoqianyi/gpt-image2-ppt-skiils",
+    "repository_url": "https://github.com/luoqianyi/gpt-image2-ppt-skiils",
+    "head_sha": "b073031a25d1e9ce5b3e7afa477f9bf2c6d9b9ea",
+    "skill_path": "SKILL.md",
+    "source_url": "https://github.com/luoqianyi/gpt-image2-ppt-skiils/blob/b073031a25d1e9ce5b3e7afa477f9bf2c6d9b9ea/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/luoqianyi/gpt-image2-ppt-skiils/b073031a25d1e9ce5b3e7afa477f9bf2c6d9b9ea/SKILL.md",
+    "license": "Apache-2.0",
+    "license_url": "https://github.com/luoqianyi/gpt-image2-ppt-skiils/blob/b073031a25d1e9ce5b3e7afa477f9bf2c6d9b9ea/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 3,
+    "snapshot_utc": "2026-10-11T07:46:54.818869+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Creates image-based slides, HTML viewer and PPTX via image API; ten presets include Japanese wabi, risograph, editorial mono and Swiss grid.",
+    "trigger_excerpt": "Generate visually striking PPT slides via OpenAI's gpt-image-2 -- 10 curated styles (Spatial Glass / Tech Blue / Editorial Mono / Dark Aurora / Risograph / Wabi / Swiss Grid / Hand Sketch / Y2K Chrome / Retro Vector) plus a template-clone mode that mimics any user-supplied .pptx; ships an HTML viewer and a 16:9 .pptx. Use when the user asks to make a presentation, slides, deck, pitch deck, investor PPT, magazine-style PPT, or 做一份 PPT / 生成幻灯片 / 用 gpt-image 生成 PPT / 按这个模板生成 PPT.",
+    "sections": [
+      {
+        "line": 10,
+        "heading": "## 十种内置风格"
+      },
+      {
+        "line": 27,
+        "heading": "## 模板克隆模式"
+      },
+      {
+        "line": 41,
+        "heading": "### 模板渲染：本机不需要操作 PowerPoint"
+      },
+      {
+        "line": 59,
+        "heading": "### 仿模板的两层缓存"
+      },
+      {
+        "line": 76,
+        "heading": "## 安装"
+      },
+      {
+        "line": 87,
+        "heading": "## 必需的环境变量"
+      },
+      {
+        "line": 107,
+        "heading": "### GPT_IMAGE_ENDPOINT 端点选择说明"
+      },
+      {
+        "line": 116,
+        "heading": "### 中转站兼容性说明"
+      },
+      {
+        "line": 128,
+        "heading": "## 如果你就是 Codex agent（原生 image_generation 出图 — 推荐）"
+      },
+      {
+        "line": 132,
+        "heading": "### 如何判断"
+      },
+      {
+        "line": 136,
+        "heading": "### 出图流程（Codex 原生路径）"
+      },
+      {
+        "line": 207,
+        "heading": "### 模板克隆模式（Codex 原生路径）"
+      },
+      {
+        "line": 213,
+        "heading": "### 与下面「--backend codex」的区别"
+      },
+      {
+        "line": 226,
+        "heading": "## 可选：走 codex CLI 出图（--backend codex，非 Codex caller 用）"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 20,
+        "text": "| `japanese-wabi` | 无印 / 原研哉式侘寂 | 茶道、生活方式、奢侈品、文化讲座 |"
+      },
+      {
+        "line": 25,
+        "text": "> 风格选择原则：技术类首选 `dark-aurora` / `gradient-glass`，商务类首选 `clean-tech-blue` / `editorial-mono`，文化生活类首选 `japanese-wabi` / `vector-illustration`，潮文娱类首选 `risograph` / `y2k-chrome`，学术类首选 `swiss-grid`，工作坊与早期创意类首选 `hand-sketch`。"
+      },
+      {
+        "line": 403,
+        "text": "|   |---- vector-illustration.md      japanese-wabi.md"
+      }
+    ],
+    "aesthetic_connection_fact": "Japanese-wabi preset expressly invokes Muji/Kenya Hara; a preset interpretation, not historical certification.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Python scripts, image API credentials and API spending; inspect requirements before use."
+    ],
+    "risks": [
+      "Raster slide text is image-generated; preserve/editable text and glyph quality require review."
+    ],
+    "skill_text_sha256": "12ef94b3639b00dfd871ef1af9052b7e5319dd74346c0cf39cc6bdcfde34e473",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "su-webstyle-top12",
+    "repository": "doublesq97-ui/su-webstyle-top12",
+    "repository_url": "https://github.com/doublesq97-ui/su-webstyle-top12",
+    "head_sha": "43a089ebbd9ccc72b651a32e0f2855d3dffab0a1",
+    "skill_path": "SKILL.md",
+    "source_url": "https://github.com/doublesq97-ui/su-webstyle-top12/blob/43a089ebbd9ccc72b651a32e0f2855d3dffab0a1/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/doublesq97-ui/su-webstyle-top12/43a089ebbd9ccc72b651a32e0f2855d3dffab0a1/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/doublesq97-ui/su-webstyle-top12/blob/43a089ebbd9ccc72b651a32e0f2855d3dffab0a1/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 16,
+    "snapshot_utc": "2026-10-11T07:46:54.819571+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Routes, applies and checks twelve web style recipes; Wabi Beige is one reference style; distinguishes website, artifact and user-layout modes.",
+    "trigger_excerpt": "\"Curated Top 12 overseas web styles with executable recipes: browse, choose, recommend, auto-select, and apply. Use for website visual direction, landing pages, style boards, artifacts (cards, dashboards, note readers, sticky-rail ops shells), and skinning existing layouts. Raises a minimum style floor (tokens, composition, evidence) without capping creativity.\"",
+    "sections": [
+      {
+        "line": 15,
+        "heading": "## Floor, Not Ceiling"
+      },
+      {
+        "line": 21,
+        "heading": "## Route the Deliverable First"
+      },
+      {
+        "line": 33,
+        "heading": "### User layout priority"
+      },
+      {
+        "line": 44,
+        "heading": "### Skin scope"
+      },
+      {
+        "line": 49,
+        "heading": "## Route the Request Mode"
+      },
+      {
+        "line": 61,
+        "heading": "## Load the Right References"
+      },
+      {
+        "line": 74,
+        "heading": "## Core Workflow"
+      },
+      {
+        "line": 85,
+        "heading": "## Style Contract (Apply intermediate)"
+      },
+      {
+        "line": 109,
+        "heading": "## Core 12"
+      },
+      {
+        "line": 126,
+        "heading": "## Response Patterns"
+      },
+      {
+        "line": 142,
+        "heading": "## Quality Bar"
+      },
+      {
+        "line": 144,
+        "heading": "### Website"
+      },
+      {
+        "line": 152,
+        "heading": "### Artifact"
+      },
+      {
+        "line": 159,
+        "heading": "### Dashboard-ops template"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 122,
+        "text": "| 10 | `wabi-beige` | Wabi Beige / 侘寂米色 |"
+      },
+      {
+        "line": 174,
+        "text": "- Chinese type: slightly higher line-height; avoid overly tight tracking on CJK."
+      }
+    ],
+    "aesthetic_connection_fact": "General visual craft or a named reference style; cultural authenticity not independently established.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Read companion references; HTML/CSS/browser capabilities depend on output."
+    ],
+    "risks": [
+      "Source instructions are untested in this research; no execution or behavioral validation."
+    ],
+    "skill_text_sha256": "76dacab7eb26b54df381ade720f870afbfec4906bcbbe104980a6a913ff353fc",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "frontend-textbooks",
+    "repository": "onepixelaway/frontend-textbooks",
+    "repository_url": "https://github.com/onepixelaway/frontend-textbooks",
+    "head_sha": "a9ee4488657a52c438dfca36b2bcd05084761cd6",
+    "skill_path": "SKILL.md",
+    "source_url": "https://github.com/onepixelaway/frontend-textbooks/blob/a9ee4488657a52c438dfca36b2bcd05084761cd6/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/onepixelaway/frontend-textbooks/a9ee4488657a52c438dfca36b2bcd05084761cd6/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/onepixelaway/frontend-textbooks/blob/a9ee4488657a52c438dfca36b2bcd05084761cd6/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 107,
+    "snapshot_utc": "2026-10-11T07:46:54.820584+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Creates manuscript-preserving HTML books and PDFs with topic-aware type/color choices, generated cover, deterministic checks and print/mobile inspection.",
+    "trigger_excerpt": "Create designed US Letter HTML textbooks, manuals, field guides, business books, and coffee-table books from supplied manuscripts, then verify and export matching PDFs. Use for new manuscript-to-book work, existing HTML book enhancement, print/mobile layout repair, manuscript-preserving diagrams or editorial imagery, and final book production.",
+    "sections": [
+      {
+        "line": 10,
+        "heading": "## Resolve the Skill"
+      },
+      {
+        "line": 20,
+        "heading": "## Ownership Boundary"
+      },
+      {
+        "line": 26,
+        "heading": "## Non-Negotiables"
+      },
+      {
+        "line": 36,
+        "heading": "## Default Workflow"
+      },
+      {
+        "line": 38,
+        "heading": "### 1. Prepare inputs"
+      },
+      {
+        "line": 51,
+        "heading": "### 2. Choose color and typography with the user"
+      },
+      {
+        "line": 59,
+        "heading": "### 3. Make the model plan"
+      },
+      {
+        "line": 65,
+        "heading": "### 4. Generate the required cover artwork"
+      },
+      {
+        "line": 83,
+        "heading": "### 5. Build and verify at the right tier"
+      },
+      {
+        "line": 103,
+        "heading": "### 6. Handle targeted repairs"
+      },
+      {
+        "line": 109,
+        "heading": "### 7. Perform the visual judgment"
+      },
+      {
+        "line": 121,
+        "heading": "### 8. Deliver"
+      },
+      {
+        "line": 125,
+        "heading": "## Design Decisions"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "General editorial/print capability; no inspected Japanese-specific assertion.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Node pipeline, browser/PDF export tooling and image-generation cover capability."
+    ],
+    "risks": [
+      "Book-print workflow, not drop-in web UI implementation; scripts create artifacts and manuscript preservation must be checked."
+    ],
+    "skill_text_sha256": "4298735a0e53f38a6e76e5422219da8a0193e8918097ce7a6725d3ac8a6dd13c",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "wedding-invitation",
+    "repository": "wyx-sg/wedding-invitation-skill",
+    "repository_url": "https://github.com/wyx-sg/wedding-invitation-skill",
+    "head_sha": "0dfdb374bd4721cabf98837210b35dbc0b599935",
+    "skill_path": "SKILL.md",
+    "source_url": "https://github.com/wyx-sg/wedding-invitation-skill/blob/0dfdb374bd4721cabf98837210b35dbc0b599935/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/wyx-sg/wedding-invitation-skill/0dfdb374bd4721cabf98837210b35dbc0b599935/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/wyx-sg/wedding-invitation-skill/blob/0dfdb374bd4721cabf98837210b35dbc0b599935/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 6,
+    "snapshot_utc": "2026-10-11T07:46:54.821739+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Designs bespoke multilingual wedding invitation HTML and a tweak panel, then renders a print PNG with local headless Chromium.",
+    "trigger_excerpt": "Use this skill when the user wants to design and generate a wedding invitation card in any language. The skill drives a conversational workflow — you gather the couple's info and style preferences, design a bespoke HTML template from scratch (no template selection), render it locally with headless Chrome, produce a print-ready PNG, and include a live tweak panel so the user can adjust colors, fonts, frames, and optional components without rebuilding. All data stays on the user's machine; no cloud, no signups, no data leaves.",
+    "sections": [
+      {
+        "line": 8,
+        "heading": "## When to invoke"
+      },
+      {
+        "line": 12,
+        "heading": "## Core principle: design, don't pick"
+      },
+      {
+        "line": 31,
+        "heading": "### Repository layout note (for skill maintainers)"
+      },
+      {
+        "line": 37,
+        "heading": "## Language"
+      },
+      {
+        "line": 51,
+        "heading": "## Privacy invariant"
+      },
+      {
+        "line": 65,
+        "heading": "## Workflow"
+      },
+      {
+        "line": 69,
+        "heading": "## Interaction principle (3-tier degradation)"
+      },
+      {
+        "line": 77,
+        "heading": "## System requirements"
+      },
+      {
+        "line": 91,
+        "heading": "## Design rules"
+      },
+      {
+        "line": 101,
+        "heading": "## Files in this skill"
+      },
+      {
+        "line": 144,
+        "heading": "## Output: what success looks like"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 47,
+        "text": "`design-principles.md` covers typography for the major scripts (Latin, CJK, Korean, Japanese, Arabic, etc.)."
+      },
+      {
+        "line": 96,
+        "text": "- Concrete visual vocabulary for 14+ aesthetics (morandi, wabi-sabi, art-deco, new-chinese, etc.)"
+      }
+    ],
+    "aesthetic_connection_fact": "References include Japanese script typography and wabi-sabi vocabulary.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Node 18+ and Chromium-family browser; local renderer."
+    ],
+    "risks": [
+      "Invitation-specific output workflow; language font availability and print text fidelity must be verified."
+    ],
+    "skill_text_sha256": "e1a5f5488b19018a1793121fbd08ce708e5dddf7a8a871e243df7454c204cc7b",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "frontend-design",
+    "repository": "julianoczkowski/designer-skills",
+    "repository_url": "https://github.com/julianoczkowski/designer-skills",
+    "head_sha": "c259656c76d9758d7ead46b0d2f125cbe84f8665",
+    "skill_path": "frontend-design/SKILL.md",
+    "source_url": "https://github.com/julianoczkowski/designer-skills/blob/c259656c76d9758d7ead46b0d2f125cbe84f8665/frontend-design/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/julianoczkowski/designer-skills/c259656c76d9758d7ead46b0d2f125cbe84f8665/frontend-design/SKILL.md",
+    "license": "Apache-2.0",
+    "license_url": "https://github.com/julianoczkowski/designer-skills/blob/c259656c76d9758d7ead46b0d2f125cbe84f8665/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 579,
+    "snapshot_utc": "2026-10-11T07:46:54.822590+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Builds frontend components/pages from named aesthetic philosophies; Japanese Minimalism Ma and Editorial/Magazine are explicit sections.",
+    "trigger_excerpt": "Build distinctive, production-grade frontend interfaces with high design quality, guided by named aesthetic philosophies. Use when building components, pages, or applications. Generates working code with exceptional attention to aesthetic details and creative choices that avoid generic AI output.",
+    "sections": [
+      {
+        "line": 8,
+        "heading": "## Example prompts"
+      },
+      {
+        "line": 15,
+        "heading": "## Before You Write Any Code"
+      },
+      {
+        "line": 35,
+        "heading": "## Aesthetic Philosophies"
+      },
+      {
+        "line": 39,
+        "heading": "### Dieter Rams (Functionalist)"
+      },
+      {
+        "line": 48,
+        "heading": "### Swiss / International Typographic"
+      },
+      {
+        "line": 57,
+        "heading": "### Japanese Minimalism (Ma)"
+      },
+      {
+        "line": 66,
+        "heading": "### Brutalist / Raw"
+      },
+      {
+        "line": 75,
+        "heading": "### Scandinavian"
+      },
+      {
+        "line": 84,
+        "heading": "### Art Deco / Geometric"
+      },
+      {
+        "line": 93,
+        "heading": "### Neo-Memphis"
+      },
+      {
+        "line": 102,
+        "heading": "### Editorial / Magazine"
+      },
+      {
+        "line": 111,
+        "heading": "## Implementation Guidelines"
+      },
+      {
+        "line": 123,
+        "heading": "## Mobile-First"
+      },
+      {
+        "line": 134,
+        "heading": "## Dark Mode"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 12,
+        "text": "- \"I want this to feel like a Japanese magazine. Build the layout.\""
+      },
+      {
+        "line": 57,
+        "text": "### Japanese Minimalism (Ma)"
+      }
+    ],
+    "aesthetic_connection_fact": "General visual craft or a named reference style; cultural authenticity not independently established.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Read companion references; HTML/CSS/browser capabilities depend on output."
+    ],
+    "risks": [
+      "Source instructions are untested in this research; no execution or behavioral validation."
+    ],
+    "skill_text_sha256": "6a078fa3e5a5cef2656d621a90c8dff8191bd9d8a3724df1b98760262c88ef60",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "magazine-poster",
+    "repository": "nexu-io/open-design",
+    "repository_url": "https://github.com/nexu-io/open-design",
+    "head_sha": "17e255959703a3fad7c8eb7f7b70dcafccc5629a",
+    "skill_path": "design-templates/magazine-poster/SKILL.md",
+    "source_url": "https://github.com/nexu-io/open-design/blob/17e255959703a3fad7c8eb7f7b70dcafccc5629a/design-templates/magazine-poster/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/nexu-io/open-design/17e255959703a3fad7c8eb7f7b70dcafccc5629a/design-templates/magazine-poster/SKILL.md",
+    "license": "Apache-2.0",
+    "license_url": "https://github.com/nexu-io/open-design/blob/17e255959703a3fad7c8eb7f7b70dcafccc5629a/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 100451,
+    "snapshot_utc": "2026-10-11T07:46:54.833061+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Newsprint poster with dateline, oversized serif headline, two-column body and numbered sections with annotated pull quotes.",
+    "trigger_excerpt": "An editorial-style poster — newsprint paper, dateline, oversized serif headline with a struck-through word and italic accent, a 2-column body block, and 6 numbered sections with annotated pull-quote captions. Reads like a Sunday-paper full-page essay or a thoughtful launch poster. Use when the brief asks for \"magazine poster\", \"editorial poster\", \"newsprint\", \"essay layout\", or \"manifesto\".",
+    "sections": [
+      {
+        "line": 39,
+        "heading": "## Workflow"
+      },
+      {
+        "line": 78,
+        "heading": "## Output contract"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "General visual craft or a named reference style; cultural authenticity not independently established.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Read companion references; HTML/CSS/browser capabilities depend on output."
+    ],
+    "risks": [
+      "Source instructions are untested in this research; no execution or behavioral validation."
+    ],
+    "skill_text_sha256": "3aec85e228ca828d4cda8b2a9b39ff7a32a84dd4614396eb5d88ca57401c79eb",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "web-prototype-taste-brutalist",
+    "repository": "nexu-io/open-design",
+    "repository_url": "https://github.com/nexu-io/open-design",
+    "head_sha": "17e255959703a3fad7c8eb7f7b70dcafccc5629a",
+    "skill_path": "design-templates/web-prototype-taste-brutalist/SKILL.md",
+    "source_url": "https://github.com/nexu-io/open-design/blob/17e255959703a3fad7c8eb7f7b70dcafccc5629a/design-templates/web-prototype-taste-brutalist/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/nexu-io/open-design/17e255959703a3fad7c8eb7f7b70dcafccc5629a/design-templates/web-prototype-taste-brutalist/SKILL.md",
+    "license": "Apache-2.0",
+    "license_url": "https://github.com/nexu-io/open-design/blob/17e255959703a3fad7c8eb7f7b70dcafccc5629a/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 100451,
+    "snapshot_utc": "2026-10-11T07:46:54.841738+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Swiss industrial-print prototype with newsprint, heavy grotesk, hairline grid, hazard red and very short mechanical state changes; credits Leonxlnx upstream.",
+    "trigger_excerpt": "Swiss industrial-print web prototype. Newsprint canvas, monolithic black grotesque, viewport-bleeding numerals, hairline grid dividers, hazard-red accent, ASCII syntax decoration. Distilled from Leonxlnx/taste-skill `brutalist-skill` (Swiss Industrial Print mode).",
+    "sections": [
+      {
+        "line": 12,
+        "heading": "## Source"
+      },
+      {
+        "line": 16,
+        "heading": "## Hard rules"
+      },
+      {
+        "line": 27,
+        "heading": "## Banned"
+      },
+      {
+        "line": 37,
+        "heading": "## Required components"
+      },
+      {
+        "line": 46,
+        "heading": "## Motion"
+      },
+      {
+        "line": 54,
+        "heading": "## Pre-flight"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "General visual craft or a named reference style; cultural authenticity not independently established.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Read companion references; HTML/CSS/browser capabilities depend on output."
+    ],
+    "risks": [
+      "Source instructions are untested in this research; no execution or behavioral validation."
+    ],
+    "skill_text_sha256": "4b62f31102fd32c7c6915569df066cdbe3b25be4fa16147c5a5df857a8d37ad0",
+    "hooks_related_files": [],
+    "duplicate_note": "Derived from Leonxlnx/taste-skill brutalist-skill; do not treat as independent provenance."
+  },
+  {
+    "name": "html-ppt-zhangzara-retro-zine",
+    "repository": "nexu-io/open-design",
+    "repository_url": "https://github.com/nexu-io/open-design",
+    "head_sha": "17e255959703a3fad7c8eb7f7b70dcafccc5629a",
+    "skill_path": "design-templates/html-ppt-zhangzara-retro-zine/SKILL.md",
+    "source_url": "https://github.com/nexu-io/open-design/blob/17e255959703a3fad7c8eb7f7b70dcafccc5629a/design-templates/html-ppt-zhangzara-retro-zine/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/nexu-io/open-design/17e255959703a3fad7c8eb7f7b70dcafccc5629a/design-templates/html-ppt-zhangzara-retro-zine/SKILL.md",
+    "license": "Apache-2.0",
+    "license_url": "https://github.com/nexu-io/open-design/blob/17e255959703a3fad7c8eb7f7b70dcafccc5629a/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 100451,
+    "snapshot_utc": "2026-10-11T07:46:54.850368+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "HTML presentation template using retro zine print vocabulary; records source and license for the underlying template.",
+    "trigger_excerpt": "A neighborhood zine on the disappearing corner shops — portraits, voices, and what a block loses when they close. Built as a decision-grade story deck for community, local readers.",
+    "sections": [
+      {
+        "line": 54,
+        "heading": "## At a glance"
+      },
+      {
+        "line": 61,
+        "heading": "## Best for"
+      },
+      {
+        "line": 65,
+        "heading": "## Avoid for"
+      },
+      {
+        "line": 69,
+        "heading": "## Workflow"
+      },
+      {
+        "line": 89,
+        "heading": "## Output contract"
+      },
+      {
+        "line": 100,
+        "heading": "## Source & license"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "General visual craft or a named reference style; cultural authenticity not independently established.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Read companion references; HTML/CSS/browser capabilities depend on output."
+    ],
+    "risks": [
+      "Source instructions are untested in this research; no execution or behavioral validation.",
+      "Vendored beautiful-html-templates assets have scoped MIT notice that must travel with copies; repository Apache alone is insufficient for those assets."
+    ],
+    "skill_text_sha256": "10fd95e3288ff10784071150cb7702ecdb2778674f4d850c6ad473b83b5dd54f",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "newspaperui",
+    "repository": "joisun/newspaperui",
+    "repository_url": "https://github.com/joisun/newspaperui",
+    "head_sha": "377e941f5dd9a505c1a7efd43a85aad3dade897d",
+    "skill_path": "SKILL.md",
+    "source_url": "https://github.com/joisun/newspaperui/blob/377e941f5dd9a505c1a7efd43a85aad3dade897d/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/joisun/newspaperui/377e941f5dd9a505c1a7efd43a85aad3dade897d/SKILL.md",
+    "license": "UNDECLARED",
+    "license_url": null,
+    "license_confirmed": false,
+    "stars_snapshot": 3,
+    "snapshot_utc": "2026-10-11T07:46:54.860838+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "React newspaper-library style guide: Layout/Section/Article span budgets, type/weight scale, restrained accent, CJK content and editorial page patterns.",
+    "trigger_excerpt": "\"Use this skill whenever the user asks to build, generate, or lay out a page with NewspaperUI (React components: Layout, Section, Article, Masthead, BodyText, etc.), or asks for a newspaper-style / editorial-style page, front page, weekly digest, or long-form feature and NewspaperUI is available in the project. Covers grid math (Layout → Section → Article span budgeting), typography scale, color restraint, component composition, and proven page patterns. Do NOT use for generic CSS Grid layout questions unrelated to NewspaperUI, or for interactive/app UI (forms, dashboards) — NewspaperUI is a static editorial-layout library only.\"",
+    "sections": [
+      {
+        "line": 22,
+        "heading": "## 1. Grid Discipline"
+      },
+      {
+        "line": 34,
+        "heading": "### Proven Span Ratios (24-column Section)"
+      },
+      {
+        "line": 54,
+        "heading": "## 2. Typography Scale"
+      },
+      {
+        "line": 58,
+        "heading": "### Size Tiers"
+      },
+      {
+        "line": 68,
+        "heading": "### Weight Discipline"
+      },
+      {
+        "line": 75,
+        "heading": "### Content-Length Budgets"
+      },
+      {
+        "line": 89,
+        "heading": "## 3. Color & Accent"
+      },
+      {
+        "line": 93,
+        "heading": "### Rule Language (Three Types Only)"
+      },
+      {
+        "line": 103,
+        "heading": "### Accent Color Discipline"
+      },
+      {
+        "line": 120,
+        "heading": "## 4. Component Composition"
+      },
+      {
+        "line": 122,
+        "heading": "### Component Selection Matrix"
+      },
+      {
+        "line": 148,
+        "heading": "### Editorial charts"
+      },
+      {
+        "line": 162,
+        "heading": "### CJK Content"
+      },
+      {
+        "line": 177,
+        "heading": "## 5. Proven Page Patterns"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 13,
+        "text": "3. **Visual noise** — accent overuse, rule inconsistency, CJK rendering in Latin serif"
+      },
+      {
+        "line": 81,
+        "text": "| `Headline weight=\"High\"` | **10–12 English words / 16–20 CJK chars** | Longer headlines wrap into ugly multi-line blocks |"
+      },
+      {
+        "line": 84,
+        "text": "| `BodyText columns={2+}` | **≥120–150 CJK chars / ≥90–100 English words per column** | Short copy in multi-column produces half-empty slivers |"
+      },
+      {
+        "line": 105,
+        "text": "- **CJK red** (`--nui-accent-cjk-red`) and **ink red** (`--nui-accent-primary`) are for **news value signals only**:"
+      },
+      {
+        "line": 162,
+        "text": "### CJK Content"
+      }
+    ],
+    "aesthetic_connection_fact": "CJK guidance is explicit; not specifically a Japanese aesthetics skill.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "NewspaperUI React component library available in project."
+    ],
+    "risks": [
+      "No declared license found; library-specific span maths; static editorial layout rather than form/dashboard UI."
+    ],
+    "skill_text_sha256": "6eb105db2c02b54680075580791c8f4ad6ddeb5be9abe456064b495a724d99a8",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "lamplighter",
+    "repository": "starinzlob/the-lamplighter",
+    "repository_url": "https://github.com/starinzlob/the-lamplighter",
+    "head_sha": "6234c33f66c5f91b7edb0235d6517394f86b5bb5",
+    "skill_path": "SKILL.md",
+    "source_url": "https://github.com/starinzlob/the-lamplighter/blob/6234c33f66c5f91b7edb0235d6517394f86b5bb5/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/starinzlob/the-lamplighter/6234c33f66c5f91b7edb0235d6517394f86b5bb5/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/starinzlob/the-lamplighter/blob/6234c33f66c5f91b7edb0235d6517394f86b5bb5/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 0,
+    "snapshot_utc": "2026-10-11T07:46:54.862327+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Creates factual or labeled-fiction newspaper articles and export-ready images in a British 1920s/1930s print-noir style; controls copy, live type, texture and PNG QA.",
+    "trigger_excerpt": "'Create finished articles and export-ready newspaper images in The Lamplighter / Old London Editorial Noir style. Use for 1920s British newspaper stories, private-editorial essays, clipping cards, front pages, quote cards, wanted posters, and telegrams. Covers editorial voice, fact handling, article structure, live typography, template field mapping, artwork boundaries, browser composition, PNG export, and visual QA.'",
+    "sections": [
+      {
+        "line": 22,
+        "heading": "## 1 · Authority and required files"
+      },
+      {
+        "line": 43,
+        "heading": "## 2 · Input contract and defaults"
+      },
+      {
+        "line": 72,
+        "heading": "## 3 · Truth, sourcing, and fictional material"
+      },
+      {
+        "line": 91,
+        "heading": "## 4 · Editorial voice"
+      },
+      {
+        "line": 98,
+        "heading": "### House qualities"
+      },
+      {
+        "line": 112,
+        "heading": "### Chinese voice"
+      },
+      {
+        "line": 123,
+        "heading": "### English voice"
+      },
+      {
+        "line": 132,
+        "heading": "### Headline system"
+      },
+      {
+        "line": 153,
+        "heading": "## 5 · Article structures and copy budgets"
+      },
+      {
+        "line": 178,
+        "heading": "## 6 · Typography — role, language, and fallback"
+      },
+      {
+        "line": 193,
+        "heading": "### Headline font selector"
+      },
+      {
+        "line": 200,
+        "heading": "### Typesetting rules"
+      },
+      {
+        "line": 226,
+        "heading": "## 7 · Visual system — the press layer"
+      },
+      {
+        "line": 242,
+        "heading": "### Gaslight day edition (default)"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 35,
+        "text": "| `assets/fonts/huiwen-mincho/result.css` | Bundled CJK newspaper face |"
+      },
+      {
+        "line": 203,
+        "text": "  punctuation, and Western European text. Do not assume it contains CJK."
+      },
+      {
+        "line": 376,
+        "text": "- CJK and Latin both render with the intended fallback and no tofu boxes;"
+      },
+      {
+        "line": 444,
+        "text": "- [ ] Correct Lamplighter/Huiwen/Goudy role and CJK fallback are visible."
+      }
+    ],
+    "aesthetic_connection_fact": "British print-noir history; adaptable print craft, not Japanese authenticity.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Browser and local static server; PNG export after fonts load."
+    ],
+    "risks": [
+      "Font assets have separate OFL; factual vs fictional editorial material must remain distinct."
+    ],
+    "skill_text_sha256": "341ddcbf38c92ccfdfbd49b407cfcc903e59ceb08aa9226290df8612d193f63e",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "newspaper-brief",
+    "repository": "EisonMe/newspaper-brief",
+    "repository_url": "https://github.com/EisonMe/newspaper-brief",
+    "head_sha": "2ef74bb427dcad98294694869812faa3e434b1ef",
+    "skill_path": "SKILL.md",
+    "source_url": "https://github.com/EisonMe/newspaper-brief/blob/2ef74bb427dcad98294694869812faa3e434b1ef/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/EisonMe/newspaper-brief/2ef74bb427dcad98294694869812faa3e434b1ef/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/EisonMe/newspaper-brief/blob/2ef74bb427dcad98294694869812faa3e434b1ef/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 57,
+    "snapshot_utc": "2026-10-11T07:46:54.862839+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Turns supplied notes/articles/summaries into a mobile newspaper HTML/PNG image with right rail and wrapped text; provides local renderer and screenshot flow.",
+    "trigger_excerpt": "Create mobile-first newspaper-style brief images from raw content or existing summaries. Use when the user says `报纸模式`, `做成报纸图`, `按报纸样式输出`, asks for a 报纸图/简报图/报纸样式总结, or wants notes/chats/articles rendered as a newspaper-style HTML/PNG long image. Supports two flows: (1) raw article/chat/link/notes -> extract and structure key points -> render, (2) existing summary/bullets -> render directly.",
+    "sections": [
+      {
+        "line": 10,
+        "heading": "## 默认工作方式"
+      },
+      {
+        "line": 20,
+        "heading": "## 触发词"
+      },
+      {
+        "line": 35,
+        "heading": "## v1 范围"
+      },
+      {
+        "line": 42,
+        "heading": "## 数据准备"
+      },
+      {
+        "line": 73,
+        "heading": "### 原始材料模式"
+      },
+      {
+        "line": 83,
+        "heading": "### 标题规则（v1.1）"
+      },
+      {
+        "line": 92,
+        "heading": "## 脚本"
+      },
+      {
+        "line": 94,
+        "heading": "### 1) 生成 HTML"
+      },
+      {
+        "line": 103,
+        "heading": "### 2) 可选：顺手导出 PNG（本地浏览器兜底）"
+      },
+      {
+        "line": 114,
+        "heading": "## 推荐截图方式"
+      },
+      {
+        "line": 116,
+        "heading": "### 首选：OpenClaw browser 工具"
+      },
+      {
+        "line": 126,
+        "heading": "### 兜底：脚本内置浏览器截图"
+      },
+      {
+        "line": 133,
+        "heading": "## 版面建议"
+      },
+      {
+        "line": 144,
+        "heading": "## 质量检查"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "Chinese newspaper-style output, no Japanese-specific claim.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Python and Chromium/Edge for screenshot; OpenClaw browser path also documented."
+    ],
+    "risks": [
+      "Mobile image export workflow; not reusable interactive website architecture."
+    ],
+    "skill_text_sha256": "c6897175d783d131c14f31fbbc913a07c83a31f3a090cf9dd04c60eef7fceff2",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "designing-frontend-interfaces",
+    "repository": "osmontero/opencode-skills",
+    "repository_url": "https://github.com/osmontero/opencode-skills",
+    "head_sha": "c269996b62c8a8f245264851e24110b46c9d8863",
+    "skill_path": "skills/designing-frontend-interfaces/SKILL.md",
+    "source_url": "https://github.com/osmontero/opencode-skills/blob/c269996b62c8a8f245264851e24110b46c9d8863/skills/designing-frontend-interfaces/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/osmontero/opencode-skills/c269996b62c8a8f245264851e24110b46c9d8863/skills/designing-frontend-interfaces/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/osmontero/opencode-skills/blob/c269996b62c8a8f245264851e24110b46c9d8863/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 14,
+    "snapshot_utc": "2026-10-11T07:46:54.863725+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Requires an eight-line brief, one visual analogue, token block, typographic hierarchy, component states and browser screenshots; example is technical broadsheet.",
+    "trigger_excerpt": "Use when building or restyling any web interface — landing pages, dashboards, marketing sites, web apps, React/Vue components, HTML/CSS layouts, artifacts, posters — or when asked to make a UI look better, more polished, more distinctive, less generic, or less \"AI-generated\". Also use when a design brief, art direction, visual identity, type scale, or color system is needed before implementation.",
+    "sections": [
+      {
+        "line": 9,
+        "heading": "## Overview"
+      },
+      {
+        "line": 21,
+        "heading": "## The Iron Law"
+      },
+      {
+        "line": 31,
+        "heading": "## Checklist"
+      },
+      {
+        "line": 44,
+        "heading": "## Step 1: The Design Brief"
+      },
+      {
+        "line": 74,
+        "heading": "## Step 2: Lock the Token Block"
+      },
+      {
+        "line": 127,
+        "heading": "## Step 3: Hierarchy"
+      },
+      {
+        "line": 140,
+        "heading": "## Step 4: Anti-Slop"
+      },
+      {
+        "line": 170,
+        "heading": "## Step 5: Component States"
+      },
+      {
+        "line": 185,
+        "heading": "## Step 6: Verify Visually"
+      },
+      {
+        "line": 207,
+        "heading": "## Self-Review"
+      },
+      {
+        "line": 224,
+        "heading": "## Reference Files"
+      },
+      {
+        "line": 236,
+        "heading": "## Common Mistakes"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "General editorial craft; inspected example explicitly models newspaper/man-page density.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "HTML/CSS; screenshot workflow uses Python Playwright."
+    ],
+    "risks": [
+      "Browser/tool dependencies and visual proof required to substantiate output."
+    ],
+    "skill_text_sha256": "950c1b60943768b340c5842479528a2e21f4c94ffce1344060331776d5d25520",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "industrial-brutalist-ui",
+    "repository": "Leonxlnx/taste-skill",
+    "repository_url": "https://github.com/Leonxlnx/taste-skill",
+    "head_sha": "717446e07a78d4e6d7918b1fde1a263378eebac9",
+    "skill_path": "skills/brutalist-skill/SKILL.md",
+    "source_url": "https://github.com/Leonxlnx/taste-skill/blob/717446e07a78d4e6d7918b1fde1a263378eebac9/skills/brutalist-skill/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/Leonxlnx/taste-skill/717446e07a78d4e6d7918b1fde1a263378eebac9/skills/brutalist-skill/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/Leonxlnx/taste-skill/blob/717446e07a78d4e6d7918b1fde1a263378eebac9/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 94503,
+    "snapshot_utc": "2026-10-11T07:46:54.864702+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Swiss industrial print and CRT telemetry as separate archetypes; macro/micro type contrast, hard grid, tactile degradation and engineering constraints.",
+    "trigger_excerpt": "Raw mechanical interfaces fusing Swiss typographic print with military terminal aesthetics. Rigid grids, extreme type scale contrast, utilitarian color, analog degradation effects. For data-heavy dashboards, portfolios, or editorial sites that need to feel like declassified blueprints.",
+    "sections": [
+      {
+        "line": 8,
+        "heading": "## 1. Skill Meta"
+      },
+      {
+        "line": 12,
+        "heading": "## 2. Visual Archetypes"
+      },
+      {
+        "line": 15,
+        "heading": "### 2.1 Swiss Industrial Print"
+      },
+      {
+        "line": 19,
+        "heading": "### 2.2 Tactical Telemetry & CRT Terminal"
+      },
+      {
+        "line": 23,
+        "heading": "## 3. Typographic Architecture"
+      },
+      {
+        "line": 26,
+        "heading": "### 3.1 Macro-Typography (Structural Headers)"
+      },
+      {
+        "line": 35,
+        "heading": "### 3.2 Micro-Typography (Data & Telemetry)"
+      },
+      {
+        "line": 44,
+        "heading": "### 3.3 Textural Contrast (Artistic Disruption)"
+      },
+      {
+        "line": 49,
+        "heading": "## 4. Color System"
+      },
+      {
+        "line": 54,
+        "heading": "### If Swiss Industrial Print (Light):"
+      },
+      {
+        "line": 59,
+        "heading": "### If Tactical Telemetry (Dark):"
+      },
+      {
+        "line": 65,
+        "heading": "## 5. Layout and Spatial Engineering"
+      },
+      {
+        "line": 73,
+        "heading": "## 6. UI Components and Symbology"
+      },
+      {
+        "line": 82,
+        "heading": "## 7. Textural and Post-Processing Effects"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "General visual craft or a named reference style; cultural authenticity not independently established.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Read companion references; HTML/CSS/browser capabilities depend on output."
+    ],
+    "risks": [
+      "Source instructions are untested in this research; no execution or behavioral validation."
+    ],
+    "skill_text_sha256": "fffbaac8597f07679e9d87145533567658aedba3b5eca6f16a7075a333048caa",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "minimalist-ui",
+    "repository": "Leonxlnx/taste-skill",
+    "repository_url": "https://github.com/Leonxlnx/taste-skill",
+    "head_sha": "717446e07a78d4e6d7918b1fde1a263378eebac9",
+    "skill_path": "skills/minimalist-skill/SKILL.md",
+    "source_url": "https://github.com/Leonxlnx/taste-skill/blob/717446e07a78d4e6d7918b1fde1a263378eebac9/skills/minimalist-skill/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/Leonxlnx/taste-skill/717446e07a78d4e6d7918b1fde1a263378eebac9/skills/minimalist-skill/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/Leonxlnx/taste-skill/blob/717446e07a78d4e6d7918b1fde1a263378eebac9/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 94503,
+    "snapshot_utc": "2026-10-11T07:46:54.865300+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Warm monochrome editorial UI with typographic contrast, muted spot colors, flat grids and subtle micro-motion.",
+    "trigger_excerpt": "Clean editorial-style interfaces. Warm monochrome palette, typographic contrast, flat bento grids, muted pastels. No gradients, no heavy shadows.",
+    "sections": [
+      {
+        "line": 8,
+        "heading": "## 1. Protocol Overview"
+      },
+      {
+        "line": 12,
+        "heading": "## 2. Absolute Negative Constraints (Banned Elements)"
+      },
+      {
+        "line": 24,
+        "heading": "## 3. Typographic Architecture"
+      },
+      {
+        "line": 31,
+        "heading": "## 4. Color Palette (Warm Monochrome + Spot Pastels)"
+      },
+      {
+        "line": 42,
+        "heading": "## 5. Component Specifications"
+      },
+      {
+        "line": 63,
+        "heading": "## 6. Iconography & Imagery Directives"
+      },
+      {
+        "line": 69,
+        "heading": "## 7. Subtle Motion & Micro-Animations"
+      },
+      {
+        "line": 77,
+        "heading": "## 8. Execution Protocol"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "General visual craft or a named reference style; cultural authenticity not independently established.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Read companion references; HTML/CSS/browser capabilities depend on output."
+    ],
+    "risks": [
+      "Source instructions are untested in this research; no execution or behavioral validation."
+    ],
+    "skill_text_sha256": "36bc7328f085405f43b476938e62460fa573bf7e984e949e072bcf014831a44c",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "brandkit",
+    "repository": "Leonxlnx/taste-skill",
+    "repository_url": "https://github.com/Leonxlnx/taste-skill",
+    "head_sha": "717446e07a78d4e6d7918b1fde1a263378eebac9",
+    "skill_path": "skills/brandkit/SKILL.md",
+    "source_url": "https://github.com/Leonxlnx/taste-skill/blob/717446e07a78d4e6d7918b1fde1a263378eebac9/skills/brandkit/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/Leonxlnx/taste-skill/717446e07a78d4e6d7918b1fde1a263378eebac9/skills/brandkit/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/Leonxlnx/taste-skill/blob/717446e07a78d4e6d7918b1fde1a263378eebac9/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 94503,
+    "snapshot_utc": "2026-10-11T07:46:54.866102+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Image-generation workflow for identity boards, logo concepts, type/color systems, physical/digital mockups and art-directed imagery.",
+    "trigger_excerpt": "Premium brand-kit image generation skill for creating high-end brand-guidelines boards, logo systems, identity decks, and visual-world presentations. Trained for minimalist, cinematic, editorial, dark-tech, luxury, cultural, security, gaming, developer-tool, and consumer-app brand systems. Optimized for intentional logo concepting, refined composition, sparse typography, strong symbolic meaning, premium mockups, art-directed imagery, and flexible grid layouts.",
+    "sections": [
+      {
+        "line": 165,
+        "heading": "## 1. Monogram + Meaning"
+      },
+      {
+        "line": 180,
+        "heading": "## 2. Product Action"
+      },
+      {
+        "line": 196,
+        "heading": "## 3. Metaphor Fusion"
+      },
+      {
+        "line": 213,
+        "heading": "## 4. Negative Space"
+      },
+      {
+        "line": 229,
+        "heading": "## 5. Construction Geometry"
+      },
+      {
+        "line": 276,
+        "heading": "## 1. Logo Cover"
+      },
+      {
+        "line": 281,
+        "heading": "## 2. Logo Construction"
+      },
+      {
+        "line": 285,
+        "heading": "## 3. Digital Application"
+      },
+      {
+        "line": 288,
+        "heading": "## 4. Brand Essence"
+      },
+      {
+        "line": 293,
+        "heading": "## 5. Color System"
+      },
+      {
+        "line": 296,
+        "heading": "## 6. Typography"
+      },
+      {
+        "line": 299,
+        "heading": "## 7. Physical Application"
+      },
+      {
+        "line": 302,
+        "heading": "## 8. Image Direction"
+      },
+      {
+        "line": 305,
+        "heading": "## 9. System Detail"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "General visual craft or a named reference style; cultural authenticity not independently established.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Read companion references; HTML/CSS/browser capabilities depend on output."
+    ],
+    "risks": [
+      "Source instructions are untested in this research; no execution or behavioral validation."
+    ],
+    "skill_text_sha256": "b0c4837e1bd140ca816ae54948754ddd2ac1e2a4d3619363777a80caf00b2ede",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "wabi-sabi",
+    "repository": "ConcertoNotes/codex-plugins",
+    "repository_url": "https://github.com/ConcertoNotes/codex-plugins",
+    "head_sha": "9ba3c9fadff1092395837bf1502e1b8a7f98b1e1",
+    "skill_path": "plugins/community/universal-design-principles/plugins/aesthetics-and-emotion-principles/skills/wabi-sabi/SKILL.md",
+    "source_url": "https://github.com/ConcertoNotes/codex-plugins/blob/9ba3c9fadff1092395837bf1502e1b8a7f98b1e1/plugins/community/universal-design-principles/plugins/aesthetics-and-emotion-principles/skills/wabi-sabi/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/ConcertoNotes/codex-plugins/9ba3c9fadff1092395837bf1502e1b8a7f98b1e1/plugins/community/universal-design-principles/plugins/aesthetics-and-emotion-principles/skills/wabi-sabi/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/ConcertoNotes/codex-plugins/blob/9ba3c9fadff1092395837bf1502e1b8a7f98b1e1/plugins/community/universal-design-principles/plugins/aesthetics-and-emotion-principles/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 0,
+    "snapshot_utc": "2026-10-11T07:46:54.879941+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Principle-level guidance on warmth, impermanence, naturalness and restraint; worked examples distinguish intentional craft from sloppy or inappropriate imprecision.",
+    "trigger_excerpt": "'Apply the principle of Wabi-Sabi — the aesthetic embrace of imperfection, impermanence, and naturalness. Use when designing for warmth and authenticity, creating spaces that feel lived-in rather than sterile, choosing handcrafted-feeling materials over machined perfection, or evaluating whether a design feels too polished and impersonal. Wabi-sabi resists the digital-design tendency toward pixel-perfect uniformity in favor of subtle asymmetry, organic textures, and the visible mark of process. Used appropriately, it produces designs that feel human; used reflexively, it produces fake-looking sloppiness.'",
+    "sections": [
+      {
+        "line": 14,
+        "heading": "## Why wabi-sabi matters in design"
+      },
+      {
+        "line": 34,
+        "heading": "## When wabi-sabi is the right register"
+      },
+      {
+        "line": 48,
+        "heading": "## When wabi-sabi is the wrong register"
+      },
+      {
+        "line": 64,
+        "heading": "## Sub-skills in this cluster"
+      },
+      {
+        "line": 69,
+        "heading": "## Worked examples"
+      },
+      {
+        "line": 71,
+        "heading": "### A meditation app with warmth"
+      },
+      {
+        "line": 77,
+        "heading": "### A note-taking app with restraint"
+      },
+      {
+        "line": 83,
+        "heading": "### A B2B SaaS that misapplies wabi-sabi"
+      },
+      {
+        "line": 89,
+        "heading": "### A personal finance app"
+      },
+      {
+        "line": 97,
+        "heading": "### A bookstore website"
+      },
+      {
+        "line": 103,
+        "heading": "## Anti-patterns"
+      },
+      {
+        "line": 117,
+        "heading": "## Heuristic checklist"
+      },
+      {
+        "line": 121,
+        "heading": "## Related principles"
+      },
+      {
+        "line": 129,
+        "heading": "## See also"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 2,
+        "text": "name: wabi-sabi"
+      },
+      {
+        "line": 6,
+        "text": "# Wabi-Sabi"
+      },
+      {
+        "line": 8,
+        "text": "> **Definition.** Wabi-sabi is a Japanese aesthetic philosophy centered on the beauty of imperfection, impermanence, and naturalness. *Wabi* connotes simplicity, rustic refinement, and the elegance of restraint; *sabi* connotes th"
+      },
+      {
+        "line": 10,
+        "text": "In design, wabi-sabi serves as a counterweight to the relentless polish of modern digital aesthetics. Pixel-perfect grids, algorithmic uniformity, smoothed gradients, machine precision — all produce designs that can feel sterile, "
+      },
+      {
+        "line": 14,
+        "text": "## Why wabi-sabi matters in design"
+      }
+    ],
+    "aesthetic_connection_fact": "Wabi-sabi cluster explicitly connects to Japanese philosophy; selective guidance rather than fixed CSS aesthetic.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Text guidance; read bundled lineage and domain context."
+    ],
+    "risks": [
+      "Mirror provenance; plugin-level MIT confirmed. Principles warn that fake imperfection and over-reduction can impair clarity/accessibility."
+    ],
+    "skill_text_sha256": "dfed7f90b44c83865d8b992ddd1df8c16eb3471eb0e3b7df4d8f537ecef221fc",
+    "hooks_related_files": [],
+    "duplicate_note": null,
+    "provenance_note": "Collection mirror; scoped copyright 2026 Hunter D. Official-prefix folders elsewhere in this repo do not confer official status on these community skills."
+  },
+  {
+    "name": "wabi-sabi-imperfection",
+    "repository": "ConcertoNotes/codex-plugins",
+    "repository_url": "https://github.com/ConcertoNotes/codex-plugins",
+    "head_sha": "9ba3c9fadff1092395837bf1502e1b8a7f98b1e1",
+    "skill_path": "plugins/community/universal-design-principles/plugins/aesthetics-and-emotion-principles/skills/wabi-sabi-imperfection/SKILL.md",
+    "source_url": "https://github.com/ConcertoNotes/codex-plugins/blob/9ba3c9fadff1092395837bf1502e1b8a7f98b1e1/plugins/community/universal-design-principles/plugins/aesthetics-and-emotion-principles/skills/wabi-sabi-imperfection/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/ConcertoNotes/codex-plugins/9ba3c9fadff1092395837bf1502e1b8a7f98b1e1/plugins/community/universal-design-principles/plugins/aesthetics-and-emotion-principles/skills/wabi-sabi-imperfection/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/ConcertoNotes/codex-plugins/blob/9ba3c9fadff1092395837bf1502e1b8a7f98b1e1/plugins/community/universal-design-principles/plugins/aesthetics-and-emotion-principles/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 0,
+    "snapshot_utc": "2026-10-11T07:46:54.896159+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Dedicated sub-skill for intentional asymmetry, organic texture, hand drawing and calibrated irregularity without impairing functional structure.",
+    "trigger_excerpt": "'Design intentional imperfection that reads as warmth — subtle asymmetry, hand-drawn elements, organic textures, intentional irregularities. Use when adding human warmth to a digital design, distinguishing from competitors with uniform design systems, designing for personal or creative contexts. The skill is making imperfection look intentional and refined rather than sloppy or broken; the line between \"designed warmth\" and \"looks unfinished\" is narrow.'",
+    "sections": [
+      {
+        "line": 12,
+        "heading": "## What \"intentional imperfection\" looks like"
+      },
+      {
+        "line": 28,
+        "heading": "## Calibrating imperfection"
+      },
+      {
+        "line": 48,
+        "heading": "## What's the difference between designed imperfection and sloppy?"
+      },
+      {
+        "line": 62,
+        "heading": "## Worked examples"
+      },
+      {
+        "line": 64,
+        "heading": "### A meditation app's hero illustration"
+      },
+      {
+        "line": 70,
+        "heading": "### A handwritten signature in a confirmation email"
+      },
+      {
+        "line": 74,
+        "heading": "### A note app that uses a serif with humanist character"
+      },
+      {
+        "line": 80,
+        "heading": "### Tilted cards that cross into sloppy"
+      },
+      {
+        "line": 86,
+        "heading": "### Hand-drawn icons among vector ones"
+      },
+      {
+        "line": 92,
+        "heading": "## Anti-patterns"
+      },
+      {
+        "line": 106,
+        "heading": "## Heuristic checklist"
+      },
+      {
+        "line": 110,
+        "heading": "## Related sub-skills"
+      },
+      {
+        "line": 117,
+        "heading": "## See also"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 2,
+        "text": "name: wabi-sabi-imperfection"
+      },
+      {
+        "line": 6,
+        "text": "# Wabi-Sabi — imperfection"
+      },
+      {
+        "line": 8,
+        "text": "Designing intentional imperfection is the half of wabi-sabi that adds warmth through irregularity, asymmetry, and visible craft. Done well, the imperfection reads as deliberate and refined — the work of someone who cared enough to"
+      },
+      {
+        "line": 78,
+        "text": "This is wabi-sabi at the typography level. The imperfection is in the typeface design, applied uniformly within the product."
+      },
+      {
+        "line": 98,
+        "text": "**Inconsistent register.** Some surfaces wabi-sabi, others highly precise, with no logic to which is which. Users get confused."
+      }
+    ],
+    "aesthetic_connection_fact": "Wabi-sabi cluster explicitly connects to Japanese philosophy; selective guidance rather than fixed CSS aesthetic.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Text guidance; read bundled lineage and domain context."
+    ],
+    "risks": [
+      "Mirror provenance; plugin-level MIT confirmed. Principles warn that fake imperfection and over-reduction can impair clarity/accessibility."
+    ],
+    "skill_text_sha256": "5fb91b6611c36bcc19e62bcb7d99e3d88b08412a45246c66cd09a0884e2fa180",
+    "hooks_related_files": [],
+    "duplicate_note": null,
+    "provenance_note": "Collection mirror; scoped copyright 2026 Hunter D. Official-prefix folders elsewhere in this repo do not confer official status on these community skills."
+  },
+  {
+    "name": "wabi-sabi-restraint",
+    "repository": "ConcertoNotes/codex-plugins",
+    "repository_url": "https://github.com/ConcertoNotes/codex-plugins",
+    "head_sha": "9ba3c9fadff1092395837bf1502e1b8a7f98b1e1",
+    "skill_path": "plugins/community/universal-design-principles/plugins/aesthetics-and-emotion-principles/skills/wabi-sabi-restraint/SKILL.md",
+    "source_url": "https://github.com/ConcertoNotes/codex-plugins/blob/9ba3c9fadff1092395837bf1502e1b8a7f98b1e1/plugins/community/universal-design-principles/plugins/aesthetics-and-emotion-principles/skills/wabi-sabi-restraint/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/ConcertoNotes/codex-plugins/9ba3c9fadff1092395837bf1502e1b8a7f98b1e1/plugins/community/universal-design-principles/plugins/aesthetics-and-emotion-principles/skills/wabi-sabi-restraint/SKILL.md",
+    "license": "MIT",
+    "license_url": "https://github.com/ConcertoNotes/codex-plugins/blob/9ba3c9fadff1092395837bf1502e1b8a7f98b1e1/plugins/community/universal-design-principles/plugins/aesthetics-and-emotion-principles/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 0,
+    "snapshot_utc": "2026-10-11T07:46:54.911633+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Dedicated sub-skill for removing decorative clutter while preserving discovery and clarity; reading-focused examples and warnings about excessive reduction.",
+    "trigger_excerpt": "'Apply wabi-sabi restraint — the discipline of leaving things out, of resisting decoration, of letting empty space and silence do design work. Use when designing reading-focused interfaces, paring back accumulated clutter, choosing between decoration and absence, or evaluating whether each element earns its place. Restraint is the often-overlooked half of wabi-sabi: the imperfection side gets attention, but the principle is equally about modesty and the elegance of what''s not there.'",
+    "sections": [
+      {
+        "line": 14,
+        "heading": "## What restraint looks like"
+      },
+      {
+        "line": 32,
+        "heading": "## Why restraint matters"
+      },
+      {
+        "line": 50,
+        "heading": "## When restraint is the right register"
+      },
+      {
+        "line": 64,
+        "heading": "## When too much restraint becomes a problem"
+      },
+      {
+        "line": 78,
+        "heading": "## Worked examples"
+      },
+      {
+        "line": 80,
+        "heading": "### A reading-focused content site"
+      },
+      {
+        "line": 91,
+        "heading": "### A SaaS dashboard with restraint"
+      },
+      {
+        "line": 102,
+        "heading": "### A product that strips too much"
+      },
+      {
+        "line": 108,
+        "heading": "### A meditation app combining restraint and warmth"
+      },
+      {
+        "line": 114,
+        "heading": "### A landing page with restraint"
+      },
+      {
+        "line": 127,
+        "heading": "## Anti-patterns"
+      },
+      {
+        "line": 141,
+        "heading": "## Heuristic checklist"
+      },
+      {
+        "line": 145,
+        "heading": "## Related sub-skills"
+      },
+      {
+        "line": 153,
+        "heading": "## See also"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 2,
+        "text": "name: wabi-sabi-restraint"
+      },
+      {
+        "line": 6,
+        "text": "# Wabi-Sabi — restraint"
+      },
+      {
+        "line": 8,
+        "text": "The other half of wabi-sabi: restraint. The discipline of leaving things out, of resisting decoration, of letting empty space carry the design. Where the imperfection side adds warmth through visible craft, the restraint side adds"
+      },
+      {
+        "line": 10,
+        "text": "The two halves work together. Pure imperfection without restraint becomes kitsch. Pure restraint without imperfection becomes cold minimalism. The Japanese tea room embodies both: the materials are humble and slightly irregular (i"
+      },
+      {
+        "line": 112,
+        "text": "The combination is the right register: restraint for function, warmth for emotional moments. Both halves of wabi-sabi working together."
+      }
+    ],
+    "aesthetic_connection_fact": "Wabi-sabi cluster explicitly connects to Japanese philosophy; selective guidance rather than fixed CSS aesthetic.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Text guidance; read bundled lineage and domain context."
+    ],
+    "risks": [
+      "Mirror provenance; plugin-level MIT confirmed. Principles warn that fake imperfection and over-reduction can impair clarity/accessibility."
+    ],
+    "skill_text_sha256": "38588058bc4c2c5565e2f769ada7949f2ff5211f9382e06302ef9c04dd5d5ac7",
+    "hooks_related_files": [],
+    "duplicate_note": null,
+    "provenance_note": "Collection mirror; scoped copyright 2026 Hunter D. Official-prefix folders elsewhere in this repo do not confer official status on these community skills."
+  },
+  {
+    "name": "aesthetic-extractor",
+    "repository": "nkuCarrie/aesthetic-extractor-skill",
+    "repository_url": "https://github.com/nkuCarrie/aesthetic-extractor-skill",
+    "head_sha": "783da93e6216bc5967f6f7254827d71c2352b89a",
+    "skill_path": "aesthetic-extractor/SKILL.md",
+    "source_url": "https://github.com/nkuCarrie/aesthetic-extractor-skill/blob/783da93e6216bc5967f6f7254827d71c2352b89a/aesthetic-extractor/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/nkuCarrie/aesthetic-extractor-skill/783da93e6216bc5967f6f7254827d71c2352b89a/aesthetic-extractor/SKILL.md",
+    "license": "UNDECLARED",
+    "license_url": null,
+    "license_confirmed": false,
+    "stars_snapshot": 11,
+    "snapshot_utc": "2026-10-11T07:46:54.928304+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Analyzes image references into composition, palette, material, type, cultural context and reusable prompt vocabulary; separates visible observation from inferred style.",
+    "trigger_excerpt": "Analyze one or more images to extract their aesthetic style, why they look good, design principles, visual elements, and reusable prompt vocabulary. Use when the user provides an image, moodboard, poster, illustration, photo, UI screenshot, product shot, interior image, social post, or visual reference and asks to improve taste, deconstruct aesthetics, summarize style, learn design logic, or generate prompts for a similar look.",
+    "sections": [
+      {
+        "line": 8,
+        "heading": "## Overview"
+      },
+      {
+        "line": 12,
+        "heading": "## Core Workflow"
+      },
+      {
+        "line": 31,
+        "heading": "## Output Structure"
+      },
+      {
+        "line": 35,
+        "heading": "### 1. 风格一句话"
+      },
+      {
+        "line": 39,
+        "heading": "### 2. 关键审美判断一句话"
+      },
+      {
+        "line": 49,
+        "heading": "### 3. 这张图好看的原因"
+      },
+      {
+        "line": 61,
+        "heading": "### 4. 设计原理拆解"
+      },
+      {
+        "line": 69,
+        "heading": "### 5. 元素清单"
+      },
+      {
+        "line": 83,
+        "heading": "### 6. 生成相似美感的必备提示词"
+      },
+      {
+        "line": 98,
+        "heading": "### 7. 可直接使用的提示词"
+      },
+      {
+        "line": 108,
+        "heading": "### 8. 避免跑偏"
+      },
+      {
+        "line": 112,
+        "heading": "## Analysis Standards"
+      },
+      {
+        "line": 122,
+        "heading": "## Prompt Extraction Rules"
+      },
+      {
+        "line": 136,
+        "heading": "## Tone"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 117,
+        "text": "- Preserve ambiguity. If the style could be \"Japanese minimalism\" or \"Scandinavian editorial,\" say what visual evidence supports each, then choose the stronger reading."
+      }
+    ],
+    "aesthetic_connection_fact": "Explicitly says Japanese minimalism vs Scandinavian editorial labels require visible evidence.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Image-reference/vision capability."
+    ],
+    "risks": [
+      "No declared license found; analysis/prompt output rather than UI implementation. Chinese output by default."
+    ],
+    "skill_text_sha256": "4ce0cbfd7ffa2efaa2f7f53055c4447d853c3aaac3ef486308bd3cc7fcad5f73",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "color-expert",
+    "repository": "meodai/skill.color-expert",
+    "repository_url": "https://github.com/meodai/skill.color-expert",
+    "head_sha": "29188b28ef2a7b374a1ea0fb71303f5252f0d372",
+    "skill_path": "SKILL.md",
+    "source_url": "https://github.com/meodai/skill.color-expert/blob/29188b28ef2a7b374a1ea0fb71303f5252f0d372/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/meodai/skill.color-expert/29188b28ef2a7b374a1ea0fb71303f5252f0d372/SKILL.md",
+    "license": "CC-BY-4.0",
+    "license_url": "https://github.com/meodai/skill.color-expert/blob/29188b28ef2a7b374a1ea0fb71303f5252f0d372/LICENSE",
+    "license_confirmed": true,
+    "stars_snapshot": 607,
+    "snapshot_utc": "2026-10-11T07:46:54.930300+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Color-science knowledge base: OKLCH/OKLAB, semantic token graphs, palette constraints, contrast, pigment behavior and reference lookup.",
+    "trigger_excerpt": "Use when working with color naming, color theory, color spaces, color definitions, or any task involving color knowledge - palettes, ramps, gradients, conversions, accessibility, perceptual matching, pigment mixing, print-vs-screen color, CSS color syntax, or historical color terminology. Use this skill whenever the user is choosing, comparing, generating, naming, converting, or explaining colors, even if they do not explicitly ask for \"color theory.\"",
+    "sections": [
+      {
+        "line": 10,
+        "heading": "## How to Use This Skill"
+      },
+      {
+        "line": 51,
+        "heading": "## Color Spaces — What to Use When"
+      },
+      {
+        "line": 70,
+        "heading": "### Understanding HSL's Limitations"
+      },
+      {
+        "line": 80,
+        "heading": "### Named Hue (HSL/HSV) Ranges"
+      },
+      {
+        "line": 97,
+        "heading": "### Key Distinctions"
+      },
+      {
+        "line": 105,
+        "heading": "### Gamut Mapping in Practice"
+      },
+      {
+        "line": 114,
+        "heading": "## Implementation Guidance — Code and CSS"
+      },
+      {
+        "line": 155,
+        "heading": "## CSS Color 4/5 — Syntax Cheat Sheet"
+      },
+      {
+        "line": 168,
+        "heading": "## Accessibility — Key Numbers"
+      },
+      {
+        "line": 185,
+        "heading": "## Color Harmony — What Actually Works"
+      },
+      {
+        "line": 187,
+        "heading": "### Hue-first harmony is a weak standalone heuristic"
+      },
+      {
+        "line": 191,
+        "heading": "### Character-first harmony works (Ellen Divers' research)"
+      },
+      {
+        "line": 195,
+        "heading": "### Colour meaning in a story is per-story, not a symbolism table (Lewis Bond)"
+      },
+      {
+        "line": 199,
+        "heading": "### Legibility = lightness variation"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 233,
+        "text": "| Traditional Japanese  | Cultural/poetic            | \"wasurenagusa-iro\" (forget-me-not) |"
+      }
+    ],
+    "aesthetic_connection_fact": "General color science; no inspected Japanese-specific claim.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Text reference bundle; optional color tools rather than mandatory execution."
+    ],
+    "risks": [
+      "CC-BY-4.0 requires attribution; color metrics and cited standards need project-specific validation."
+    ],
+    "skill_text_sha256": "fefc31fb668362fdc9693b92df4ba38c14f8af91a7db30700be46f4cfb23e45c",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "image-style-prompt-extractor",
+    "repository": "uyoujian/style-prompt-extractor",
+    "repository_url": "https://github.com/uyoujian/style-prompt-extractor",
+    "head_sha": "5a5c5c1f6984f59380677d3c4924de6b488b06f8",
+    "skill_path": "SKILL.md",
+    "source_url": "https://github.com/uyoujian/style-prompt-extractor/blob/5a5c5c1f6984f59380677d3c4924de6b488b06f8/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/uyoujian/style-prompt-extractor/5a5c5c1f6984f59380677d3c4924de6b488b06f8/SKILL.md",
+    "license": "UNDECLARED",
+    "license_url": null,
+    "license_confirmed": false,
+    "stars_snapshot": 3,
+    "snapshot_utc": "2026-10-11T07:46:54.930941+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Extracts 15 style dimensions from a reference image into a reusable Chinese generation prompt; era/culture examples explicitly include Showa.",
+    "trigger_excerpt": "提取参考图片的视觉风格并反推生成可复用的中文 AI 绘画提示词模板，用于 GPT-Image、Nano Banana（Gemini）、Midjourney、Flux、Stable Diffusion 等图像生成模型。当用户上传一张图片并希望「分析风格」「反推提示词」「提取美学」「保留风格替换主体」「生成通用 prompt」「做风格模板」「让 nano banana / GPT-Image / Gemini / MJ 复刻这种风格」时，必须使用此 skill。也适用于英文请求如 \"extract style from this image\"、\"reverse-engineer prompt\"、\"make this style reusable\"、\"style transfer prompt\"。只要用户提供了参考图并意图围绕\"风格\"而非\"内容\"复用，就触发本 skill，即使他们没有明说\"提示词\"三个字。",
+    "sections": [
+      {
+        "line": 8,
+        "heading": "## 1. 任务"
+      },
+      {
+        "line": 14,
+        "heading": "## 2. 上下文"
+      },
+      {
+        "line": 18,
+        "heading": "## 3. 参考资料"
+      },
+      {
+        "line": 41,
+        "heading": "## 4. 付出努力"
+      },
+      {
+        "line": 45,
+        "heading": "## 5. 行动"
+      },
+      {
+        "line": 49,
+        "heading": "## 6. 范围"
+      },
+      {
+        "line": 53,
+        "heading": "## 7. 委派"
+      },
+      {
+        "line": 57,
+        "heading": "## 8. 证据"
+      },
+      {
+        "line": 64,
+        "heading": "## 9. 记忆"
+      },
+      {
+        "line": 68,
+        "heading": "## 10. 检查点"
+      },
+      {
+        "line": 72,
+        "heading": "## 11. 汇报（格式）"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 34,
+        "text": "10. **时代感与文化语境** — 70 年代复古、Y2K、昭和、Art Deco、新中式 ……"
+      }
+    ],
+    "aesthetic_connection_fact": "Showa appears as an era/context dimension example.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "Image-reference/vision capability; optional downstream image generation model."
+    ],
+    "risks": [
+      "No declared license found; prompt output only; naming Showa is not a Showa design specification."
+    ],
+    "skill_text_sha256": "7288eedf0f026b6ad98506e5a3fe637efd2910fbb2d5d2aba6229315877f2b77",
+    "hooks_related_files": [],
+    "duplicate_note": null
+  },
+  {
+    "name": "showa-kissaten",
+    "repository": "wenxiangxiao/design-skills-center",
+    "repository_url": "https://github.com/wenxiangxiao/design-skills-center",
+    "head_sha": "bf83e8687ace4ed7efd64a058d2cd05db1187a28",
+    "skill_path": "sites/asahiyu/SKILL.md",
+    "source_url": "https://github.com/wenxiangxiao/design-skills-center/blob/bf83e8687ace4ed7efd64a058d2cd05db1187a28/sites/asahiyu/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/wenxiangxiao/design-skills-center/bf83e8687ace4ed7efd64a058d2cd05db1187a28/sites/asahiyu/SKILL.md",
+    "license": "UNDECLARED",
+    "license_url": null,
+    "license_confirmed": false,
+    "stars_snapshot": 0,
+    "snapshot_utc": "2026-10-11T07:46:54.934649+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Showa bathhouse/cafe pack: melamine cream, moss tile, vermilion noren, retro Japanese type, noren navigation and interactive soroban.",
+    "trigger_excerpt": "A warm Showa-era Japanese bathhouse-and-cafe aesthetic — toned melamine cream ground, moss-green tile and vermillion noren, chunky retro display type, a swaying-noren nav and an operable soroban-abacus configurator.",
+    "sections": [
+      {
+        "line": 8,
+        "heading": "## 設計哲學"
+      },
+      {
+        "line": 14,
+        "heading": "## 色彩系統"
+      },
+      {
+        "line": 27,
+        "heading": "## 字體系統"
+      },
+      {
+        "line": 35,
+        "heading": "## 版面與網格"
+      },
+      {
+        "line": 42,
+        "heading": "## 元件配方"
+      },
+      {
+        "line": 50,
+        "heading": "## 動效規則"
+      },
+      {
+        "line": 57,
+        "heading": "## 插畫與圖像風格"
+      },
+      {
+        "line": 61,
+        "heading": "## Logo 與 Favicon"
+      },
+      {
+        "line": 66,
+        "heading": "## Do & Don't"
+      },
+      {
+        "line": 73,
+        "heading": "## 頁面骨架範例"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 2,
+        "text": "name: showa-kissaten"
+      },
+      {
+        "line": 6,
+        "text": "# 昭和喫茶風（Showa Kissaten）"
+      },
+      {
+        "line": 10,
+        "text": "回到昭和末期的巷角錢湯與喫茶店：暖簾的錆朱、磁磚牆的苔綠、老冰櫃裡玻璃瓶牛乳的琥珀。這不是冷冽的日式極簡，而是**溫、舊、手作**——melamine 桌面的暖黃、硬邊木牌的位移陰影、そろばん撥珠的觸感。基調溫柔療癒，招呼你慢下來。適合湯屋、喫茶、食堂、老鋪、昭和主題餐飲與零售。"
+      },
+      {
+        "line": 29,
+        "text": "- 招牌／品牌／數字／標籤：**Reggae One**（圓潤厚重的昭和海報體，覆蓋假名＋基本漢字＋拉丁），用在 logo、價格、區塊小標「メイン湯」等。"
+      },
+      {
+        "line": 68,
+        "text": "- **Do**：底色用調過的奶油黃中間調，不用純白；大面積苔綠與錆朱面板；Reggae One 撐起昭和招牌感；用一個真正可玩的功能（本風以「泡湯套餐配置器＋算盤結算」示範）。"
+      }
+    ],
+    "aesthetic_connection_fact": "Directly named Japanese styles and crafts in authored skills; Western gallery negative-space skill expressly says it is not wafu.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "HTML/CSS/SVG/JS; most examples use Google Fonts. Hanabi pack uses Canvas/Web Audio; Rinpa uses SVG filters and pointer math."
+    ],
+    "risks": [
+      "No root/site source license found; dependency licenses in committed node_modules do not license the skills. Art-historical statements are author claims, not independently authenticated."
+    ],
+    "skill_text_sha256": "d4bcdc864c7021bbf5bd6aca4e45d2e882185929d339a7cedaa19609da706fc4",
+    "hooks_related_files": [],
+    "duplicate_note": null,
+    "repo_license_caution": "Committed node_modules dependency licenses do not license site SKILL.md files."
+  },
+  {
+    "name": "wafu-minimal",
+    "repository": "wenxiangxiao/design-skills-center",
+    "repository_url": "https://github.com/wenxiangxiao/design-skills-center",
+    "head_sha": "bf83e8687ace4ed7efd64a058d2cd05db1187a28",
+    "skill_path": "sites/nagi-cha/SKILL.md",
+    "source_url": "https://github.com/wenxiangxiao/design-skills-center/blob/bf83e8687ace4ed7efd64a058d2cd05db1187a28/sites/nagi-cha/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/wenxiangxiao/design-skills-center/bf83e8687ace4ed7efd64a058d2cd05db1187a28/sites/nagi-cha/SKILL.md",
+    "license": "UNDECLARED",
+    "license_url": null,
+    "license_confirmed": false,
+    "stars_snapshot": 0,
+    "snapshot_utc": "2026-10-11T07:46:54.937216+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Wafu minimalist web pack with ma, vertical mincho, earth tones, asymmetric editorial layout and one hand-drawn enso motion motif.",
+    "trigger_excerpt": "Japanese minimalist (wafū) web style — generous negative space (ma), vertical mincho typography, muted natural earth tones, a single hand-drawn ensō as motion signature, and asymmetric editorial layout with hairline rules.",
+    "sections": [
+      {
+        "line": 12,
+        "heading": "## 一、設計哲學"
+      },
+      {
+        "line": 22,
+        "heading": "## 二、色彩系統"
+      },
+      {
+        "line": 37,
+        "heading": "## 三、字體系統"
+      },
+      {
+        "line": 53,
+        "heading": "## 四、版面與網格"
+      },
+      {
+        "line": 62,
+        "heading": "## 五、元件配方"
+      },
+      {
+        "line": 74,
+        "heading": "## 六、動效規則"
+      },
+      {
+        "line": 84,
+        "heading": "## 七、插畫與圖像風格"
+      },
+      {
+        "line": 91,
+        "heading": "## 八、Logo 與 Favicon 設計指南"
+      },
+      {
+        "line": 97,
+        "heading": "## 九、Do & Don't"
+      },
+      {
+        "line": 118,
+        "heading": "## 十、頁面骨架範例"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 6,
+        "text": "# 和風極簡（Japanese Minimalism / Wafū Minimal）"
+      },
+      {
+        "line": 16,
+        "text": "- **間（ま・ma）**：留白不是「還沒填滿的空間」，而是主動的設計元素。空，讓內容有呼吸、讓視線有停頓。寧可少放一段，也不要把版面塞滿。"
+      },
+      {
+        "line": 17,
+        "text": "- **侘寂（わびさび・wabi-sabi）**：欣賞樸素、不完美、自然的痕跡。因此我們用手繪的、略不規則的線條（如一筆未閉合的円相），而不是幾何完美的圓。"
+      },
+      {
+        "line": 29,
+        "text": "| 墨黑 sumi | `#1C1B18` | 主文字、主要線條、footer 上緣線（**不用純黑 #000**，帶一點暖） | ~18% |"
+      },
+      {
+        "line": 49,
+        "text": "- **標籤／導覽／數據**：Zen Kaku Gothic New 500，字級 10–13px，**大字距 `.24em–.5em`**，多用 `text-transform:uppercase` 的拉丁小字（如 `SINGLE-ORIGIN JAPANESE TEA`）。"
+      }
+    ],
+    "aesthetic_connection_fact": "Directly named Japanese styles and crafts in authored skills; Western gallery negative-space skill expressly says it is not wafu.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "HTML/CSS/SVG/JS; most examples use Google Fonts. Hanabi pack uses Canvas/Web Audio; Rinpa uses SVG filters and pointer math."
+    ],
+    "risks": [
+      "No root/site source license found; dependency licenses in committed node_modules do not license the skills. Art-historical statements are author claims, not independently authenticated."
+    ],
+    "skill_text_sha256": "8325cde98aa4387662416d62a093869c72b32c5e0a792dd9de9b3a99fa7933a7",
+    "hooks_related_files": [],
+    "duplicate_note": null,
+    "repo_license_caution": "Committed node_modules dependency licenses do not license site SKILL.md files."
+  },
+  {
+    "name": "negative-space-minimal",
+    "repository": "wenxiangxiao/design-skills-center",
+    "repository_url": "https://github.com/wenxiangxiao/design-skills-center",
+    "head_sha": "bf83e8687ace4ed7efd64a058d2cd05db1187a28",
+    "skill_path": "sites/yohaku-yoga/SKILL.md",
+    "source_url": "https://github.com/wenxiangxiao/design-skills-center/blob/bf83e8687ace4ed7efd64a058d2cd05db1187a28/sites/yohaku-yoga/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/wenxiangxiao/design-skills-center/bf83e8687ace4ed7efd64a058d2cd05db1187a28/sites/yohaku-yoga/SKILL.md",
+    "license": "UNDECLARED",
+    "license_url": null,
+    "license_confirmed": false,
+    "stars_snapshot": 0,
+    "snapshot_utc": "2026-10-11T07:46:54.939943+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Gallery-style near-monochrome whitespace pack with hairline rules and light Latin type; explicitly distinguishes itself from Japanese wafu symbolism.",
+    "trigger_excerpt": "Negative-space minimalism — vast intentional whitespace, hairline rules, a near-monochrome paper-grey palette with one slate accent, light sans + thin serif contrast, chapter-scroll openings and anchor-index navigation, and a single slow breathing motion signature.",
+    "sections": [
+      {
+        "line": 14,
+        "heading": "## 一、設計哲學"
+      },
+      {
+        "line": 24,
+        "heading": "## 二、色彩系統"
+      },
+      {
+        "line": 39,
+        "heading": "## 三、字體系統"
+      },
+      {
+        "line": 55,
+        "heading": "## 四、版面與網格"
+      },
+      {
+        "line": 64,
+        "heading": "## 五、元件配方"
+      },
+      {
+        "line": 72,
+        "heading": "## 六、動效規則"
+      },
+      {
+        "line": 82,
+        "heading": "## 七、插畫與圖像風格"
+      },
+      {
+        "line": 88,
+        "heading": "## 八、Logo 與 Favicon 設計指南"
+      },
+      {
+        "line": 93,
+        "heading": "## 九、Do & Don't"
+      },
+      {
+        "line": 111,
+        "heading": "## 十、頁面骨架範例（可直接使用）"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "Directly named Japanese styles and crafts in authored skills; Western gallery negative-space skill expressly says it is not wafu.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "HTML/CSS/SVG/JS; most examples use Google Fonts. Hanabi pack uses Canvas/Web Audio; Rinpa uses SVG filters and pointer math."
+    ],
+    "risks": [
+      "No root/site source license found; dependency licenses in committed node_modules do not license the skills. Art-historical statements are author claims, not independently authenticated."
+    ],
+    "skill_text_sha256": "0666b4bc892b6111e80b4817b61a1e77e4c67e8e75b4703f22ae31897ce1c38f",
+    "hooks_related_files": [],
+    "duplicate_note": null,
+    "repo_license_caution": "Committed node_modules dependency licenses do not license site SKILL.md files."
+  },
+  {
+    "name": "sashiko-hitomezashi",
+    "repository": "wenxiangxiao/design-skills-center",
+    "repository_url": "https://github.com/wenxiangxiao/design-skills-center",
+    "head_sha": "bf83e8687ace4ed7efd64a058d2cd05db1187a28",
+    "skill_path": "sites/hitome-sha/SKILL.md",
+    "source_url": "https://github.com/wenxiangxiao/design-skills-center/blob/bf83e8687ace4ed7efd64a058d2cd05db1187a28/sites/hitome-sha/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/wenxiangxiao/design-skills-center/bf83e8687ace4ed7efd64a058d2cd05db1187a28/sites/hitome-sha/SKILL.md",
+    "license": "UNDECLARED",
+    "license_url": null,
+    "license_confirmed": false,
+    "stars_snapshot": 0,
+    "snapshot_utc": "2026-10-11T07:46:54.943024+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Japanese sashiko pack: indigo cloth, bleached thread, dashed running stitch, a grid and binary-string pattern generation; static fallback and minimal external assets.",
+    "trigger_excerpt": "Japanese sashiko (hitomezashi) visual language — indigo-dyed cloth, one bleached cotton thread, every mark a dashed running stitch on a 5 mm marking grid, patterns generated from two binary strings.",
+    "sections": [
+      {
+        "line": 14,
+        "heading": "## 一、設計哲學"
+      },
+      {
+        "line": 26,
+        "heading": "## 二、本風格的 5 個不可省略特徵"
+      },
+      {
+        "line": 30,
+        "heading": "### 1. 針目：所有線都是等長虛線，且沒有一條實線"
+      },
+      {
+        "line": 69,
+        "heading": "### 2. 交点で交わらない：縱橫針目在交點絕不重疊"
+      },
+      {
+        "line": 81,
+        "heading": "### 3. 格：5 mm 的印付け，而且看得見"
+      },
+      {
+        "line": 94,
+        "heading": "### 4. 糸は一色：要第二個顏色就換布，不換線"
+      },
+      {
+        "line": 108,
+        "heading": "### 5. 厚み：密度即強度，柄由「哪裡會先壞」決定"
+      },
+      {
+        "line": 114,
+        "heading": "## 三、色彩系統"
+      },
+      {
+        "line": 129,
+        "heading": "## 四、字體系統"
+      },
+      {
+        "line": 143,
+        "heading": "## 五、版面與網格"
+      },
+      {
+        "line": 153,
+        "heading": "## 六、元件配方"
+      },
+      {
+        "line": 184,
+        "heading": "## 七、動效規則"
+      },
+      {
+        "line": 199,
+        "heading": "## 八、插畫與圖像風格（hitome-field 一目場構成）"
+      },
+      {
+        "line": 228,
+        "heading": "## 九、Logo 與 Favicon"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "Directly named Japanese styles and crafts in authored skills; Western gallery negative-space skill expressly says it is not wafu.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "HTML/CSS/SVG/JS; most examples use Google Fonts. Hanabi pack uses Canvas/Web Audio; Rinpa uses SVG filters and pointer math."
+    ],
+    "risks": [
+      "No root/site source license found; dependency licenses in committed node_modules do not license the skills. Art-historical statements are author claims, not independently authenticated."
+    ],
+    "skill_text_sha256": "3145ae0a77ba462fedc4b623589a4c971373a95cdc7053ad071425fe642c5804",
+    "hooks_related_files": [],
+    "duplicate_note": null,
+    "repo_license_caution": "Committed node_modules dependency licenses do not license site SKILL.md files."
+  },
+  {
+    "name": "newspaper-editorial-style",
+    "repository": "wenxiangxiao/design-skills-center",
+    "repository_url": "https://github.com/wenxiangxiao/design-skills-center",
+    "head_sha": "bf83e8687ace4ed7efd64a058d2cd05db1187a28",
+    "skill_path": "sites/sudden-rain-books/SKILL.md",
+    "source_url": "https://github.com/wenxiangxiao/design-skills-center/blob/bf83e8687ace4ed7efd64a058d2cd05db1187a28/sites/sudden-rain-books/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/wenxiangxiao/design-skills-center/bf83e8687ace4ed7efd64a058d2cd05db1187a28/sites/sudden-rain-books/SKILL.md",
+    "license": "UNDECLARED",
+    "license_url": null,
+    "license_confirmed": false,
+    "stars_snapshot": 0,
+    "snapshot_utc": "2026-10-11T07:46:54.945850+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Broadsheet web pack with masthead, multicolumn serif, column rules, drop caps, woodcut SVG and a single seal-red accent.",
+    "trigger_excerpt": "Build a website styled as a traditional broadsheet newspaper — masthead, multi-column serif typography, hairline column rules, drop caps, woodcut-style SVG illustrations, and a single seal-red accent on aged paper.",
+    "sections": [
+      {
+        "line": 13,
+        "heading": "## 一、設計哲學"
+      },
+      {
+        "line": 21,
+        "heading": "## 二、色彩系統"
+      },
+      {
+        "line": 35,
+        "heading": "## 三、字體系統"
+      },
+      {
+        "line": 56,
+        "heading": "## 四、版面與網格"
+      },
+      {
+        "line": 64,
+        "heading": "## 五、元件配方"
+      },
+      {
+        "line": 81,
+        "heading": "## 六、動效規則"
+      },
+      {
+        "line": 91,
+        "heading": "## 七、插畫與圖像風格（版畫畫法）"
+      },
+      {
+        "line": 103,
+        "heading": "## 八、Logo 與 Favicon 指南"
+      },
+      {
+        "line": 108,
+        "heading": "## 九、Do & Don't"
+      },
+      {
+        "line": 124,
+        "heading": "## 十、頁面骨架範例"
+      }
+    ],
+    "japanese_evidence": [],
+    "aesthetic_connection_fact": "Directly named Japanese styles and crafts in authored skills; Western gallery negative-space skill expressly says it is not wafu.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "HTML/CSS/SVG/JS; most examples use Google Fonts. Hanabi pack uses Canvas/Web Audio; Rinpa uses SVG filters and pointer math."
+    ],
+    "risks": [
+      "No root/site source license found; dependency licenses in committed node_modules do not license the skills. Art-historical statements are author claims, not independently authenticated."
+    ],
+    "skill_text_sha256": "c7596c842936bd271c033765f7fd0f7b5b87eafc7459e9617cadd95f80e609ed",
+    "hooks_related_files": [],
+    "duplicate_note": null,
+    "repo_license_caution": "Committed node_modules dependency licenses do not license site SKILL.md files."
+  },
+  {
+    "name": "rinpa-gold-ground",
+    "repository": "wenxiangxiao/design-skills-center",
+    "repository_url": "https://github.com/wenxiangxiao/design-skills-center",
+    "head_sha": "bf83e8687ace4ed7efd64a058d2cd05db1187a28",
+    "skill_path": "sites/suhamado/SKILL.md",
+    "source_url": "https://github.com/wenxiangxiao/design-skills-center/blob/bf83e8687ace4ed7efd64a058d2cd05db1187a28/sites/suhamado/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/wenxiangxiao/design-skills-center/bf83e8687ace4ed7efd64a058d2cd05db1187a28/sites/suhamado/SKILL.md",
+    "license": "UNDECLARED",
+    "license_url": null,
+    "license_confirmed": false,
+    "stars_snapshot": 0,
+    "snapshot_utc": "2026-10-11T07:46:54.948887+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Rinpa decorative-painting pack using gold ground, tarashikomi pooling, outlineless mokkotsu fields, bold crop and grouped stencil motifs.",
+    "trigger_excerpt": "Rinpa (琳派) school of Japanese decorative painting — gold-leaf ground, tarashikomi pooled-pigment edges, outline-less mokkotsu colour fields, bold cropping and grouped stencil motifs.",
+    "sections": [
+      {
+        "line": 14,
+        "heading": "## 一、設計哲學"
+      },
+      {
+        "line": 29,
+        "heading": "## 二、本風格的 5 個不可省略特徵"
+      },
+      {
+        "line": 33,
+        "heading": "### 特徵 1／金地（きんじ）——大面積的金，且看得見箔目"
+      },
+      {
+        "line": 59,
+        "heading": "### 特徵 2／溜込（たらしこみ）——厚度來自邊緣的濃，不是漸層"
+      },
+      {
+        "line": 80,
+        "heading": "### 特徵 3／沒骨（もっこつ）——不描輪廓線"
+      },
+      {
+        "line": 93,
+        "heading": "### 特徵 4／大胆な截断と群化——被畫框切斷、成叢重複、留白 ≥40%"
+      },
+      {
+        "line": 105,
+        "heading": "### 特徵 5／型紙の反復——一枚型，只換 rotate / scale / mirror"
+      },
+      {
+        "line": 117,
+        "heading": "## 三、色彩系統"
+      },
+      {
+        "line": 141,
+        "heading": "## 四、字體系統"
+      },
+      {
+        "line": 166,
+        "heading": "## 五、版面與網格"
+      },
+      {
+        "line": 182,
+        "heading": "## 六、元件配方"
+      },
+      {
+        "line": 210,
+        "heading": "## 七、動效規則（四種，缺一不可）"
+      },
+      {
+        "line": 235,
+        "heading": "## 八、插畫與圖像風格"
+      },
+      {
+        "line": 263,
+        "heading": "## 九、Logo 與 Favicon"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 2,
+        "text": "name: rinpa-gold-ground"
+      },
+      {
+        "line": 6,
+        "text": "# 琳派 RINPA — 金地・溜込・沒骨"
+      },
+      {
+        "line": 9,
+        "text": "> 這份規格書描述的是十七世紀京都的琳派（俵屋宗達 → 尾形光琳 → 酒井抱一），不是「和風」，也不是「日式極簡」。"
+      },
+      {
+        "line": 10,
+        "text": "> 兩者的差別在於：和風極簡靠留白與素材，琳派靠**一整面金**與**在金上並列的平塗色面**。"
+      },
+      {
+        "line": 16,
+        "text": "琳派不是一個師徒相承的流派——宗達（17 世紀初）、光琳（17 世紀末）、抱一（19 世紀初）三人彼此沒有見過面，每隔約一百年由後人「私淑」重啟一次。它因此不是一套技術傳承，而是**一組可以被重新拾起的視覺規則**。這對網頁設計是好消息：規則本身就是可交付物。"
+      }
+    ],
+    "aesthetic_connection_fact": "Directly named Japanese styles and crafts in authored skills; Western gallery negative-space skill expressly says it is not wafu.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "HTML/CSS/SVG/JS; most examples use Google Fonts. Hanabi pack uses Canvas/Web Audio; Rinpa uses SVG filters and pointer math."
+    ],
+    "risks": [
+      "No root/site source license found; dependency licenses in committed node_modules do not license the skills. Art-historical statements are author claims, not independently authenticated."
+    ],
+    "skill_text_sha256": "465e81c8a57a4cad9edbde8362ef4a4980eaa62e8967f6a6f83aaa2e2621962c",
+    "hooks_related_files": [],
+    "duplicate_note": null,
+    "repo_license_caution": "Committed node_modules dependency licenses do not license site SKILL.md files."
+  },
+  {
+    "name": "rinpa-kinji-mokkotsu",
+    "repository": "wenxiangxiao/design-skills-center",
+    "repository_url": "https://github.com/wenxiangxiao/design-skills-center",
+    "head_sha": "bf83e8687ace4ed7efd64a058d2cd05db1187a28",
+    "skill_path": "sites/tamamizu/SKILL.md",
+    "source_url": "https://github.com/wenxiangxiao/design-skills-center/blob/bf83e8687ace4ed7efd64a058d2cd05db1187a28/sites/tamamizu/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/wenxiangxiao/design-skills-center/bf83e8687ace4ed7efd64a058d2cd05db1187a28/sites/tamamizu/SKILL.md",
+    "license": "UNDECLARED",
+    "license_url": null,
+    "license_confirmed": false,
+    "stars_snapshot": 0,
+    "snapshot_utc": "2026-10-11T07:46:54.952041+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Rinpa web pack with tiled gold leaf, mineral color fields, tarashikomi, repeated kata, asymmetry and ma; SVG filter/pointer performance instructions.",
+    "trigger_excerpt": "Rinpa school for the web — full-bleed gold-leaf ground with visible leaf seams, outlineless (mokkotsu) colour shapes, wet-on-wet tarashikomi pooling, repeated stylised kata motifs cropped by the edge, and a bold asymmetric void.",
+    "sections": [
+      {
+        "line": 27,
+        "heading": "## 一、設計哲學"
+      },
+      {
+        "line": 60,
+        "heading": "## 二、本風格的 5 個不可省略特徵"
+      },
+      {
+        "line": 64,
+        "heading": "### 特徵 1｜金地（きんじ）與箔足（はくあし）"
+      },
+      {
+        "line": 86,
+        "heading": "### 特徵 2｜たらしこみ（濕疊積色）"
+      },
+      {
+        "line": 118,
+        "heading": "### 特徵 3｜没骨（もっこつ）＝零輪廓線"
+      },
+      {
+        "line": 129,
+        "heading": "### 特徵 4｜型（かた）の反復と裁ち落とし"
+      },
+      {
+        "line": 159,
+        "heading": "### 特徵 5｜大胆な余白と一塊の間（ま）"
+      },
+      {
+        "line": 177,
+        "heading": "## 三、色彩系統"
+      },
+      {
+        "line": 198,
+        "heading": "## 四、字體系統"
+      },
+      {
+        "line": 224,
+        "heading": "## 五、版面與網格"
+      },
+      {
+        "line": 243,
+        "heading": "## 六、元件配方"
+      },
+      {
+        "line": 273,
+        "heading": "## 七、動效規則"
+      },
+      {
+        "line": 315,
+        "heading": "## 八、插畫與圖像風格（kinji-mokkotsu 金地没骨図）"
+      },
+      {
+        "line": 333,
+        "heading": "## 九、Logo と Favicon"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 2,
+        "text": "name: rinpa-kinji-mokkotsu"
+      },
+      {
+        "line": 6,
+        "text": "# 琳派 Rinpa 風格規格書（金地・没骨・たらしこみ）"
+      },
+      {
+        "line": 8,
+        "text": "> 本規格書描述的是**日本江戶時代的琳派（りんぱ）**，一個真實存在、可查證、可指名的畫派。"
+      },
+      {
+        "line": 15,
+        "text": "> **江戶琳派**：酒井抱一（1761–1829）在江戶私淑光琳，代表作《夏秋草図屏風》；"
+      },
+      {
+        "line": 17,
+        "text": "> **命名**：「琳派」這個詞是二十世紀才被追認的（取自「光**琳**」），三代人之間並無師承，"
+      }
+    ],
+    "aesthetic_connection_fact": "Directly named Japanese styles and crafts in authored skills; Western gallery negative-space skill expressly says it is not wafu.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "HTML/CSS/SVG/JS; most examples use Google Fonts. Hanabi pack uses Canvas/Web Audio; Rinpa uses SVG filters and pointer math."
+    ],
+    "risks": [
+      "No root/site source license found; dependency licenses in committed node_modules do not license the skills. Art-historical statements are author claims, not independently authenticated."
+    ],
+    "skill_text_sha256": "872046a1397611242d5b6e59f7c3eca29c5c86fb8fe802cb944c5c875a5bcf58",
+    "hooks_related_files": [],
+    "duplicate_note": null,
+    "repo_license_caution": "Committed node_modules dependency licenses do not license site SKILL.md files."
+  },
+  {
+    "name": "yoiai-summer-festival",
+    "repository": "wenxiangxiao/design-skills-center",
+    "repository_url": "https://github.com/wenxiangxiao/design-skills-center",
+    "head_sha": "bf83e8687ace4ed7efd64a058d2cd05db1187a28",
+    "skill_path": "sites/yoiwan-hanabi/SKILL.md",
+    "source_url": "https://github.com/wenxiangxiao/design-skills-center/blob/bf83e8687ace4ed7efd64a058d2cd05db1187a28/sites/yoiwan-hanabi/SKILL.md",
+    "raw_url": "https://raw.githubusercontent.com/wenxiangxiao/design-skills-center/bf83e8687ace4ed7efd64a058d2cd05db1187a28/sites/yoiwan-hanabi/SKILL.md",
+    "license": "UNDECLARED",
+    "license_url": null,
+    "license_confirmed": false,
+    "stars_snapshot": 0,
+    "snapshot_utc": "2026-10-11T07:46:54.954870+00:00",
+    "archived": false,
+    "distinct_entrypoint": true,
+    "format_validity": "yaml-name-present",
+    "summary": "Japanese summer-festival pack: night-indigo washi, vermilion/gold lanterns, vertical mincho and crest fireworks; ma expressed as visual/audio time delay.",
+    "trigger_excerpt": "A deep-indigo Japanese summer-festival visual language — lantern vermilion and gold on night-blue washi, vertical Mincho, radial family-crest hanabi motifs, and a light-instant/sound-delayed sense of distance.",
+    "sections": [
+      {
+        "line": 10,
+        "heading": "## 一、設計哲學"
+      },
+      {
+        "line": 18,
+        "heading": "## 二、色彩系統"
+      },
+      {
+        "line": 35,
+        "heading": "## 三、字體系統"
+      },
+      {
+        "line": 43,
+        "heading": "## 四、版面與網格"
+      },
+      {
+        "line": 52,
+        "heading": "## 五、元件配方"
+      },
+      {
+        "line": 77,
+        "heading": "## 六、動效規則"
+      },
+      {
+        "line": 87,
+        "heading": "## 七、插畫與圖像風格 — hanabi-mon（花火家紋）"
+      },
+      {
+        "line": 98,
+        "heading": "## 八、Logo 與 Favicon 設計指南"
+      },
+      {
+        "line": 104,
+        "heading": "## 九、Do & Don't"
+      },
+      {
+        "line": 123,
+        "heading": "## 十、頁面骨架範例（可直接取用）"
+      }
+    ],
+    "japanese_evidence": [
+      {
+        "line": 16,
+        "text": "3. **間（ま）。** 這個風格的獨門情緒是「時間差」：光到眼、聲到胸，之間有一段靜。設計上要為「等待」留白——不要每個角落都在動，讓一個大輪安靜地開，再讓資訊/聲音遲一步到達。留白與延遲本身就是內容。"
+      }
+    ],
+    "aesthetic_connection_fact": "Directly named Japanese styles and crafts in authored skills; Western gallery negative-space skill expressly says it is not wafu.",
+    "possible_use_inference": "May inform typography, palette, materials, spacing or motion for a portfolio; output fit and cultural authenticity require case-specific evaluation.",
+    "prerequisites": [
+      "HTML/CSS/SVG/JS; most examples use Google Fonts. Hanabi pack uses Canvas/Web Audio; Rinpa uses SVG filters and pointer math."
+    ],
+    "risks": [
+      "No root/site source license found; dependency licenses in committed node_modules do not license the skills. Art-historical statements are author claims, not independently authenticated."
+    ],
+    "skill_text_sha256": "6ee6900aa76fa38f030a007d0abb9735b8e27942afd4651cb58f2b37c574ecd8",
+    "hooks_related_files": [],
+    "duplicate_note": null,
+    "repo_license_caution": "Committed node_modules dependency licenses do not license site SKILL.md files."
+  }
+]

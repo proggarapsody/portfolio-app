@@ -1,0 +1,4 @@
+interface:
+  display_name: "Japanese publication layout"
+  short_description: "Image direction, book spreads and album structure"
+  default_prompt: "Use $japanese-publication-layout to develop reference-grounded visual guidance for this journal."

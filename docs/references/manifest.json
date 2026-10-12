@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-12",
+  "images": [
+    {
+      "supplied_filename": "_ (21).jpeg",
+      "local_file": "01-sony-recorder.jpeg",
+      "sha256": "f52dfb6f6722412677e3b6afd87a5e33345e7f0f7c098c9333feb8f6e8314d7a",
+      "use": "internal design reference only"
+    },
+    {
+      "supplied_filename": "_ (22).jpeg",
+      "local_file": "02-seiko-wave.jpeg",
+      "sha256": "9d477d9a87e8b09b6049d4ebbb2af2506dd9b71a686f65233872f1966148ffc7",
+      "use": "internal design reference only"
+    },
+    {
+      "supplied_filename": "_ (23).jpeg",
+      "local_file": "03-walkman.jpeg",
+      "sha256": "f6e16dc5a359996209285c1c7c32804dae7217787cb0b367d01edc1fdbe73e4b",
+      "use": "internal design reference only"
+    },
+    {
+      "supplied_filename": "_ (24).jpeg",
+      "local_file": "04-modular-controls.jpeg",
+      "sha256": "2fcde40e110d25bac9cea2d29d15133ddefaaf473018d057a8b2f56fb60f58a3",
+      "use": "internal design reference only"
+    },
+    {
+      "supplied_filename": "Reblog by @eightiesfan · 1 image.jpeg",
+      "local_file": "05-studio-editorial.jpeg",
+      "sha256": "b75cc1b3014e45ee8471c19b5d2ce2468c0e933f89f4b610b6276d27dbc50817",
+      "use": "internal design reference only"
+    },
+    {
+      "supplied_filename": "Roland.jpeg",
+      "local_file": "06-roland.jpeg",
+      "sha256": "c8a92d93df0f695e71f123506bc271579e62c4fedda1c0b37f5db86a83712dda",
+      "use": "internal design reference only"
+    },
+    {
+      "supplied_filename": "YAMAHA.jpeg",
+      "local_file": "07-yamaha.jpeg",
+      "sha256": "c6027f41dcbc492a735a3513683ea2c0030612cff3bbde5864dd02d8eaa0c76e",
+      "use": "internal design reference only"
+    },
+    {
+      "supplied_filename": "浅草　東京館：昭和3年（1928年）1月12日。.jpeg",
+      "local_file": "08-newspaper.jpeg",
+      "sha256": "319c4a99d46a2b75c417895bc9d34136bc96c06b4a6ef881cfecc4912877eec9",
+      "use": "internal design reference only"
+    },
+    {
+      "supplied_filename": "_ (25).jpeg",
+      "local_file": "09-canon-demi.jpeg",
+      "sha256": "2c7fcb5f1a3b6d7eccf6a27fddab392884b8dd452e071b7eeaa38bdff5f2a5a6",
+      "use": "internal design reference only"
+    },
+    {
+      "supplied_filename": "DOMO-A Inspiration blog.jpeg",
+      "local_file": "10-akira.jpeg",
+      "sha256": "e5205aaf59d6b5f3f0a170ff13499837a436865b14ead1ff16ee4bad4c77406f",
+      "use": "internal design reference only"
+    }
+  ],
+  "priority_reference_set": [
+    "06-roland.jpeg",
+    "02-seiko-wave.jpeg",
+    "08-newspaper.jpeg",
+    "09-canon-demi.jpeg",
+    "10-akira.jpeg"
+  ],
+  "numbering_note": "Original eight retained; Canon Demi and AKIRA added as 09 and 10. These are not the removed experiment package numbering."
+}

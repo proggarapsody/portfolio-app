@@ -1,0 +1,4 @@
+interface:
+  display_name: "Retro print effects"
+  short_description: "Paper, ink edges, registration and graphic screens"
+  default_prompt: "Use $retro-print-effects to develop reference-grounded visual guidance for this journal."

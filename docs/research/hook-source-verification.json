@@ -1,0 +1,82 @@
+{
+  "method": "Raw pinned source re-fetch and SHA256; source identity only, no hook execution",
+  "entries": [
+    {
+      "name": "ECC post-edit-format",
+      "kind": "agent-lifecycle",
+      "sha256": "5b4c6fa4469697c40b2506a1a50838e53de3cb47e97eaa57929c2124245e4606",
+      "matches": true,
+      "source_url": "https://github.com/affaan-m/everything-claude-code/blob/2d515e4fc2ddef97354769812cf3f7b9ec4e5124/scripts/hooks/post-edit-format.js"
+    },
+    {
+      "name": "ECC post-edit-typecheck",
+      "kind": "agent-lifecycle",
+      "sha256": "bc12d455ce3d7f316404d23aa9e070098a636a8f47cee2fcd702208ffff18385",
+      "matches": true,
+      "source_url": "https://github.com/affaan-m/everything-claude-code/blob/2d515e4fc2ddef97354769812cf3f7b9ec4e5124/scripts/hooks/post-edit-typecheck.js"
+    },
+    {
+      "name": "ECC check-console-log",
+      "kind": "agent-lifecycle",
+      "sha256": "382623502ffe25ffc2cc7fe810bc79a181600a46c43595fe8de0da148998b7b1",
+      "matches": true,
+      "source_url": "https://github.com/affaan-m/everything-claude-code/blob/2d515e4fc2ddef97354769812cf3f7b9ec4e5124/scripts/hooks/check-console-log.js"
+    },
+    {
+      "name": "ECC native Codex session bootstrap",
+      "kind": "agent-lifecycle",
+      "sha256": "57edf21eb83d9c8144cfdc19f621700a854b6fd4abc4c368ddaeb5c74488b43c",
+      "matches": true,
+      "source_url": "https://github.com/affaan-m/everything-claude-code/blob/2d515e4fc2ddef97354769812cf3f7b9ec4e5124/hooks/codex-hooks.json"
+    },
+    {
+      "name": "dev-hooks lint-on-edit",
+      "kind": "agent-lifecycle",
+      "sha256": "92e5431aefcb9f26b91ea2129ba257859937d24ea7d3013aac2a83a07bcfc7ca",
+      "matches": true,
+      "source_url": "https://github.com/mickzijdel/dev-hooks/blob/1754dd924ed1fe65dfa0c83b06fb89b33decf61f/plugins/dev-hooks/hooks/scripts/lint-on-edit.sh"
+    },
+    {
+      "name": "dev-hooks verify-work",
+      "kind": "agent-lifecycle",
+      "sha256": "5377695c431c8915a1c28efbaef91275c5598b0ddd10961af7fba5315a1f48b3",
+      "matches": true,
+      "source_url": "https://github.com/mickzijdel/dev-hooks/blob/1754dd924ed1fe65dfa0c83b06fb89b33decf61f/plugins/dev-hooks/hooks/scripts/verify-work.sh"
+    },
+    {
+      "name": "dev-hooks accessibility reminder",
+      "kind": "agent-lifecycle",
+      "sha256": "ac5df1cda55717b95eb19974d8a47a8d6e4e0318db9208e4109c468cc681ea4d",
+      "matches": true,
+      "source_url": "https://github.com/mickzijdel/dev-hooks/blob/1754dd924ed1fe65dfa0c83b06fb89b33decf61f/plugins/dev-hooks/hooks/scripts/a11y-reminder.sh"
+    },
+    {
+      "name": "jev-lint semantic hook",
+      "kind": "agent-lifecycle",
+      "sha256": "b0ea8e91e6651d9769b49195b5b9cdad79c2988e236227d14cb87f9c5f1c3bbf",
+      "matches": true,
+      "source_url": "https://github.com/ckorhonen/jev-lint/blob/ebefe17bde12842c5ad7bbfffc07ae92b8146feb/src/hook.ts"
+    },
+    {
+      "name": "usehooks-ts useMediaQuery",
+      "kind": "react-runtime",
+      "sha256": "e66f6623402cd9bb40e190a0e946b906352e3b12fcdb827e451c47d4e7260406",
+      "matches": true,
+      "source_url": "https://github.com/juliencrn/usehooks-ts/blob/61949134144d3690fe9f521260a16c779a6d3797/packages/usehooks-ts/src/useMediaQuery/useMediaQuery.ts"
+    },
+    {
+      "name": "usehooks-ts useEventListener",
+      "kind": "react-runtime",
+      "sha256": "0ffba92b42103c68b6a982816f066da424acf8b1179d13bcd59aa14d93015ba0",
+      "matches": true,
+      "source_url": "https://github.com/juliencrn/usehooks-ts/blob/61949134144d3690fe9f521260a16c779a6d3797/packages/usehooks-ts/src/useEventListener/useEventListener.ts"
+    },
+    {
+      "name": "usehooks-ts useDebounceValue",
+      "kind": "react-runtime",
+      "sha256": "77496ed20ba595b8c7341f7a68edfed56d18eeec5877826920b71f5325c3902a",
+      "matches": true,
+      "source_url": "https://github.com/juliencrn/usehooks-ts/blob/61949134144d3690fe9f521260a16c779a6d3797/packages/usehooks-ts/src/useDebounceValue/useDebounceValue.ts"
+    }
+  ]
+}

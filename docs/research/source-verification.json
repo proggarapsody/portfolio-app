@@ -1,0 +1,1086 @@
+{
+  "method": "Independent raw pinned-source re-fetch, SHA256 comparison and YAML metadata parse; does not validate efficacy or cultural authority",
+  "verified_strict_skill_count": 97,
+  "entries": [
+    {
+      "id": "y-endo/agents:.agents/skills/japanese-design-review/SKILL.md",
+      "catalog_id": "S001",
+      "sha256": "8b8c2f70aee8e5d2e51971b48253bb17e9d4fec93d95268b1ed83358c8c1a79d",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "hanageruge/ja-webtypo-skill:SKILL.md",
+      "catalog_id": "S002",
+      "sha256": "db675ab9196a6aa45c4d18d0f2fad4e3a34b7e201e2655357f712cff62e80018",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "edbizarro/glaze:skills/Glaze/SKILL.md",
+      "catalog_id": "S003",
+      "sha256": "6f6b32a37d3eff250078ed1fb5c0724b4382591be85e327fd8cee4062d450b1a",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "maestro-ai-stack/maestro-creative:SKILL.md",
+      "catalog_id": "S004",
+      "sha256": "e45a9ed169d2e5f5cc6dc57943ea75dca161513dc68a61bec417d2730bc75ddb",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": false,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "maestro-ai-stack/maestro-creative:skills/poster/SKILL.md",
+      "catalog_id": "S005",
+      "sha256": "aa5d18c6733404d660386809ceeb5b0084fd15533996311e5b175db25ea71806",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "maestro-ai-stack/maestro-creative:skills/slides/SKILL.md",
+      "catalog_id": "S006",
+      "sha256": "5b5777d406c98ffc2e10e2b09410ef02dd7dd47b83bcd74b560971349231bff3",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "maestro-ai-stack/maestro-creative:skills/motion/SKILL.md",
+      "catalog_id": "S007",
+      "sha256": "4a968bc0b5896fbfc5601a7252a12981d78656f1cdf374d12cb6d66f4860de82",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "maestro-ai-stack/maestro-creative:skills/web-landing/SKILL.md",
+      "catalog_id": "S008",
+      "sha256": "18731b43b9c2c91dc223926de7c961ba4945e2caa2c105d856310a8163436d90",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "maestro-ai-stack/maestro-creative:skills/generative-art/SKILL.md",
+      "catalog_id": "S009",
+      "sha256": "7b341be0e8966ad0ca4710a0be1f9a927c4aa03ddbb6460819b44b63b415481f",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "maestro-ai-stack/maestro-creative:skills/handbook/SKILL.md",
+      "catalog_id": "S010",
+      "sha256": "71e2b1c935d403bb37c1ad7437017bafa1112f75631beb0d499076e8f35fa773",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "yanliudesign/mono-color-skill:SKILL.md",
+      "catalog_id": "S011",
+      "sha256": "8274bc1f30a92a9dc715c03c3fb9aeaa060fb5a12fd58dfe8d977ae98a26bd76",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "petekp/agent-skills:skills/typography/SKILL.md",
+      "catalog_id": "S012",
+      "sha256": "fa63d89a9bcb43462d11b6b783419cbca4db8faec1f3fc3075cb044a80ebe2b9",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "petekp/agent-skills:skills/aesthetic-guide/SKILL.md",
+      "catalog_id": "S013",
+      "sha256": "0840211940d4d52a03fd29060ba06f863511bbfbf72991f67635356ce56217af",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "petekp/agent-skills:skills/interaction-design/SKILL.md",
+      "catalog_id": "S014",
+      "sha256": "e712e8ea4a564e5549653a13fb6011cf7709c0622f102a13ad8c7b6e9ec0c994",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "madebymustafa/design-taste:skills/japanese-minimal/SKILL.md",
+      "catalog_id": "S015",
+      "sha256": "7b96ba5a48afd7d4e69f79f589f95e4fa6874384db0762c6d90b5cad0e1a6465",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "madebymustafa/design-taste:skills/retro-print/SKILL.md",
+      "catalog_id": "S016",
+      "sha256": "9036bd4daf53dd27a7e2c05d9c1d158a6a8aa0e67a2ea5d49f6f8b7b34ff1731",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "madebymustafa/design-taste:skills/editorial-minimal/SKILL.md",
+      "catalog_id": "S017",
+      "sha256": "fd6c52053a992de985d5053278994784088f20bf9e76e1224ad9c75cdd8e3676",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "madebymustafa/design-taste:skills/taste-typography/SKILL.md",
+      "catalog_id": "S018",
+      "sha256": "8c9ce32d56237ade84985868db6cc5753082987a9cd1e67d0e2bbb8bc2e3e648",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "madebymustafa/design-taste:skills/taste-color/SKILL.md",
+      "catalog_id": "S019",
+      "sha256": "e56ad74bef333f3d328a752f840f4e70240f3519f3a56dc585b26d2395be9482",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "madebymustafa/design-taste:skills/taste-motion/SKILL.md",
+      "catalog_id": "S020",
+      "sha256": "c8b4f6ae093ebee73b2ac401dbbbb8f80dba18a407ee938c1616e812fddd5d18",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "madebymustafa/design-taste:skills/cinematic-motion/SKILL.md",
+      "catalog_id": "S021",
+      "sha256": "b5e4b30e362c14e319f3c14eb725ce6b35d1f733c3314a1b5d0b592d39664fed",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "madebymustafa/design-taste:skills/taste-brand-identity/SKILL.md",
+      "catalog_id": "S022",
+      "sha256": "f21fd39579be578597f4ed73b10837c7a6ddfbabeee003d131a85c9d52171b8a",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "madebymustafa/design-taste:skills/taste-gsap/SKILL.md",
+      "catalog_id": "S023",
+      "sha256": "648b1b14375061b643fa1f45a2f65ac12edd0bd6c9a489f24f60cd21f547ef5f",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "madebymustafa/design-taste:skills/brutalist-industrial/SKILL.md",
+      "catalog_id": "S024",
+      "sha256": "7e16d97e74a303d62d572ad02c155d65dccd478fcf3372416765585b12ed0702",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "wangpf1129/design-prompts:SKILL.md",
+      "catalog_id": "S025",
+      "sha256": "24cd9b132650e48e665804c71ad43fc3075d4f3ccfb4a890de03a8bb8ee33ab9",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "ayusavin/skills:design-process/skills/design-process/SKILL.md",
+      "catalog_id": "S026",
+      "sha256": "afaefeb452db7f05e6a78863e88139d75156957e612c5892e56ffb4647dce702",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "luoqianyi/gpt-image2-ppt-skiils:SKILL.md",
+      "catalog_id": "S027",
+      "sha256": "12ef94b3639b00dfd871ef1af9052b7e5319dd74346c0cf39cc6bdcfde34e473",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "doublesq97-ui/su-webstyle-top12:SKILL.md",
+      "catalog_id": "S028",
+      "sha256": "76dacab7eb26b54df381ade720f870afbfec4906bcbbe104980a6a913ff353fc",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "onepixelaway/frontend-textbooks:SKILL.md",
+      "catalog_id": "S029",
+      "sha256": "4298735a0e53f38a6e76e5422219da8a0193e8918097ce7a6725d3ac8a6dd13c",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "wyx-sg/wedding-invitation-skill:SKILL.md",
+      "catalog_id": "S030",
+      "sha256": "e1a5f5488b19018a1793121fbd08ce708e5dddf7a8a871e243df7454c204cc7b",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "julianoczkowski/designer-skills:frontend-design/SKILL.md",
+      "catalog_id": "S031",
+      "sha256": "6a078fa3e5a5cef2656d621a90c8dff8191bd9d8a3724df1b98760262c88ef60",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "nexu-io/open-design:design-templates/magazine-poster/SKILL.md",
+      "catalog_id": "S032",
+      "sha256": "3aec85e228ca828d4cda8b2a9b39ff7a32a84dd4614396eb5d88ca57401c79eb",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "nexu-io/open-design:design-templates/web-prototype-taste-brutalist/SKILL.md",
+      "catalog_id": "S033",
+      "sha256": "4b62f31102fd32c7c6915569df066cdbe3b25be4fa16147c5a5df857a8d37ad0",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "nexu-io/open-design:design-templates/html-ppt-zhangzara-retro-zine/SKILL.md",
+      "catalog_id": "S034",
+      "sha256": "10fd95e3288ff10784071150cb7702ecdb2778674f4d850c6ad473b83b5dd54f",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "joisun/newspaperui:SKILL.md",
+      "catalog_id": "S035",
+      "sha256": "6eb105db2c02b54680075580791c8f4ad6ddeb5be9abe456064b495a724d99a8",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "starinzlob/the-lamplighter:SKILL.md",
+      "catalog_id": "S036",
+      "sha256": "341ddcbf38c92ccfdfbd49b407cfcc903e59ceb08aa9226290df8612d193f63e",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "EisonMe/newspaper-brief:SKILL.md",
+      "status": "retrieved",
+      "strict_count_eligible": false,
+      "sha256": "c6897175d783d131c14f31fbbc913a07c83a31f3a090cf9dd04c60eef7fceff2",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": false,
+      "yaml_error": "ScannerError: mapping values are not allowed here\n  in \"<unicode string>\", line 3, column 280:\n     ... G long image. Supports two flows: (1) raw article/chat/link/note ... \n                                         ^"
+    },
+    {
+      "id": "osmontero/opencode-skills:skills/designing-frontend-interfaces/SKILL.md",
+      "catalog_id": "S038",
+      "sha256": "950c1b60943768b340c5842479528a2e21f4c94ffce1344060331776d5d25520",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "Leonxlnx/taste-skill:skills/brutalist-skill/SKILL.md",
+      "catalog_id": "S039",
+      "sha256": "fffbaac8597f07679e9d87145533567658aedba3b5eca6f16a7075a333048caa",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "Leonxlnx/taste-skill:skills/minimalist-skill/SKILL.md",
+      "catalog_id": "S040",
+      "sha256": "36bc7328f085405f43b476938e62460fa573bf7e984e949e072bcf014831a44c",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "Leonxlnx/taste-skill:skills/brandkit/SKILL.md",
+      "catalog_id": "S041",
+      "sha256": "b0c4837e1bd140ca816ae54948754ddd2ac1e2a4d3619363777a80caf00b2ede",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "ConcertoNotes/codex-plugins:plugins/community/universal-design-principles/plugins/aesthetics-and-emotion-principles/skills/wabi-sabi/SKILL.md",
+      "catalog_id": "S042",
+      "sha256": "dfed7f90b44c83865d8b992ddd1df8c16eb3471eb0e3b7df4d8f537ecef221fc",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "ConcertoNotes/codex-plugins:plugins/community/universal-design-principles/plugins/aesthetics-and-emotion-principles/skills/wabi-sabi-imperfection/SKILL.md",
+      "catalog_id": "S043",
+      "sha256": "5fb91b6611c36bcc19e62bcb7d99e3d88b08412a45246c66cd09a0884e2fa180",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "ConcertoNotes/codex-plugins:plugins/community/universal-design-principles/plugins/aesthetics-and-emotion-principles/skills/wabi-sabi-restraint/SKILL.md",
+      "catalog_id": "S044",
+      "sha256": "38588058bc4c2c5565e2f769ada7949f2ff5211f9382e06302ef9c04dd5d5ac7",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "nkuCarrie/aesthetic-extractor-skill:aesthetic-extractor/SKILL.md",
+      "catalog_id": "S045",
+      "sha256": "4ce0cbfd7ffa2efaa2f7f53055c4447d853c3aaac3ef486308bd3cc7fcad5f73",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "meodai/skill.color-expert:SKILL.md",
+      "catalog_id": "S046",
+      "sha256": "fefc31fb668362fdc9693b92df4ba38c14f8af91a7db30700be46f4cfb23e45c",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "uyoujian/style-prompt-extractor:SKILL.md",
+      "catalog_id": "S047",
+      "sha256": "7288eedf0f026b6ad98506e5a3fe637efd2910fbb2d5d2aba6229315877f2b77",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "wenxiangxiao/design-skills-center:sites/asahiyu/SKILL.md",
+      "catalog_id": "S048",
+      "sha256": "d4bcdc864c7021bbf5bd6aca4e45d2e882185929d339a7cedaa19609da706fc4",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "wenxiangxiao/design-skills-center:sites/nagi-cha/SKILL.md",
+      "catalog_id": "S049",
+      "sha256": "8325cde98aa4387662416d62a093869c72b32c5e0a792dd9de9b3a99fa7933a7",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "wenxiangxiao/design-skills-center:sites/yohaku-yoga/SKILL.md",
+      "catalog_id": "S050",
+      "sha256": "0666b4bc892b6111e80b4817b61a1e77e4c67e8e75b4703f22ae31897ce1c38f",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "wenxiangxiao/design-skills-center:sites/hitome-sha/SKILL.md",
+      "catalog_id": "S051",
+      "sha256": "3145ae0a77ba462fedc4b623589a4c971373a95cdc7053ad071425fe642c5804",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "wenxiangxiao/design-skills-center:sites/sudden-rain-books/SKILL.md",
+      "catalog_id": "S052",
+      "sha256": "c7596c842936bd271c033765f7fd0f7b5b87eafc7459e9617cadd95f80e609ed",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "wenxiangxiao/design-skills-center:sites/suhamado/SKILL.md",
+      "catalog_id": "S053",
+      "sha256": "465e81c8a57a4cad9edbde8362ef4a4980eaa62e8967f6a6f83aaa2e2621962c",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "wenxiangxiao/design-skills-center:sites/tamamizu/SKILL.md",
+      "catalog_id": "S054",
+      "sha256": "872046a1397611242d5b6e59f7c3eca29c5c86fb8fe802cb944c5c875a5bcf58",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "wenxiangxiao/design-skills-center:sites/yoiwan-hanabi/SKILL.md",
+      "catalog_id": "S055",
+      "sha256": "6ee6900aa76fa38f030a007d0abb9735b8e27942afd4651cb58f2b37c574ecd8",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "addyosmani/web-quality-skills:skills/accessibility/SKILL.md",
+      "catalog_id": "S056",
+      "sha256": "267fb2a0707d6142f2871f22688203a42ba21291a2aa200fb740936e41362b5d",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "addyosmani/web-quality-skills:skills/best-practices/SKILL.md",
+      "catalog_id": "S057",
+      "sha256": "9d1f10a08cd7a94176ce160ec860dbd3ecfadad75d46546001883f1f907c5c3e",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "addyosmani/web-quality-skills:skills/core-web-vitals/SKILL.md",
+      "catalog_id": "S058",
+      "sha256": "731aa78c0347e8b3e191b75962175bee058ce73817278e610ac0fe546e685914",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "addyosmani/web-quality-skills:skills/performance/SKILL.md",
+      "catalog_id": "S059",
+      "sha256": "b0c220185d88c61f7770eb127d8facf86c86d2dd1fd82b86e15a4965a0137265",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "addyosmani/web-quality-skills:skills/seo/SKILL.md",
+      "catalog_id": "S060",
+      "sha256": "57cd16566c2c706186b643644dec2884da89c42f296843364c65a40a4d566ae6",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "addyosmani/web-quality-skills:skills/web-quality-audit/SKILL.md",
+      "catalog_id": "S061",
+      "sha256": "1903cfb4dcba987d50dc7a51f6c19ec43830ff924c2c8f78979d8775fbe20f91",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "vercel-labs/agent-skills:skills/composition-patterns/SKILL.md",
+      "catalog_id": "S062",
+      "sha256": "e38e0eaa609316b10423a9a138ed95e35099accd3f735585295c8a8f165c28a3",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "vercel-labs/agent-skills:skills/deploy-to-vercel/SKILL.md",
+      "catalog_id": "S063",
+      "sha256": "cfcc3dd479ab2e0ae721ddf39b8af84d977321487672f1487c8d6855f576927b",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "vercel-labs/agent-skills:skills/react-best-practices/SKILL.md",
+      "catalog_id": "S064",
+      "sha256": "71ed7794962fa6e803ee83030517b5b93a9f70fbfeb431ec4535c5480a8d8355",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "vercel-labs/agent-skills:skills/react-view-transitions/SKILL.md",
+      "catalog_id": "S065",
+      "sha256": "1520343c8814c972fee001cac6d6185976d6eb3f4edcac33afe95c10f3b3228b",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "vercel-labs/agent-skills:skills/vercel-cli-with-tokens/SKILL.md",
+      "catalog_id": "S066",
+      "sha256": "c06bea99e75eab07fde4fae26069baa002f82f39b53f07981704c2901551dd4c",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "vercel-labs/agent-skills:skills/vercel-optimize/SKILL.md",
+      "catalog_id": "S067",
+      "sha256": "95ae2683b30d892d165af92a350c5628b68106f395a59b448857b654e306ed91",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "vercel-labs/agent-skills:skills/web-design-guidelines/SKILL.md",
+      "catalog_id": "S068",
+      "sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "vercel-labs/agent-skills:skills/writing-guidelines/SKILL.md",
+      "catalog_id": "S069",
+      "sha256": "89a5f581193289b80af58b980090aeed535047c8df2b55ccbaae0de40283a99d",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "anthropics/skills:skills/webapp-testing/SKILL.md",
+      "catalog_id": "S070",
+      "sha256": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "anthropics/skills:skills/web-artifacts-builder/SKILL.md",
+      "catalog_id": "S071",
+      "sha256": "81c5002c6643b0de7b8710b00e7a9038daa6fb9b68d59870ee6adb12da8d10f8",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "microsoft/playwright-cli:skills/playwright-cli/SKILL.md",
+      "catalog_id": "S072",
+      "sha256": "9bba755285a4c9ad72a4a41b9c7baef6fb516d329c0b44ed0573715f4479b906",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "vercel-labs/agent-browser:skills/agent-browser/SKILL.md",
+      "catalog_id": "S073",
+      "sha256": "3a7520e64de2dfaa516b6721c001e84e06e3c06a187b82af029ae721540ebfac",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "vercel-labs/agent-browser:skill-data/dogfood/SKILL.md",
+      "catalog_id": "S074",
+      "sha256": "83afc0f6ce5598ae56ab06c7e18090d6769ec0a9a2abb3a12df240a81c77ed02",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "gohypergiant/agent-skills:skills/accelint-ac-to-playwright/SKILL.md",
+      "catalog_id": "S075",
+      "sha256": "afda2e850e4d55f81c500cdc9bd5c32bc9cc1445a570983a00a893cae176902b",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "gohypergiant/agent-skills:skills/accelint-nextjs-best-practices/SKILL.md",
+      "catalog_id": "S076",
+      "sha256": "3d291fe11c7f6bd40ba75a1fad8370768cc2809680862bf615c54ec6e500d9c9",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "gohypergiant/agent-skills:skills/accelint-react-best-practices/SKILL.md",
+      "catalog_id": "S077",
+      "sha256": "4b9327067525ef17173e2ad84fb4188cefa713929c5103e11353027d0b9f7ac0",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "gohypergiant/agent-skills:skills/accelint-react-testing/SKILL.md",
+      "catalog_id": "S078",
+      "sha256": "9744f94ea0d0658330d6f4aac2aeec1a9e49935b03803fb9712d40c97f5dc817",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "gohypergiant/agent-skills:skills/accelint-ts-best-practices/SKILL.md",
+      "catalog_id": "S079",
+      "sha256": "fa7d87c215f19fd0c754a3d8c4e8e96d397c71839f3cade93a67c0dc4262759c",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "gohypergiant/agent-skills:skills/accelint-ts-performance/SKILL.md",
+      "catalog_id": "S080",
+      "sha256": "437e94bc9eeab8c9af6ae87ab0a80cd3344018351bdd3b622001f31c068d1c76",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "gohypergiant/agent-skills:skills/accelint-ts-testing/SKILL.md",
+      "catalog_id": "S081",
+      "sha256": "d46441ec97466c8ea2d7663b1c7641535861b1e9ee26708239fe96b2a2016113",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "smukh/a11y-agent-skills:skills/accessibility-audit/SKILL.md",
+      "catalog_id": "S082",
+      "sha256": "c9d8982c44254a85282bdc6bcb655a500877b9d951ba3d3cc0f9074b44af153b",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "smukh/a11y-agent-skills:skills/accessibility-regression-test/SKILL.md",
+      "catalog_id": "S083",
+      "sha256": "42714f16e02332dec3c0ccd9d3f47fdb2db09154e1a20d13e6e2a176c9349fe4",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "smukh/a11y-agent-skills:skills/accessible-component-review/SKILL.md",
+      "catalog_id": "S084",
+      "sha256": "b36f58ab468cf09fef71bb666b8e7c1ed2ee18e5b7b9f7c818d7249014140644",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "smukh/a11y-agent-skills:skills/keyboard-navigation-review/SKILL.md",
+      "catalog_id": "S085",
+      "sha256": "a6090113410fedacebf5b514dbdc141ce8ee58c49d2c338cc96ac4e01303ec59",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "smukh/a11y-agent-skills:skills/dialog-accessibility/SKILL.md",
+      "catalog_id": "S086",
+      "sha256": "8b59f8972049fd3e57b2e4112881eceb630d50c1dddd229f0c4095af0b457578",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "smukh/a11y-agent-skills:skills/accessible-dynamic-updates/SKILL.md",
+      "catalog_id": "S087",
+      "sha256": "e90f7328ae798c9ae26f3e9e474f9e1adcf3eb8c28372a27168240ba395f978d",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "smukh/a11y-agent-skills:skills/fix-accessibility-issue/SKILL.md",
+      "catalog_id": "S088",
+      "sha256": "ea1f71ea887bbc6e90d01ebf9bf236d29591b8c261bf2f408d43423883ec2077",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "smukh/a11y-agent-skills:skills/accessible-forms/SKILL.md",
+      "catalog_id": "S089",
+      "sha256": "b90bda13812f766d29ff64fc8ccaeb2ceea4e448e2c9eff84652d17a6d70edce",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "coreyhaines31/marketingskills:skills/seo-audit/SKILL.md",
+      "catalog_id": "S090",
+      "sha256": "f79aebc633d5fcf53d67fd4d39ea6210577485f2a5e46125b3bd757e03baa634",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "coreyhaines31/marketingskills:skills/schema/SKILL.md",
+      "catalog_id": "S091",
+      "sha256": "d298f5d6e1b33b6825f38ecaa05c4d33ba9e45e346b224bd86f9834e46f67a94",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "coreyhaines31/marketingskills:skills/content-strategy/SKILL.md",
+      "catalog_id": "S092",
+      "sha256": "dce9f4027ae129691e92623541a360bee9356137a7eecf68afa95674af118e68",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "coreyhaines31/marketingskills:skills/copy-editing/SKILL.md",
+      "catalog_id": "S093",
+      "sha256": "d23184ad62cbe29f64684b934c99d4ae8c7f03dec9c5a5d6bd492d645f5b9719",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "coreyhaines31/marketingskills:skills/site-architecture/SKILL.md",
+      "catalog_id": "S094",
+      "sha256": "55c0128ac29f628944444f8850b97913517f57131673824ebcad4d5ffb26ddd2",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "coreyhaines31/marketingskills:skills/copywriting/SKILL.md",
+      "catalog_id": "S095",
+      "sha256": "78c0a09b78a41995ba055d6549bbd7db3fe958673d039b9121e7a2e32bb4bb06",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "coreyhaines31/marketingskills:skills/ai-seo/SKILL.md",
+      "catalog_id": "S096",
+      "sha256": "97424245fab155d065e39fae5fda8c031bb2f195083411842379fddb5e035e03",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "vercel/next.js:skills/next-dev-loop/SKILL.md",
+      "catalog_id": "S097",
+      "sha256": "ca45c937ae77b2dc39399ffbe5afbfabcc1862056a62fd50c76342a32e6f8375",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "vercel/next.js:skills/next-bundle-optimizer/SKILL.md",
+      "catalog_id": "S098",
+      "sha256": "0c73ee3c9c93b9b8489209eb1b5b726c4d2e9caa40d1688fb61022884f8cd0a5",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "vercel/next.js:skills/next-cache-components-optimizer/SKILL.md",
+      "catalog_id": "S099",
+      "sha256": "3d0e8eb9d922538de71def2e75ebfc1e1d5ec86e5eeaf0b3b51f22cc38a29f99",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "vercel/next.js:skills/next-partial-prefetching-optimizer/SKILL.md",
+      "catalog_id": "S100",
+      "sha256": "876634c57c5cfbace95edcbe6c7e9bdea199fa53c09cd177990dc936876db345",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "affaan-m/everything-claude-code:skills/e2e-testing/SKILL.md",
+      "catalog_id": "S101",
+      "sha256": "b0e00e7e17cb259101139900816c5528aed18dd10bcf5f9cb42cfc35baf8a755",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "affaan-m/everything-claude-code:skills/nextjs-turbopack/SKILL.md",
+      "catalog_id": "S102",
+      "sha256": "336034322d2022f47b097e55b5448cbc1e204c11f964910fa6fb3baeab06a474",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "anthropics/skills:skills/doc-coauthoring/SKILL.md",
+      "catalog_id": "S103",
+      "sha256": "2e47d78846faeea4a56e9809c52700087a15a2155a3f293a3efbaded81398ef4",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "anthropics/skills:skills/canvas-design/SKILL.md",
+      "catalog_id": "S104",
+      "sha256": "a1f288079624402f30682753c1d43920b6664785698d21d3e7aa197450a6448b",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "anthropics/skills:skills/brand-guidelines/SKILL.md",
+      "catalog_id": "S105",
+      "sha256": "1120b3769e2985cefb3d25be981b1f914abeba57ae079b83c20c666c164fa9fe",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "anthropics/skills:skills/skill-creator/SKILL.md",
+      "catalog_id": "S106",
+      "sha256": "dcd4803e61e913e6fc27294184cd3a71f09f5e924ff20c8a9a20173e7b3c2bcf",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "anthropics/skills:skills/theme-factory/SKILL.md",
+      "catalog_id": "S107",
+      "sha256": "c35893e221e28895c52143cc11bf30e41a44817796b39d4b15727dadc9796552",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "anthropics/skills:skills/internal-comms/SKILL.md",
+      "catalog_id": "S108",
+      "sha256": "067b7587a344a928fc6534ef66b1bcd591fc7c26d207ea7ca3334aeb678d6475",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "obra/superpowers:skills/writing-skills/SKILL.md",
+      "catalog_id": "S109",
+      "sha256": "bbdfe742f853562e643a3d40d64476359d47881e39cef80a189283fa26d11ab9",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "blader/humanizer:SKILL.md",
+      "catalog_id": "S110",
+      "sha256": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "google-labs-code/stitch-skills:plugins/stitch-utilities/skills/design-md/SKILL.md",
+      "catalog_id": "S111",
+      "sha256": "eb15f44646528f3a087ce023329ae699c1b6e803662af68338e1eb1c0406b59b",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "google-labs-code/stitch-skills:plugins/stitch-design/skills/extract-design-md/SKILL.md",
+      "catalog_id": "S112",
+      "sha256": "f9c32b30acd9fea3dba7306bf38e3a859f49c1f27bcf44f9cf16d3a60a730276",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "google-labs-code/stitch-skills:plugins/stitch-design/skills/manage-design-system/SKILL.md",
+      "catalog_id": "S113",
+      "sha256": "5ce0b8adb5261e8a926fc0942d679cda0421ac29e8159a6ee38e5d940bc9658e",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "nextlevelbuilder/ui-ux-pro-max-skill:.claude/skills/design-system/SKILL.md",
+      "catalog_id": "S114",
+      "sha256": "8aa5ff93320559a6e5289d37b6b06b3307737dbfb4a6f3fc44135c705613c511",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "nextlevelbuilder/ui-ux-pro-max-skill:.claude/skills/brand/SKILL.md",
+      "catalog_id": "S115",
+      "sha256": "1c24139633e2ebf11da4f97eaeb1c0564f8658a40b3ad779387a5b8c6cb76dbc",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": false,
+      "status": "retrieved"
+    },
+    {
+      "id": "coreyhaines31/marketingskills:skills/image/SKILL.md",
+      "catalog_id": "S116",
+      "sha256": "a03da6dd4aed940f2fb8df1337a8dbe0f4108b3bef864e996f759fa4d94e2600",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "microsoft/amplifier-bundle-skills:skills/image-vision/SKILL.md",
+      "catalog_id": "S117",
+      "sha256": "0029f27b0cb3bf4c23db93f1ce8ee54187fb142b14929a0ee601b3045125b844",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "smixs/visual-skills:image/SKILL.md",
+      "catalog_id": "S118",
+      "sha256": "6d574e0b524bf80896271cad8d7192d5eb3db238c4543367ad90235982f3a530",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "pbakaus/impeccable:.agents/skills/impeccable/SKILL.md",
+      "catalog_id": "S119",
+      "sha256": "58c0252bca04521de87007aeb495f7ec99dc4c7341bc890fe82b6d577573af91",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    },
+    {
+      "id": "jakubkrehel/make-interfaces-feel-better:skills/make-interfaces-feel-better/SKILL.md",
+      "catalog_id": "S120",
+      "sha256": "c1d508fa7bef8e47ee682b4f214c7a4ed1416b91d05a97285e555bad1c41a23e",
+      "recorded_hash_matches": true,
+      "yaml_name_description_present": true,
+      "strict_count_eligible": true,
+      "status": "retrieved"
+    }
+  ]
+}

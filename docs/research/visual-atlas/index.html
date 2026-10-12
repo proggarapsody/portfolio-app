@@ -1,0 +1,2837 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="data:," />
+    <title>Print composition &amp; material atlas — internal study</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #f6f5f1;
+        color: #202522;
+        font:
+          16px/1.55 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 1400px;
+        margin: auto;
+        padding: 40px;
+      }
+      h1 {
+        font-size: clamp(32px, 4vw, 56px);
+        line-height: 1.08;
+        max-width: 1000px;
+        letter-spacing: -0.04em;
+      }
+      h2 {
+        font-size: 30px;
+        margin: 0 0 16px;
+      }
+      h3 {
+        font-size: 21px;
+        line-height: 1.2;
+        margin: 0 0 14px;
+      }
+      p {
+        max-width: 850px;
+      }
+      a {
+        color: #144b81;
+      }
+      nav {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        border-block: 1px solid #a8aaa3;
+        padding: 14px 0;
+        margin: 30px 0;
+      }
+      section {
+        scroll-margin-top: 20px;
+      }
+      header small,
+      .label {
+        font:
+          12px/1.4 system-ui,
+          sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+      .reference {
+        padding: 30px 0;
+        border-top: 1px solid #acafa6;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.2fr);
+        gap: 28px;
+        align-items: start;
+      }
+      figure {
+        margin: 0;
+        min-width: 0;
+      }
+      figure img {
+        width: 100%;
+        height: 440px;
+        object-fit: contain;
+        object-position: top;
+        background: #e9e9e3;
+      }
+      figcaption {
+        font-size: 13px;
+        margin: 10px 0 0;
+        color: #4b514d;
+      }
+      .diagram {
+        height: 440px;
+        width: 100%;
+        background: #e9e9e3;
+      }
+      .notes strong {
+        display: block;
+        margin-top: 14px;
+      }
+      .notes p {
+        margin: 8px 0 14px;
+      }
+      svg text {
+        font-family: system-ui, sans-serif;
+      }
+      .spread-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+      }
+      .study {
+        border-top: 1px solid #a8aaa3;
+        padding: 20px 0;
+      }
+      .study svg {
+        width: 100%;
+        height: auto;
+      }
+      .materials {
+        margin-top: 60px;
+      }
+      .lab-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+      .sample {
+        background: #fff;
+        padding: 20px;
+        border: 1px solid #c5c6be;
+        min-width: 0;
+      }
+      .pair {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .pair svg {
+        width: 100%;
+        height: auto;
+        display: block;
+        background: #efebdf;
+      }
+      .pair figcaption {
+        color: #303830;
+      }
+      label {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 16px;
+      }
+      input {
+        accent-color: #254d40;
+        flex: 1;
+        min-width: 80px;
+      }
+      output {
+        font-variant-numeric: tabular-nums;
+        min-width: 45px;
+      }
+      button {
+        font: inherit;
+        background: #203e33;
+        color: white;
+        border: 0;
+        padding: 10px 18px;
+        cursor: pointer;
+      }
+      button:focus-visible,
+      a:focus-visible,
+      input:focus-visible {
+        outline: 3px solid #a64122;
+        outline-offset: 4px;
+      }
+      .sources {
+        border-top: 1px solid #aaa;
+        padding: 30px 0;
+        margin-top: 40px;
+        font-size: 14px;
+      }
+      .sources li {
+        margin-bottom: 10px;
+      }
+      #openings {
+        padding-top: 50px;
+      }
+      @media (max-width: 750px) {
+        main {
+          padding: 24px 18px;
+        }
+        .reference {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+        .reference .notes {
+          grid-column: 1/-1;
+        }
+        figure img,
+        .diagram {
+          height: 440px;
+        }
+        .spread-grid,
+        .lab-grid {
+          grid-template-columns: 1fr;
+        }
+        h2 {
+          font-size: 26px;
+        }
+      }
+      @media (max-width: 360px) {
+        figure img,
+        .diagram {
+          height: 380px;
+        }
+        .pair {
+          gap: 6px;
+        }
+        .sample {
+          padding: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <small>Portfolio / internal skill reference / 12 October 2026</small>
+        <h1>Image first. Page structure next. Material last.</h1>
+        <p>
+          A visual companion to the publication-layout and retro-print-effects
+          skills. Original references sit beside schematic readings. These are
+          teaching diagrams and controlled specimens, not replacement portfolio
+          designs.
+        </p>
+        <nav aria-label="Atlas sections">
+          <a href="#references">Five reference readings</a
+          ><a href="#openings">Book &amp; album structure</a
+          ><a href="#materials">Material lab</a
+          ><a href="#sources">Sources &amp; boundaries</a>
+        </nav>
+      </header>
+      <section id="references">
+        <h2>Five different ways to compose</h2>
+        <p>
+          The diagrams isolate image and type masses. They do not reproduce the
+          artwork, identify typefaces or authenticate a printing process.
+        </p>
+        <article class="reference">
+          <figure>
+            <img
+              src="../../references/06-roland.jpeg"
+              alt="Supplied 06 / Roland print reference"
+            />
+            <figcaption>06 / Roland · original scan, unchanged</figcaption>
+          </figure>
+          <figure>
+            <svg
+              class="diagram"
+              role="img"
+              aria-label="Annotated schematic; not final artwork"
+              viewBox="0 0 300 440"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="0"
+                y="0"
+                width="300"
+                height="440"
+                rx="0"
+                fill="#142a1b"
+              />
+              <text x="174" y="28" font-size="19" fill="#ecede0">IDENTITY</text>
+              <path d="M20 90 L258 52 L267 300 L70 405Z" fill="#385841" />
+              <path d="M40 280 L275 204 L261 235 L51 326Z" fill="#c5ccb4" />
+              <path d="M50 82 L75 287" stroke="#91a887" stroke-width="1" />
+              <path d="M74 82 L95 287" stroke="#91a887" stroke-width="1" />
+              <path d="M98 82 L115 287" stroke="#91a887" stroke-width="1" />
+              <path d="M122 82 L135 287" stroke="#91a887" stroke-width="1" />
+              <path d="M146 82 L155 287" stroke="#91a887" stroke-width="1" />
+              <path d="M170 82 L175 287" stroke="#91a887" stroke-width="1" />
+              <path d="M194 82 L195 287" stroke="#91a887" stroke-width="1" />
+              <path d="M218 82 L215 287" stroke="#91a887" stroke-width="1" />
+              <path d="M242 82 L235 287" stroke="#91a887" stroke-width="1" />
+              <text x="45" y="153" font-size="18" fill="#f2f1df">
+                IMMERSIVE SCENE
+              </text>
+              <text x="58" y="179" font-size="13" fill="#f2f1df">
+                detail + depth
+              </text>
+              <text x="90" y="362" font-size="14" fill="#f2f1df">
+                diagonal eye path
+              </text>
+              <text x="126" y="424" font-size="12" fill="#efa678">
+                Small caption / signal
+              </text>
+            </svg>
+            <figcaption>Spatial reading · approximate geometry</figcaption>
+          </figure>
+          <div class="notes">
+            <span class="label">06 / Roland</span>
+            <h3>The image is the space.</h3>
+            <strong>Visible evidence</strong>
+            <p>
+              The receding instrument planes and dense midtones do the work.
+              Identity and an orange caption sit at the edges.
+            </p>
+            <strong>Design consequence</strong>
+            <p>
+              Choose imagery with depth and a usable quiet area. A flat green
+              surface cannot replace the scene.
+            </p>
+          </div>
+        </article>
+        <article class="reference">
+          <figure>
+            <img
+              src="../../references/02-seiko-wave.jpeg"
+              alt="Supplied 02 / Seiko print reference"
+            />
+            <figcaption>02 / Seiko · original scan, unchanged</figcaption>
+          </figure>
+          <figure>
+            <svg
+              class="diagram"
+              role="img"
+              aria-label="Annotated schematic; not final artwork"
+              viewBox="0 0 300 440"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="0"
+                y="0"
+                width="300"
+                height="440"
+                rx="0"
+                fill="#164982"
+              />
+              <path
+                d="M-10 145 Q170 -65 95 130 Q5 170 150 228"
+                fill="none"
+                stroke="#77b4c6"
+                stroke-width="36"
+              />
+              <text x="28" y="28" font-size="20" fill="#e7efe6">
+                ENVIRONMENT
+              </text>
+              <rect
+                x="120"
+                y="80"
+                width="112"
+                height="203"
+                rx="18"
+                fill="#bccccc"
+              />
+              <rect
+                x="139"
+                y="110"
+                width="74"
+                height="111"
+                rx="6"
+                fill="#214d7c"
+              />
+              <text x="142" y="156" font-size="17" fill="#fff">HERO</text>
+              <text x="143" y="182" font-size="14" fill="#fff">scale</text>
+              <rect
+                x="35"
+                y="307"
+                width="71"
+                height="106"
+                rx="9"
+                fill="#b8c9c7"
+              />
+              <rect
+                x="123"
+                y="307"
+                width="71"
+                height="106"
+                rx="9"
+                fill="#b8c9c7"
+              />
+              <rect
+                x="214"
+                y="315"
+                width="50.25"
+                height="2"
+                rx="0"
+                fill="#bdc9c9"
+              />
+              <rect
+                x="214"
+                y="323"
+                width="67"
+                height="2"
+                rx="0"
+                fill="#bdc9c9"
+              />
+              <rect
+                x="214"
+                y="331"
+                width="67"
+                height="2"
+                rx="0"
+                fill="#bdc9c9"
+              />
+              <rect
+                x="214"
+                y="339"
+                width="67"
+                height="2"
+                rx="0"
+                fill="#bdc9c9"
+              />
+              <rect
+                x="214"
+                y="347"
+                width="50.25"
+                height="2"
+                rx="0"
+                fill="#bdc9c9"
+              />
+              <rect
+                x="214"
+                y="355"
+                width="67"
+                height="2"
+                rx="0"
+                fill="#bdc9c9"
+              />
+              <rect
+                x="214"
+                y="363"
+                width="67"
+                height="2"
+                rx="0"
+                fill="#bdc9c9"
+              />
+              <rect
+                x="214"
+                y="371"
+                width="67"
+                height="2"
+                rx="0"
+                fill="#bdc9c9"
+              />
+              <text x="213" y="408" font-size="14" fill="#fff">Identity</text>
+            </svg>
+            <figcaption>Spatial reading · approximate geometry</figcaption>
+          </figure>
+          <div class="notes">
+            <span class="label">02 / Seiko</span>
+            <h3>The object inhabits a world.</h3>
+            <strong>Visible evidence</strong>
+            <p>
+              An oversized bright watch, wave environment and smaller pair
+              create three scales within one blue field.
+            </p>
+            <strong>Design consequence</strong>
+            <p>
+              A new montage needs a subject-related idea and believable or
+              deliberately graphic relationships—not just a blue background.
+            </p>
+          </div>
+        </article>
+        <article class="reference">
+          <figure>
+            <img
+              src="../../references/08-newspaper.jpeg"
+              alt="Supplied 08 / Cinema sheet print reference"
+            />
+            <figcaption>
+              08 / Cinema sheet · original scan, unchanged
+            </figcaption>
+          </figure>
+          <figure>
+            <svg
+              class="diagram"
+              role="img"
+              aria-label="Annotated schematic; not final artwork"
+              viewBox="0 0 300 440"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="0"
+                y="0"
+                width="300"
+                height="440"
+                rx="0"
+                fill="#e7d5a4"
+              />
+              <rect x="7" y="7" width="286" height="28" rx="0" fill="#6b6043" />
+              <text x="17" y="27" font-size="14" fill="#f1e6ca">
+                TOP INFORMATION BAND
+              </text>
+              <rect
+                x="12"
+                y="50"
+                width="42.0"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect x="12" y="58" width="56" height="2" rx="0" fill="#aaa18e" />
+              <rect x="12" y="66" width="56" height="2" rx="0" fill="#aaa18e" />
+              <rect x="12" y="74" width="56" height="2" rx="0" fill="#aaa18e" />
+              <rect
+                x="12"
+                y="82"
+                width="42.0"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect x="12" y="90" width="56" height="2" rx="0" fill="#aaa18e" />
+              <rect x="12" y="98" width="56" height="2" rx="0" fill="#aaa18e" />
+              <rect
+                x="12"
+                y="106"
+                width="56"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="12"
+                y="114"
+                width="42.0"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="12"
+                y="122"
+                width="56"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="12"
+                y="130"
+                width="56"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="12"
+                y="138"
+                width="56"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="12"
+                y="146"
+                width="42.0"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="12"
+                y="154"
+                width="56"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="12"
+                y="162"
+                width="56"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="12"
+                y="170"
+                width="56"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="12"
+                y="178"
+                width="42.0"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="12"
+                y="186"
+                width="56"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="12"
+                y="194"
+                width="56"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="12"
+                y="202"
+                width="56"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="12"
+                y="210"
+                width="42.0"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="12"
+                y="218"
+                width="56"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="12"
+                y="226"
+                width="56"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="12"
+                y="234"
+                width="56"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="50"
+                width="39.75"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="58"
+                width="53"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="66"
+                width="53"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="74"
+                width="53"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="82"
+                width="39.75"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="90"
+                width="53"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="98"
+                width="53"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="106"
+                width="53"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="114"
+                width="39.75"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="122"
+                width="53"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="130"
+                width="53"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="138"
+                width="53"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="146"
+                width="39.75"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="154"
+                width="53"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="162"
+                width="53"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="170"
+                width="53"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="178"
+                width="39.75"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="186"
+                width="53"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="194"
+                width="53"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="202"
+                width="53"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="210"
+                width="39.75"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="218"
+                width="53"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="232"
+                y="226"
+                width="53"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <text x="84" y="101" font-size="27" fill="#b74d30">DISPLAY</text>
+              <text x="92" y="137" font-size="36" fill="#b74d30">MASS</text>
+              <path
+                d="M22 339 Q10 245 96 245 Q70 160 149 157 Q218 171 195 245 Q280 257 285 353Z"
+                fill="#87785b"
+              />
+              <text x="80" y="293" font-size="15" fill="#fff4d9">
+                FIGURE CROSSES
+              </text>
+              <text x="96" y="318" font-size="14" fill="#fff4d9">
+                THE COLUMNS
+              </text>
+              <rect
+                x="10"
+                y="366"
+                width="280"
+                height="64"
+                rx="0"
+                fill="#6b6043"
+              />
+              <text x="24" y="393" font-size="18" fill="#f1e6ca">
+                BOTTOM TITLE BLOCKS
+              </text>
+              <text x="25" y="416" font-size="12" fill="#f1e6ca">
+                Different weight from the body
+              </text>
+            </svg>
+            <figcaption>Spatial reading · approximate geometry</figcaption>
+          </figure>
+          <div class="notes">
+            <span class="label">08 / Cinema sheet</span>
+            <h3>Figure and type interlock.</h3>
+            <strong>Visible evidence</strong>
+            <p>
+              The red title, narrow columns, portrait mass and bottom black
+              blocks compete within a clear border.
+            </p>
+            <strong>Design consequence</strong>
+            <p>
+              Keep meaningful density. Adapt column and headline relationships
+              into readable English. The supplied date is unverified.
+            </p>
+          </div>
+        </article>
+        <article class="reference">
+          <figure>
+            <img
+              src="../../references/09-canon-demi.jpeg"
+              alt="Supplied 09 / Canon Demi print reference"
+            />
+            <figcaption>09 / Canon Demi · original scan, unchanged</figcaption>
+          </figure>
+          <figure>
+            <svg
+              class="diagram"
+              role="img"
+              aria-label="Annotated schematic; not final artwork"
+              viewBox="0 0 300 440"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="0"
+                y="0"
+                width="300"
+                height="440"
+                rx="0"
+                fill="#eee7ce"
+              />
+              <rect
+                x="13"
+                y="12"
+                width="274"
+                height="321"
+                rx="28"
+                fill="#555747"
+              />
+              <text x="52" y="77" font-size="20" fill="#fffce9">
+                TIGHT CLOSE VIEW
+              </text>
+              <path
+                d="M40 112 Q80 83 120 112 M165 112 Q210 83 260 112"
+                fill="none"
+                stroke="#e6e3ce"
+                stroke-width="10"
+              />
+              <rect
+                x="15"
+                y="166"
+                width="270"
+                height="145"
+                rx="0"
+                fill="#d8d5c1"
+              />
+              <rect
+                x="54"
+                y="189"
+                width="165"
+                height="97"
+                rx="8"
+                fill="#4a4f44"
+              />
+              <circle cx="136" cy="237" r="34" fill="#c0c6b5" />
+              <circle cx="136" cy="237" r="22" fill="#50594b" />
+              <text x="64" y="321" font-size="14" fill="#fffbe9">
+                RELATED SECOND VIEW
+              </text>
+              <text x="17" y="363" font-size="25" fill="#182f26">IDENTITY</text>
+              <rect
+                x="16"
+                y="385"
+                width="70.5"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="16"
+                y="393"
+                width="94"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="16"
+                y="401"
+                width="94"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="16"
+                y="409"
+                width="94"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="16"
+                y="417"
+                width="70.5"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="16"
+                y="425"
+                width="94"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="129"
+                y="349"
+                width="48.0"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="129"
+                y="357"
+                width="64"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="129"
+                y="365"
+                width="64"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="129"
+                y="373"
+                width="64"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="129"
+                y="381"
+                width="48.0"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="129"
+                y="389"
+                width="64"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="129"
+                y="397"
+                width="64"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="129"
+                y="405"
+                width="64"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="129"
+                y="413"
+                width="48.0"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="129"
+                y="421"
+                width="64"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="129"
+                y="429"
+                width="64"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="211"
+                y="349"
+                width="51.75"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="211"
+                y="357"
+                width="69"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="211"
+                y="365"
+                width="69"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="211"
+                y="373"
+                width="69"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="211"
+                y="381"
+                width="51.75"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="211"
+                y="389"
+                width="69"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="211"
+                y="397"
+                width="69"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="211"
+                y="405"
+                width="69"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="211"
+                y="413"
+                width="51.75"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="211"
+                y="421"
+                width="69"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="211"
+                y="429"
+                width="69"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+            </svg>
+            <figcaption>Spatial reading · approximate geometry</figcaption>
+          </figure>
+          <div class="notes">
+            <span class="label">09 / Canon Demi</span>
+            <h3>Two close views create an encounter.</h3>
+            <strong>Visible evidence</strong>
+            <p>
+              Eyes above a hand and camera; one enclosing rounded frame; compact
+              type and information below.
+            </p>
+            <strong>Design consequence</strong>
+            <p>
+              Pair related views with purposeful scale. The rounded frame
+              belongs to the whole image, not a repeated card system.
+            </p>
+          </div>
+        </article>
+        <article class="reference">
+          <figure>
+            <img
+              src="../../references/10-akira.jpeg"
+              alt="Supplied 10 / AKIRA print reference"
+            />
+            <figcaption>10 / AKIRA · original scan, unchanged</figcaption>
+          </figure>
+          <figure>
+            <svg
+              class="diagram"
+              role="img"
+              aria-label="Annotated schematic; not final artwork"
+              viewBox="0 0 300 440"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="0"
+                y="0"
+                width="300"
+                height="440"
+                rx="0"
+                fill="#efebe3"
+              />
+              <rect
+                x="9"
+                y="10"
+                width="231"
+                height="52"
+                rx="0"
+                fill="#242c27"
+              />
+              <text x="17" y="44" font-size="31" fill="#f6f2e7">HEADLINE</text>
+              <rect
+                x="248"
+                y="10"
+                width="41"
+                height="325"
+                rx="0"
+                fill="#d6d4c9"
+              />
+              <text x="255" y="35" font-size="10" fill="#182f26">SIDE</text>
+              <rect
+                x="255"
+                y="55"
+                width="20.25"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="63"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="71"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="79"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="87"
+                width="20.25"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="95"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="103"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="111"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="119"
+                width="20.25"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="127"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="135"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="143"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="151"
+                width="20.25"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="159"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="167"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="175"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="183"
+                width="20.25"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="191"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="199"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="207"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="215"
+                width="20.25"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="223"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="231"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="239"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="247"
+                width="20.25"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="255"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="263"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="271"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="279"
+                width="20.25"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="255"
+                y="287"
+                width="27"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="10"
+                y="82"
+                width="225"
+                height="170"
+                rx="0"
+                fill="#565c51"
+              />
+              <circle cx="122" cy="161" r="43" fill="#e2ded2" />
+              <path d="M10 242 L122 161 L234 239" fill="#272f29" />
+              <text x="22" y="104" font-size="14" fill="#f2efdf">
+                ILLUSTRATED EVENT
+              </text>
+              <rect
+                x="11"
+                y="265"
+                width="49.5"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="11"
+                y="273"
+                width="66"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="11"
+                y="281"
+                width="66"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="11"
+                y="289"
+                width="66"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="11"
+                y="297"
+                width="49.5"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="11"
+                y="305"
+                width="66"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="11"
+                y="313"
+                width="66"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="11"
+                y="321"
+                width="66"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="11"
+                y="329"
+                width="49.5"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="89"
+                y="265"
+                width="49.5"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="89"
+                y="273"
+                width="66"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="89"
+                y="281"
+                width="66"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="89"
+                y="289"
+                width="66"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="89"
+                y="297"
+                width="49.5"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="89"
+                y="305"
+                width="66"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="89"
+                y="313"
+                width="66"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="89"
+                y="321"
+                width="66"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="89"
+                y="329"
+                width="49.5"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="169"
+                y="265"
+                width="49.5"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="169"
+                y="273"
+                width="66"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="169"
+                y="281"
+                width="66"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="169"
+                y="289"
+                width="66"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="169"
+                y="297"
+                width="49.5"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="169"
+                y="305"
+                width="66"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="169"
+                y="313"
+                width="66"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="169"
+                y="321"
+                width="66"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="169"
+                y="329"
+                width="49.5"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="10"
+                y="348"
+                width="280"
+                height="80"
+                rx="0"
+                fill="#283029"
+              />
+              <text x="21" y="384" font-size="27" fill="#f6f2e7">
+                CLOSING BLOCK
+              </text>
+              <text x="22" y="411" font-size="13" fill="#f6f2e7">
+                Large type + precise small detail
+              </text>
+            </svg>
+            <figcaption>Spatial reading · approximate geometry</figcaption>
+          </figure>
+          <div class="notes">
+            <span class="label">10 / AKIRA</span>
+            <h3>Unequal blocks make a news sheet.</h3>
+            <strong>Visible evidence</strong>
+            <p>
+              Headline slab → illustrated event → dense explanation → heavy
+              closing block, with an independent side rail.
+            </p>
+            <strong>Design consequence</strong>
+            <p>
+              Compose these masses before adding material effects. A big title
+              and ordinary hero rectangle lose the structure.
+            </p>
+          </div>
+        </article>
+      </section>
+      <section id="openings">
+        <h2>Book &amp; album structure</h2>
+        <p>
+          Proposed adaptations for an English journal. The supplied ads do not
+          document complete books or album packages. Transfer pacing, alignment,
+          facing relationships and real credits; avoid decorative Japanese or a
+          mandatory page-turn simulation.
+        </p>
+        <div class="spread-grid">
+          <article class="study">
+            <h3>01 / Announcement to index</h3>
+            <svg
+              class=""
+              role="img"
+              aria-label="Annotated schematic; not final artwork"
+              viewBox="0 0 560 280"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="0"
+                y="0"
+                width="560"
+                height="280"
+                rx="0"
+                fill="#e9e4d6"
+              />
+              <rect
+                x="16"
+                y="18"
+                width="238"
+                height="238"
+                rx="0"
+                fill="#214238"
+              />
+              <text x="35" y="47" font-size="16" fill="#eee9d9">COVER</text>
+              <rect
+                x="39"
+                y="68"
+                width="190"
+                height="149"
+                rx="0"
+                fill="#819787"
+              />
+              <text x="48" y="239" font-size="13" fill="#eee9d9">
+                One visual / one identity
+              </text>
+              <text x="292" y="44" font-size="24" fill="#182f26">CONTENTS</text>
+              <rect
+                x="292"
+                y="69"
+                width="165.0"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="292"
+                y="77"
+                width="220"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="292"
+                y="85"
+                width="220"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="292"
+                y="108"
+                width="36"
+                height="23"
+                rx="0"
+                fill="#8c9b88"
+              />
+              <text x="341" y="124" font-size="13" fill="#182f26">
+                Engineering
+              </text>
+              <rect
+                x="292"
+                y="142"
+                width="36"
+                height="23"
+                rx="0"
+                fill="#8c9b88"
+              />
+              <text x="341" y="158" font-size="13" fill="#182f26">
+                Photography
+              </text>
+              <rect
+                x="292"
+                y="176"
+                width="36"
+                height="23"
+                rx="0"
+                fill="#8c9b88"
+              />
+              <text x="341" y="192" font-size="13" fill="#182f26">Music</text>
+              <rect
+                x="292"
+                y="210"
+                width="36"
+                height="23"
+                rx="0"
+                fill="#8c9b88"
+              />
+              <text x="341" y="226" font-size="13" fill="#182f26">Writing</text>
+            </svg>
+            <p>
+              Change the density and task; carry a small identity cue forward.
+            </p>
+          </article>
+          <article class="study">
+            <h3>02 / Sleeve to liner notes</h3>
+            <svg
+              class=""
+              role="img"
+              aria-label="Annotated schematic; not final artwork"
+              viewBox="0 0 560 280"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="0"
+                y="0"
+                width="560"
+                height="280"
+                rx="0"
+                fill="#e9e4d6"
+              />
+              <rect
+                x="26"
+                y="29"
+                width="221"
+                height="221"
+                rx="0"
+                fill="#738b7b"
+              />
+              <text x="58" y="145" font-size="20" fill="#fff">
+                ORIGINAL IMAGE
+              </text>
+              <rect
+                x="279"
+                y="0"
+                width="2"
+                height="280"
+                rx="0"
+                fill="#c1bbac"
+              />
+              <text x="308" y="46" font-size="23" fill="#182f26">
+                LINER NOTES
+              </text>
+              <rect
+                x="308"
+                y="68"
+                width="156.75"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="308"
+                y="76"
+                width="209"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="308"
+                y="84"
+                width="209"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="308"
+                y="92"
+                width="209"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="308"
+                y="100"
+                width="156.75"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="308"
+                y="108"
+                width="209"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="308"
+                y="116"
+                width="209"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="308"
+                y="124"
+                width="209"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="308"
+                y="132"
+                width="156.75"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="308"
+                y="140"
+                width="209"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="308"
+                y="148"
+                width="209"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="308"
+                y="156"
+                width="209"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="308"
+                y="164"
+                width="156.75"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <text x="308" y="194" font-size="14" fill="#182f26">
+                Work order / credits
+              </text>
+              <rect
+                x="308"
+                y="209"
+                width="123.0"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="308"
+                y="217"
+                width="164"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="308"
+                y="225"
+                width="164"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="308"
+                y="233"
+                width="164"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <text x="310" y="264" font-size="11" fill="#182f26">
+                02 / Music
+              </text>
+            </svg>
+            <p>
+              The gutter separates visual identity from useful editorial
+              information.
+            </p>
+          </article>
+          <article class="study">
+            <h3>03 / Essay and evidence</h3>
+            <svg
+              class=""
+              role="img"
+              aria-label="Annotated schematic; not final artwork"
+              viewBox="0 0 560 280"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="0"
+                y="0"
+                width="560"
+                height="280"
+                rx="0"
+                fill="#e9e4d6"
+              />
+              <text x="24" y="35" font-size="24" fill="#182f26">
+                A READING PAGE
+              </text>
+              <rect
+                x="24"
+                y="58"
+                width="153.75"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="24"
+                y="66"
+                width="205"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="24"
+                y="74"
+                width="205"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="24"
+                y="82"
+                width="205"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="24"
+                y="90"
+                width="153.75"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="24"
+                y="98"
+                width="205"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="24"
+                y="106"
+                width="205"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="24"
+                y="114"
+                width="205"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="24"
+                y="122"
+                width="153.75"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="24"
+                y="130"
+                width="205"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="24"
+                y="138"
+                width="205"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="24"
+                y="146"
+                width="205"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="24"
+                y="154"
+                width="153.75"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="24"
+                y="162"
+                width="205"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="24"
+                y="170"
+                width="205"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="24"
+                y="178"
+                width="205"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="24"
+                y="186"
+                width="153.75"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="24"
+                y="194"
+                width="205"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="24"
+                y="202"
+                width="205"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="24"
+                y="210"
+                width="205"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="24"
+                y="218"
+                width="153.75"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="24"
+                y="226"
+                width="205"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="279"
+                y="0"
+                width="2"
+                height="280"
+                rx="0"
+                fill="#c1bbac"
+              />
+              <rect
+                x="308"
+                y="29"
+                width="222"
+                height="119"
+                rx="0"
+                fill="#738b7b"
+              />
+              <text x="337" y="94" font-size="16" fill="#fff">
+                DETAIL / EVIDENCE
+              </text>
+              <text x="309" y="169" font-size="13" fill="#182f26">
+                Caption close to its image
+              </text>
+              <rect
+                x="309"
+                y="191"
+                width="156.0"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="309"
+                y="199"
+                width="208"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="309"
+                y="207"
+                width="208"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="309"
+                y="215"
+                width="208"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="309"
+                y="223"
+                width="156.0"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="309"
+                y="231"
+                width="208"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="309"
+                y="239"
+                width="208"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="309"
+                y="247"
+                width="208"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+            </svg>
+            <p>
+              Relate image, caption and argument through a consistent page
+              frame.
+            </p>
+          </article>
+          <article class="study">
+            <h3>04 / Reflow, not miniaturization</h3>
+            <svg
+              class=""
+              role="img"
+              aria-label="Annotated schematic; not final artwork"
+              viewBox="0 0 560 280"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="0"
+                y="0"
+                width="560"
+                height="280"
+                rx="0"
+                fill="#e9e4d6"
+              />
+              <rect
+                x="26"
+                y="18"
+                width="139"
+                height="243"
+                rx="0"
+                fill="#f8f5ed"
+              />
+              <text x="40" y="44" font-size="16" fill="#182f26">TITLE</text>
+              <rect
+                x="40"
+                y="59"
+                width="111"
+                height="85"
+                rx="0"
+                fill="#738b7b"
+              />
+              <rect
+                x="40"
+                y="161"
+                width="80.25"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="40"
+                y="169"
+                width="107"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="40"
+                y="177"
+                width="107"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="40"
+                y="185"
+                width="107"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="40"
+                y="193"
+                width="80.25"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="40"
+                y="201"
+                width="107"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="40"
+                y="209"
+                width="107"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="40"
+                y="217"
+                width="107"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="40"
+                y="225"
+                width="80.25"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="40"
+                y="233"
+                width="107"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <rect
+                x="40"
+                y="241"
+                width="107"
+                height="2"
+                rx="0"
+                fill="#aaa18e"
+              />
+              <text x="201" y="59" font-size="22" fill="#182f26">
+                NARROW SCREEN
+              </text>
+              <text x="201" y="95" font-size="15" fill="#182f26">
+                Keep the reading sequence.
+              </text>
+              <text x="201" y="126" font-size="15" fill="#182f26">
+                Side rails become labels.
+              </text>
+              <text x="201" y="157" font-size="15" fill="#182f26">
+                Columns become one measure.
+              </text>
+              <text x="201" y="188" font-size="15" fill="#182f26">
+                No forced page curl.
+              </text>
+              <text x="201" y="237" font-size="14" fill="#182f26">
+                Real URLs + visible navigation
+              </text>
+            </svg>
+            <p>
+              Preserve English source order and readable type when the spread
+              collapses.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section id="materials" class="materials">
+        <h2>Material lab: one cause at a time</h2>
+        <p>
+          Original graphic specimens below make individual mechanisms visible.
+          No treatment touches the reference scans. Sliders are deliberate
+          demonstrations; their values are not approved design tokens. Resetting
+          restores the starting experiments.
+        </p>
+        <button id="reset" type="button">Reset specimens</button
+        ><svg
+          width="0"
+          height="0"
+          aria-hidden="true"
+          style="position: absolute"
+        >
+          <defs>
+            <filter id="paper-grain" x="0" y="0" width="100%" height="100%">
+              <feTurbulence
+                type="fractalNoise"
+                baseFrequency=".032 .38"
+                numOctaves="3"
+                seed="17"
+              />
+              <feColorMatrix type="saturate" values="0" />
+            </filter>
+            <filter
+              id="ink-edge"
+              x="-10%"
+              y="-10%"
+              width="120%"
+              height="120%"
+              color-interpolation-filters="sRGB"
+            >
+              <feTurbulence
+                type="fractalNoise"
+                baseFrequency=".12"
+                numOctaves="3"
+                seed="8"
+                result="noise"
+              />
+              <feDisplacementMap
+                id="displace"
+                in="SourceGraphic"
+                in2="noise"
+                scale=".8"
+                xChannelSelector="R"
+                yChannelSelector="G"
+              />
+            </filter>
+            <pattern
+              id="screen-dots"
+              patternUnits="userSpaceOnUse"
+              width="4"
+              height="4"
+            >
+              <circle id="screen-dot" cx="2" cy="2" r=".85" fill="#243b32" />
+            </pattern>
+          </defs>
+        </svg>
+        <div class="lab-grid">
+          <article class="sample">
+            <h3>Paper variation</h3>
+            <div class="pair">
+              <figure>
+                <svg role="img" aria-label="Clean" viewBox="0 0 240 190">
+                  <rect
+                    x="0"
+                    y="0"
+                    width="240"
+                    height="190"
+                    rx="0"
+                    fill="#efe7d3"
+                  />
+                  <text x="20" y="40" font-size="24" fill="#182f26">PAPER</text>
+                  <text x="20" y="169" font-size="13" fill="#182f26">
+                    Substrate only
+                  </text>
+                </svg>
+                <figcaption>Clean</figcaption>
+              </figure>
+              <figure>
+                <svg
+                  role="img"
+                  aria-label="Treated specimen"
+                  viewBox="0 0 240 190"
+                >
+                  <rect
+                    x="0"
+                    y="0"
+                    width="240"
+                    height="190"
+                    rx="0"
+                    fill="#efe7d3"
+                  />
+                  <rect
+                    id="grain"
+                    width="240"
+                    height="190"
+                    filter="url(#paper-grain)"
+                    opacity=".05"
+                  />
+                  <text x="20" y="40" font-size="24" fill="#182f26">PAPER</text>
+                  <text x="20" y="169" font-size="13" fill="#182f26">
+                    Substrate only
+                  </text>
+                </svg>
+                <figcaption>Treated specimen</figcaption>
+              </figure>
+            </div>
+            <label for="paper"
+              >Paper grain opacity<input
+                id="paper"
+                type="range"
+                min="0"
+                max="0.15"
+                step="0.01"
+                value="0.05"
+              /><output for="paper">0.05</output></label
+            >
+            <p>
+              Quiet variation; keep the substrate separate from photographs and
+              reading content.
+            </p>
+          </article>
+          <article class="sample">
+            <h3>Ink edge</h3>
+            <div class="pair">
+              <figure>
+                <svg role="img" aria-label="Clean" viewBox="0 0 240 190">
+                  <text x="15" y="70" font-size="65" fill="#182f26">INK</text>
+                  <rect
+                    x="17"
+                    y="92"
+                    width="204"
+                    height="16"
+                    rx="0"
+                    fill="#203d30"
+                  />
+                  <circle cx="63" cy="145" r="25" fill="#203d30" />
+                  <text x="111" y="153" font-size="28" fill="#182f26">
+                    EDGE
+                  </text>
+                </svg>
+                <figcaption>Clean</figcaption>
+              </figure>
+              <figure>
+                <svg
+                  role="img"
+                  aria-label="Treated specimen"
+                  viewBox="0 0 240 190"
+                >
+                  <g filter="url(#ink-edge)">
+                    <text x="15" y="70" font-size="65" fill="#182f26">INK</text>
+                    <rect
+                      x="17"
+                      y="92"
+                      width="204"
+                      height="16"
+                      rx="0"
+                      fill="#203d30"
+                    />
+                    <circle cx="63" cy="145" r="25" fill="#203d30" />
+                    <text x="111" y="153" font-size="28" fill="#182f26">
+                      EDGE
+                    </text>
+                  </g>
+                </svg>
+                <figcaption>Treated specimen</figcaption>
+              </figure>
+            </div>
+            <label for="ink"
+              >Displacement scale<input
+                id="ink"
+                type="range"
+                min="0"
+                max="3"
+                step="0.1"
+                value="0.8"
+              /><output for="ink">0.8</output></label
+            >
+            <p>
+              Inspect the glyph edges at actual size. Stronger wobble is a
+              failure, not extra authenticity.
+            </p>
+          </article>
+          <article class="sample">
+            <h3>Two ink plates</h3>
+            <div class="pair">
+              <figure>
+                <svg role="img" aria-label="Clean" viewBox="0 0 240 190">
+                  <rect
+                    x="22"
+                    y="28"
+                    width="159"
+                    height="126"
+                    rx="0"
+                    fill="#203d30"
+                  />
+                  <rect
+                    x="98"
+                    y="64"
+                    width="119"
+                    height="102"
+                    rx="0"
+                    fill="#cb6944"
+                  />
+                </svg>
+                <figcaption>Clean</figcaption>
+              </figure>
+              <figure>
+                <svg
+                  role="img"
+                  aria-label="Treated specimen"
+                  viewBox="0 0 240 190"
+                >
+                  <rect
+                    x="22"
+                    y="28"
+                    width="159"
+                    height="126"
+                    rx="0"
+                    fill="#203d30"
+                  />
+                  <g id="plate" transform="translate(.7 .35)">
+                    <rect
+                      x="98"
+                      y="64"
+                      width="119"
+                      height="102"
+                      rx="0"
+                      fill="#cb6944"
+                    />
+                  </g>
+                </svg>
+                <figcaption>Treated specimen</figcaption>
+              </figure>
+            </div>
+            <label for="register"
+              >Spot plate offset<input
+                id="register"
+                type="range"
+                min="0"
+                max="4"
+                step="0.1"
+                value="0.7"
+              /><output for="register">0.7</output></label
+            >
+            <p>
+              Separate authored plates; this is not an RGB shadow on every word.
+            </p>
+          </article>
+          <article class="sample">
+            <h3>Graphic dot screen</h3>
+            <div class="pair">
+              <figure>
+                <svg role="img" aria-label="Clean" viewBox="0 0 240 190">
+                  <rect
+                    x="25"
+                    y="25"
+                    width="190"
+                    height="140"
+                    rx="0"
+                    fill="#203d30"
+                  />
+                </svg>
+                <figcaption>Clean</figcaption>
+              </figure>
+              <figure>
+                <svg
+                  role="img"
+                  aria-label="Treated specimen"
+                  viewBox="0 0 240 190"
+                >
+                  <rect
+                    x="25"
+                    y="25"
+                    width="190"
+                    height="140"
+                    rx="0"
+                    fill="url(#screen-dots)"
+                  />
+                </svg>
+                <figcaption>Treated specimen</figcaption>
+              </figure>
+            </div>
+            <label for="dots"
+              >Dot radius<input
+                id="dots"
+                type="range"
+                min="0"
+                max="2"
+                step="0.05"
+                value="0.85"
+              /><output for="dots">0.85</output></label
+            >
+            <p>
+              A flat graphic screen, not a photo-to-halftone conversion. True
+              tonal halftone needs tone-dependent dot coverage.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="sources" id="sources">
+        <h2>Sources &amp; boundaries</h2>
+        <p>
+          Five supplied images, copied unchanged. Diagrams and specimens are
+          project-authored interpretations. The full local library contains ten
+          scans; numbering preserves the original eight. References stay outside
+          application assets. No owner photography or music artwork is filtered
+          here.
+        </p>
+        <ul>
+          <li>
+            <a
+              href="https://www.w3.org/TR/jlreq/#basics_of_japanese_composition"
+              >W3C: Requirements for Japanese Text Layout</a
+            >
+            — page frame and relationships among composition elements. English
+            adaptation here is a design proposal.
+          </li>
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/feDisplacementMap"
+              >MDN: feDisplacementMap</a
+            >
+            — displacement mechanics, not historical print authentication.
+          </li>
+          <li>
+            <a
+              href="../../../.agents/skills/japanese-publication-layout/SKILL.md"
+              >Publication layout skill</a
+            >
+            ·
+            <a href="../../../.agents/skills/retro-print-effects/SKILL.md"
+              >Print effects skill</a
+            >
+          </li>
+        </ul>
+        <p>
+          Composition still has to work with all effects disabled. This atlas
+          documents decisions; it does not prove future designs will satisfy the
+          owner.
+        </p>
+      </section>
+    </main>
+    <script>
+      const controls = [...document.querySelectorAll("input[type=range]")];
+      function update(e) {
+        const v = Number(e.value);
+        e.nextElementSibling.value = v;
+        if (e.id === "paper")
+          document.querySelector("#grain").setAttribute("opacity", v);
+        if (e.id === "ink")
+          document.querySelector("#displace").setAttribute("scale", v);
+        if (e.id === "register")
+          document
+            .querySelector("#plate")
+            .setAttribute("transform", `translate(${v} ${v / 2})`);
+        if (e.id === "dots")
+          document.querySelector("#screen-dot").setAttribute("r", v);
+      }
+      controls.forEach((e) => e.addEventListener("input", () => update(e)));
+      document.querySelector("#reset").addEventListener("click", () =>
+        controls.forEach((e) => {
+          e.value = e.defaultValue;
+          update(e);
+        }),
+      );
+    </script>
+  </body>
+</html>

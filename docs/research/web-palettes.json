@@ -1,0 +1,98 @@
+{
+  "status": "proposal, not implemented",
+  "contrast_method": "sRGB relative luminance WCAG formula, opaque solid pairs only",
+  "palettes": [
+    {
+      "name": "Newsprint",
+      "source_images": [
+        1,
+        8
+      ],
+      "surface": "#F1E2C5",
+      "text": "#28251F",
+      "signal": "#9C352B",
+      "furniture": "#C1A47A",
+      "text_contrast": 11.95,
+      "signal_contrast": 5.55,
+      "furniture_text_approved": false
+    },
+    {
+      "name": "Ocean signal",
+      "source_images": [
+        2
+      ],
+      "surface": "#132D5C",
+      "text": "#EEF0E2",
+      "signal": "#9BBCC8",
+      "furniture": "#426CBA",
+      "text_contrast": 11.68,
+      "signal_contrast": 6.69,
+      "furniture_text_approved": false
+    },
+    {
+      "name": "Studio amber",
+      "source_images": [
+        5
+      ],
+      "surface": "#2B2824",
+      "text": "#F4E6CB",
+      "signal": "#D58E43",
+      "furniture": "#7E483C",
+      "text_contrast": 11.89,
+      "signal_contrast": 5.43,
+      "furniture_text_approved": false
+    },
+    {
+      "name": "Black catalogue",
+      "source_images": [
+        3
+      ],
+      "surface": "#20211F",
+      "text": "#EEEBDD",
+      "signal": "#D67C6C",
+      "furniture": "#898A80",
+      "text_contrast": 13.52,
+      "signal_contrast": 5.36,
+      "furniture_text_approved": false
+    },
+    {
+      "name": "Forest circuitry",
+      "source_images": [
+        6
+      ],
+      "surface": "#11271B",
+      "text": "#DFE5CF",
+      "signal": "#D99C4F",
+      "furniture": "#58775A",
+      "text_contrast": 12.22,
+      "signal_contrast": 6.63,
+      "furniture_text_approved": false
+    },
+    {
+      "name": "Warm interior",
+      "source_images": [
+        7
+      ],
+      "surface": "#E6D4A5",
+      "text": "#3B3026",
+      "signal": "#91352C",
+      "furniture": "#CFAF4D",
+      "text_contrast": 8.75,
+      "signal_contrast": 5.21,
+      "furniture_text_approved": false
+    },
+    {
+      "name": "Lab sheet",
+      "source_images": [
+        4
+      ],
+      "surface": "#F4F4ED",
+      "text": "#282C2C",
+      "signal": "#AD3838",
+      "furniture": "#A8AEAF",
+      "text_contrast": 12.79,
+      "signal_contrast": 5.59,
+      "furniture_text_approved": false
+    }
+  ]
+}
